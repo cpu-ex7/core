@@ -1,0 +1,10 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tansei/Desktop/cpu/2017/top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+WARNING: [VRFC 10-965] invalid size of integer constant literal [/home/tansei/Desktop/cpu/2017/top.sv:126]
+WARNING: [VRFC 10-965] invalid size of integer constant literal [/home/tansei/Desktop/cpu/2017/top.sv:128]
+WARNING: [VRFC 10-965] invalid size of integer constant literal [/home/tansei/Desktop/cpu/2017/top.sv:133]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tansei/Desktop/cpu/2017/top_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_wrapper
+WARNING: [VRFC 10-756] identifier d_addr2 is used before its declaration [/home/tansei/Desktop/cpu/2017/top_wrapper.v:13]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tansei/cpu1/cpu1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
