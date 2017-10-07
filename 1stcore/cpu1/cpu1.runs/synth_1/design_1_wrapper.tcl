@@ -22,6 +22,10 @@ set_property target_language Verilog [current_project]
 set_property board_part xilinx.com:kcu105:part0:1.1 [current_project]
 set_property ip_output_repo /home/tansei/Desktop/cpu/2017/1stcore/cpu1/cpu1.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
+add_files /home/tansei/Desktop/cpu/2017/1stcore/example.coe
+add_files /home/tansei/Desktop/cpu/2017/1stcore/fib.coe
+add_files /home/tansei/Desktop/cpu/2017/1stcore/dmem.coe
+add_files /home/tansei/Desktop/cpu/2017/1stcore/load_test.coe
 read_verilog -library xil_defaultlib /home/tansei/Desktop/cpu/2017/1stcore/cpu1/cpu1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
 add_files /home/tansei/Desktop/cpu/2017/1stcore/cpu1/cpu1.srcs/sources_1/bd/design_1/design_1.bd
 set_property used_in_implementation false [get_files -all /home/tansei/Desktop/cpu/2017/1stcore/cpu1/cpu1.srcs/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_0/design_1_blk_mem_gen_0_0_ooc.xdc]

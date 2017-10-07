@@ -168,13 +168,16 @@ CONFIG.FREQ_HZ {300000000} \
 
   # Create ports
   set GPIO_LED [ create_bd_port -dir O -from 7 -to 0 -type data GPIO_LED ]
-  set GPIO_SW_C [ create_bd_port -dir I -type data GPIO_SW_C ]
+  set GPIO_SW_E [ create_bd_port -dir I -type data GPIO_SW_E ]
+  set GPIO_SW_N [ create_bd_port -dir I -type data GPIO_SW_N ]
+  set GPIO_SW_S [ create_bd_port -dir I -type data GPIO_SW_S ]
+  set GPIO_SW_W [ create_bd_port -dir I -type data GPIO_SW_W ]
 
   # Create instance: blk_mem_gen_0, and set properties
   set blk_mem_gen_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.3 blk_mem_gen_0 ]
   set_property -dict [ list \
 CONFIG.Byte_Size {9} \
-CONFIG.Coe_File {../../../../../../../example.coe} \
+CONFIG.Coe_File {../../../../../../../fib.coe} \
 CONFIG.Enable_32bit_Address {false} \
 CONFIG.Enable_A {Always_Enabled} \
 CONFIG.Load_Init_File {true} \
@@ -189,8 +192,10 @@ CONFIG.use_bram_block {Stand_Alone} \
   set blk_mem_gen_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.3 blk_mem_gen_1 ]
   set_property -dict [ list \
 CONFIG.Byte_Size {9} \
+CONFIG.Coe_File {no_coe_file_loaded} \
 CONFIG.Enable_32bit_Address {false} \
 CONFIG.Enable_A {Always_Enabled} \
+CONFIG.Load_Init_File {false} \
 CONFIG.Register_PortA_Output_of_Memory_Primitives {false} \
 CONFIG.Use_Byte_Write_Enable {false} \
 CONFIG.Use_RSTA_Pin {false} \
@@ -255,7 +260,10 @@ CONFIG.PRIM_SOURCE.VALUE_SRC {DEFAULT} \
   connect_bd_intf_net -intf_net default_sysclk_300_1 [get_bd_intf_ports default_sysclk_300] [get_bd_intf_pins clk_wiz_0/CLK_IN1_D]
 
   # Create port connections
-  connect_bd_net -net GPIO_SW_C_1 [get_bd_ports GPIO_SW_C] [get_bd_pins top_wrapper_0/sw_c]
+  connect_bd_net -net GPIO_SW_E_1 [get_bd_ports GPIO_SW_E] [get_bd_pins top_wrapper_0/sw_e]
+  connect_bd_net -net GPIO_SW_N_1 [get_bd_ports GPIO_SW_N] [get_bd_pins top_wrapper_0/sw_n]
+  connect_bd_net -net GPIO_SW_S_1 [get_bd_ports GPIO_SW_S] [get_bd_pins top_wrapper_0/sw_s]
+  connect_bd_net -net GPIO_SW_W_1 [get_bd_ports GPIO_SW_W] [get_bd_pins top_wrapper_0/sw_w]
   connect_bd_net -net blk_mem_gen_0_douta [get_bd_pins blk_mem_gen_0/douta] [get_bd_pins top_wrapper_0/odata]
   connect_bd_net -net blk_mem_gen_1_douta [get_bd_pins blk_mem_gen_1/douta] [get_bd_pins top_wrapper_0/rdata]
   connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins blk_mem_gen_0/clka] [get_bd_pins blk_mem_gen_1/clka] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins top_wrapper_0/clk]
@@ -271,24 +279,30 @@ CONFIG.PRIM_SOURCE.VALUE_SRC {DEFAULT} \
   regenerate_bd_layout -layout_string {
    guistr: "# # String gsaved with Nlview 6.6.5b  2016-09-06 bk=1.3687 VDI=39 GEI=35 GUI=JA:1.6
 #  -string -flagsOSRD
-preplace port default_sysclk_300 -pg 1 -y 60 -defaultsOSRD
-preplace port GPIO_SW_C -pg 1 -lvl 1:-30 -defaultsOSRD -top
+preplace port GPIO_SW_E -pg 1 -y 50 -defaultsOSRD
+preplace port default_sysclk_300 -pg 1 -y 330 -defaultsOSRD
+preplace port GPIO_SW_S -pg 1 -y 70 -defaultsOSRD
+preplace port GPIO_SW_W -pg 1 -y 90 -defaultsOSRD
+preplace port GPIO_SW_N -pg 1 -y 30 -defaultsOSRD
 preplace portBus GPIO_LED -pg 1 -y 60 -defaultsOSRD
-preplace inst top_wrapper_0 -pg 1 -lvl 2 -y 90 -defaultsOSRD
-preplace inst blk_mem_gen_0 -pg 1 -lvl 3 -y 320 -defaultsOSRD
-preplace inst blk_mem_gen_1 -pg 1 -lvl 3 -y 90 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 70 -defaultsOSRD
-preplace netloc GPIO_SW_C_1 1 1 1 -260
-preplace netloc default_sysclk_300_1 1 0 1 NJ
-preplace netloc blk_mem_gen_1_douta 1 1 2 -260J 180 170J
-preplace netloc top_wrapper_0_wea 1 2 1 160
-preplace netloc top_wrapper_0_o_addr 1 2 1 130
-preplace netloc top_wrapper_0_d_addr 1 2 1 150
-preplace netloc clk_wiz_0_clk_out1 1 1 2 -280 310 150J
-preplace netloc blk_mem_gen_0_douta 1 1 2 -270 350 NJ
-preplace netloc top_wrapper_0_led 1 2 2 120J 190 460
-preplace netloc top_wrapper_0_wdata 1 2 1 140
-levelinfo -pg 1 -500 -380 0 360 480 -top -140 -bot 500
+preplace inst top_wrapper_0 -pg 1 -lvl 3 -y 90 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 4 -y 320 -defaultsOSRD
+preplace inst blk_mem_gen_1 -pg 1 -lvl 4 -y 90 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 2 -y 340 -defaultsOSRD
+preplace netloc default_sysclk_300_1 1 0 2 NJ 330 N
+preplace netloc blk_mem_gen_1_douta 1 2 2 -10J -20 280J
+preplace netloc GPIO_SW_S_1 1 0 3 NJ 70 N 70 N
+preplace netloc top_wrapper_0_wea 1 3 1 270
+preplace netloc top_wrapper_0_o_addr 1 3 1 240
+preplace netloc top_wrapper_0_d_addr 1 3 1 260
+preplace netloc GPIO_SW_E_1 1 0 3 NJ 50 N 50 N
+preplace netloc clk_wiz_0_clk_out1 1 2 2 -20 330 290J
+preplace netloc GPIO_SW_N_1 1 0 3 NJ 30 N 30 N
+preplace netloc blk_mem_gen_0_douta 1 2 2 0 350 NJ
+preplace netloc GPIO_SW_W_1 1 0 3 NJ 90 N 90 N
+preplace netloc top_wrapper_0_led 1 3 2 250J -10 500
+preplace netloc top_wrapper_0_wdata 1 3 1 300
+levelinfo -pg 1 -560 -380 -120 120 400 520 -top -150 -bot 500
 ",
 }
 

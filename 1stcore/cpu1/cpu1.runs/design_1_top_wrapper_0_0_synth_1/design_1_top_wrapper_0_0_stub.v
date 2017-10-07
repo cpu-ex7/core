@@ -1,7 +1,7 @@
 // Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2016.4 (lin64) Build 1756540 Mon Jan 23 19:11:19 MST 2017
-// Date        : Fri Oct  6 20:18:13 2017
+// Date        : Sat Oct  7 19:39:13 2017
 // Host        : ispc2016 running 64-bit Ubuntu 14.04.5 LTS
 // Command     : write_verilog -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_top_wrapper_0_0_stub.v
@@ -14,9 +14,13 @@
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* X_CORE_INFO = "top_wrapper,Vivado 2016.4" *)
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix(sw_c, clk, odata, rdata, wea, d_addr, o_addr, led, wdata)
-/* synthesis syn_black_box black_box_pad_pin="sw_c,clk,odata[31:0],rdata[31:0],wea,d_addr[9:0],o_addr[9:0],led[7:0],wdata[31:0]" */;
-  input sw_c;
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix(sw_n, sw_e, sw_s, sw_w, clk, odata, rdata, wea, d_addr, 
+  o_addr, led, wdata)
+/* synthesis syn_black_box black_box_pad_pin="sw_n,sw_e,sw_s,sw_w,clk,odata[31:0],rdata[31:0],wea,d_addr[9:0],o_addr[9:0],led[7:0],wdata[31:0]" */;
+  input sw_n;
+  input sw_e;
+  input sw_s;
+  input sw_w;
   input clk;
   input [31:0]odata;
   input [31:0]rdata;

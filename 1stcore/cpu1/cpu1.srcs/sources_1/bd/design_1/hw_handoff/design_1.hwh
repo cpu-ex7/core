@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Oct  6 20:32:20 2017" VIVADOVERSION="2016.4">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Oct  7 19:47:33 2017" VIVADOVERSION="2016.4">
 
   <SYSTEMINFO ARCH="kintexu" BOARD="xilinx.com:kcu105:part0:1.1" DEVICE="xcku040" NAME="design_1" PACKAGE="ffva1156" SPEEDGRADE="-2"/>
 
@@ -11,9 +11,24 @@
         <CONNECTION INSTANCE="top_wrapper_0" PORT="led"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="GPIO_SW_C" SIGIS="data" SIGNAME="External_Ports_GPIO_SW_C">
+    <PORT DIR="I" NAME="GPIO_SW_N" SIGIS="data" SIGNAME="External_Ports_GPIO_SW_N">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="top_wrapper_0" PORT="sw_c"/>
+        <CONNECTION INSTANCE="top_wrapper_0" PORT="sw_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="GPIO_SW_E" SIGIS="data" SIGNAME="External_Ports_GPIO_SW_E">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="top_wrapper_0" PORT="sw_e"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="GPIO_SW_S" SIGIS="data" SIGNAME="External_Ports_GPIO_SW_S">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="top_wrapper_0" PORT="sw_s"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="GPIO_SW_W" SIGIS="data" SIGNAME="External_Ports_GPIO_SW_W">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="top_wrapper_0" PORT="sw_w"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -151,7 +166,7 @@
         <PARAMETER NAME="register_portb_output_of_softecc" VALUE="false"/>
         <PARAMETER NAME="Pipeline_Stages" VALUE="0"/>
         <PARAMETER NAME="Load_Init_File" VALUE="true"/>
-        <PARAMETER NAME="Coe_File" VALUE="../../../../../../../example.coe"/>
+        <PARAMETER NAME="Coe_File" VALUE="../../../../../../../fib.coe"/>
         <PARAMETER NAME="Fill_Remaining_Memory_Locations" VALUE="false"/>
         <PARAMETER NAME="Remaining_Memory_Locations" VALUE="0"/>
         <PARAMETER NAME="Use_RSTA_Pin" VALUE="false"/>
@@ -1008,9 +1023,24 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="sw_c" SIGIS="undef" SIGNAME="External_Ports_GPIO_SW_C">
+        <PORT DIR="I" NAME="sw_n" SIGIS="undef" SIGNAME="External_Ports_GPIO_SW_N">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="GPIO_SW_C"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="GPIO_SW_N"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sw_e" SIGIS="undef" SIGNAME="External_Ports_GPIO_SW_E">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="GPIO_SW_E"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sw_s" SIGIS="undef" SIGNAME="External_Ports_GPIO_SW_S">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="GPIO_SW_S"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sw_w" SIGIS="undef" SIGNAME="External_Ports_GPIO_SW_W">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="GPIO_SW_W"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">

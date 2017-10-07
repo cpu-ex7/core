@@ -42,6 +42,7 @@ module top(
 	localparam OP_LW = 6'b100011;
 	localparam OP_SW = 6'b101011;
   localparam OP_SLTI = 6'b001010;
+  localparam OP_LUI = 6'b001111;
   localparam GPR_ZERO = 6'd0;
 /*  localparam gpr_at = 6'd1;
   localparam reg_gp = 6'd28;
@@ -55,7 +56,7 @@ module top(
                (sw_e)? led2[23:16] :
                (sw_s)? led2[15:8] :
                (sw_w)? led2[7:0] : 8'b0;
-  assign led2 = gpr[9];
+  assign led2 = gpr[2];
 
   initial begin
     mode <= 5'b0;
@@ -89,6 +90,14 @@ module top(
           pc <= {6'b0, op[25:0]};
           gpr[GPR_RA] <= pc + 6'd2;
         end
+        else if(op[31:26] == OP_BNE) begin
+          if(gpr[op[25:21]] != gpr[op[20:16]]) begin
+            pc <= pc + $signed({op[15:0],2'b0});
+          end
+          else begin
+            pc <= pc + 1;
+          end
+        end
         else begin
           if(op[31:26] == OP_SPECIAL) begin
             if(op[5:0] == 6'b0) begin
@@ -102,11 +111,6 @@ module top(
             end
             if(op[5:0] == FUNC_OR) begin
               gpr[op[15:11]] <= gpr[op[25:21]] | gpr[op[20:16]];
-            end
-          end
-          else if(op[31:26] == OP_BNE) begin
-            if(gpr[op[25:21]] != gpr[op[20:16]]) begin
-              pc <= pc + $signed({op[15:0],2'b0});
             end
           end
           else if(op[31:26] == OP_ADDI) begin
@@ -129,6 +133,9 @@ module top(
             wdata <= gpr[op[20:16]];
             wea <= 0'b1;
           end
+          else if(op[31:26] == OP_LUI) begin
+            gpr[op[20:16]] <= {op[15:0],16'b0};
+          end
           pc <= pc + 0'b1;
         end
       end
@@ -140,7 +147,7 @@ module top(
         mode <= LOAD2;
       end
       if(mode == LOAD2) begin
-        mode <= LOAD2;
+        mode <= LOAD3;
       end
       if(mode == LOAD3) begin
         gpr[op[20:16]] <= rdata;

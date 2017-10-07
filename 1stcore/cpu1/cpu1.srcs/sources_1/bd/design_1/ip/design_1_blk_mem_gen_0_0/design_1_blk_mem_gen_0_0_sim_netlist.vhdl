@@ -1,10 +1,10 @@
 -- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2016.4 (lin64) Build 1756540 Mon Jan 23 19:11:19 MST 2017
--- Date        : Fri Oct  6 20:34:15 2017
+-- Date        : Sat Oct  7 19:10:23 2017
 -- Host        : ispc2016 running 64-bit Ubuntu 14.04.5 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/tansei/Desktop/cpu/2017/1stcore/cpu1/cpu1.srcs/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_0/design_1_blk_mem_gen_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top design_1_blk_mem_gen_0_0 -prefix
+--               design_1_blk_mem_gen_0_0_ design_1_blk_mem_gen_0_0_sim_netlist.vhdl
 -- Design      : design_1_blk_mem_gen_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -23,8 +23,6 @@ entity design_1_blk_mem_gen_0_0_blk_mem_gen_prim_wrapper_init is
     dina : in STD_LOGIC_VECTOR ( 31 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_blk_mem_gen_0_0_blk_mem_gen_prim_wrapper_init : entity is "blk_mem_gen_prim_wrapper_init";
 end design_1_blk_mem_gen_0_0_blk_mem_gen_prim_wrapper_init;
 
 architecture STRUCTURE of design_1_blk_mem_gen_0_0_blk_mem_gen_prim_wrapper_init is
@@ -75,14 +73,14 @@ begin
       INITP_0D => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_0E => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_0F => X"0000000000000000000000000000000000000000000000000000000000000000",
-      INIT_00 => X"012010200810000A2084FFFF012448201500000428880001000048202004000A",
-      INIT_01 => X"0000000000000000000000000000000000000000000000000000000000000000",
-      INIT_02 => X"0000000000000000000000000000000000000000000000000000000000000000",
-      INIT_03 => X"0000000000000000000000000000000000000000000000000000000000000000",
-      INIT_04 => X"0000000000000000000000000000000000000000000000000000000000000000",
-      INIT_05 => X"0000000000000000000000000000000000000000000000000000000000000000",
-      INIT_06 => X"0000000000000000000000000000000000000000000000000000000000000000",
-      INIT_07 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_00 => X"AD6A000801095020AD69000420090001AD68000020080000216B00003C0B0000",
+      INIT_01 => X"AD6A0010010950208D69000C8D680008AD6A000C010950208D6900088D680004",
+      INIT_02 => X"AD6A0018010950208D6900148D680010AD6A0014010950208D6900108D68000C",
+      INIT_03 => X"AD6A0020010950208D69001C8D680018AD6A001C010950208D6900188D680014",
+      INIT_04 => X"AD6A0028010950208D6900248D680020AD6A0024010950208D6900208D68001C",
+      INIT_05 => X"AD6A0030010950208D69002C8D680028AD6A002C010950208D6900288D680024",
+      INIT_06 => X"AD6A0038010950208D6900348D680030AD6A0034010950208D6900308D68002C",
+      INIT_07 => X"000A1020010950208D69003C8D680038AD6A003C010950208D6900388D680034",
       INIT_08 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INIT_09 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INIT_0A => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -306,8 +304,6 @@ entity design_1_blk_mem_gen_0_0_blk_mem_gen_prim_width is
     dina : in STD_LOGIC_VECTOR ( 31 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_blk_mem_gen_0_0_blk_mem_gen_prim_width : entity is "blk_mem_gen_prim_width";
 end design_1_blk_mem_gen_0_0_blk_mem_gen_prim_width;
 
 architecture STRUCTURE of design_1_blk_mem_gen_0_0_blk_mem_gen_prim_width is
@@ -335,8 +331,6 @@ entity design_1_blk_mem_gen_0_0_blk_mem_gen_generic_cstr is
     dina : in STD_LOGIC_VECTOR ( 31 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_blk_mem_gen_0_0_blk_mem_gen_generic_cstr : entity is "blk_mem_gen_generic_cstr";
 end design_1_blk_mem_gen_0_0_blk_mem_gen_generic_cstr;
 
 architecture STRUCTURE of design_1_blk_mem_gen_0_0_blk_mem_gen_generic_cstr is
@@ -364,8 +358,6 @@ entity design_1_blk_mem_gen_0_0_blk_mem_gen_top is
     dina : in STD_LOGIC_VECTOR ( 31 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_blk_mem_gen_0_0_blk_mem_gen_top : entity is "blk_mem_gen_top";
 end design_1_blk_mem_gen_0_0_blk_mem_gen_top;
 
 architecture STRUCTURE of design_1_blk_mem_gen_0_0_blk_mem_gen_top is
@@ -393,8 +385,6 @@ entity design_1_blk_mem_gen_0_0_blk_mem_gen_v8_3_5_synth is
     dina : in STD_LOGIC_VECTOR ( 31 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_blk_mem_gen_0_0_blk_mem_gen_v8_3_5_synth : entity is "blk_mem_gen_v8_3_5_synth";
 end design_1_blk_mem_gen_0_0_blk_mem_gen_v8_3_5_synth;
 
 architecture STRUCTURE of design_1_blk_mem_gen_0_0_blk_mem_gen_v8_3_5_synth is
@@ -625,8 +615,6 @@ entity design_1_blk_mem_gen_0_0_blk_mem_gen_v8_3_5 is
   attribute C_WRITE_WIDTH_B of design_1_blk_mem_gen_0_0_blk_mem_gen_v8_3_5 : entity is 32;
   attribute C_XDEVICEFAMILY : string;
   attribute C_XDEVICEFAMILY of design_1_blk_mem_gen_0_0_blk_mem_gen_v8_3_5 : entity is "kintexu";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_blk_mem_gen_0_0_blk_mem_gen_v8_3_5 : entity is "blk_mem_gen_v8_3_5";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of design_1_blk_mem_gen_0_0_blk_mem_gen_v8_3_5 : entity is "yes";
 end design_1_blk_mem_gen_0_0_blk_mem_gen_v8_3_5;

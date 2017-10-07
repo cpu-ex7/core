@@ -54,7 +54,10 @@
 (* CHECK_LICENSE_TYPE = "design_1_top_wrapper_0_0,top_wrapper,{}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_top_wrapper_0_0 (
-  sw_c,
+  sw_n,
+  sw_e,
+  sw_s,
+  sw_w,
   clk,
   odata,
   rdata,
@@ -65,7 +68,10 @@ module design_1_top_wrapper_0_0 (
   wdata
 );
 
-input wire sw_c;
+input wire sw_n;
+input wire sw_e;
+input wire sw_s;
+input wire sw_w;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
 input wire [31 : 0] odata;
@@ -77,7 +83,10 @@ output wire [7 : 0] led;
 output wire [31 : 0] wdata;
 
   top_wrapper inst (
-    .sw_c(sw_c),
+    .sw_n(sw_n),
+    .sw_e(sw_e),
+    .sw_s(sw_s),
+    .sw_w(sw_w),
     .clk(clk),
     .odata(odata),
     .rdata(rdata),
