@@ -1,5 +1,8 @@
 module top_wrapper(
-  input wire sw_c,
+  input wire sw_n,
+  input wire sw_e,
+  input wire sw_s,
+  input wire sw_w,
   input wire clk,
   input wire [31:0] odata,
   input wire [31:0] rdata,
@@ -14,6 +17,6 @@ module top_wrapper(
 
   wire [31:0] d_addr2;
 
-  top t1 (sw_c,clk,odata,rdata,wea,d_addr2,o_addr,led,wdata);
+  top t1 (sw_n,sw_e,sw_s,sw_w,clk,odata,rdata,wea,d_addr2,o_addr,led,wdata);
 
 endmodule

@@ -1,5 +1,8 @@
 module top(
-  input logic sw_c,
+  input logic sw_n,
+  input logic sw_e,
+  input logic sw_s,
+  input logic sw_w,
   input logic clk,
   input logic [31:0] odata,
   input logic [31:0] rdata,
@@ -14,8 +17,6 @@ module top(
   logic [31:0] op;
   logic [31:0] [31:0] gpr;
   logic [31:0] pc;
-  logic [31:0] hi;
-  logic [31:0] lo;
   logic [31:0] led2;
   logic [9:0] clk2;
   logic clk3;
@@ -48,9 +49,12 @@ module top(
   localparam reg_fp = 6'd30;*/
   localparam GPR_RA = 6'd31;
 
-  assign gpr[GPR_ZERO] = 6'b0;
+  assign gpr[GPR_ZERO] = 32'b0;
   assign o_addr = pc[9:0];
-  assign led = (sw_c)? led2[7:0] : 8'b0;
+  assign led = (sw_n)? led2[31:24] :
+               (sw_e)? led2[23:16] :
+               (sw_s)? led2[15:8] :
+               (sw_w)? led2[7:0] : 8'b0;
   assign led2 = gpr[9];
 
   initial begin
