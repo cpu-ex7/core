@@ -1,0 +1,25 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tansei/Desktop/cpu/2017/1stcore/cpu1/cpu1.sim/sim_1/impl/timing/design_1_wrapper_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IBUF_UNIQ_BASE_
+INFO: [VRFC 10-311] analyzing module IBUFDS_UNIQ_BASE_
+INFO: [VRFC 10-311] analyzing module IBUF_HD1
+INFO: [VRFC 10-311] analyzing module IBUF_HD2
+INFO: [VRFC 10-311] analyzing module IBUF_HD3
+INFO: [VRFC 10-311] analyzing module design_1
+INFO: [VRFC 10-311] analyzing module design_1_blk_mem_gen_0_0
+INFO: [VRFC 10-311] analyzing module design_1_clk_wiz_0_0
+INFO: [VRFC 10-311] analyzing module design_1_clk_wiz_0_0_design_1_clk_wiz_0_0_clk_wiz
+INFO: [VRFC 10-311] analyzing module design_1_top_wrapper_0_0
+INFO: [VRFC 10-311] analyzing module design_1_top_wrapper_0_0_exec
+INFO: [VRFC 10-311] analyzing module design_1_top_wrapper_0_0_fetch
+INFO: [VRFC 10-311] analyzing module design_1_top_wrapper_0_0_mem_load
+INFO: [VRFC 10-311] analyzing module design_1_top_wrapper_0_0_reg_write
+INFO: [VRFC 10-311] analyzing module design_1_top_wrapper_0_0_top
+INFO: [VRFC 10-311] analyzing module design_1_top_wrapper_0_0_top_wrapper
+INFO: [VRFC 10-311] analyzing module design_1_wrapper
+INFO: [VRFC 10-311] analyzing module design_1_blk_mem_gen_0_0blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module design_1_blk_mem_gen_0_0blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module design_1_blk_mem_gen_0_0blk_mem_gen_prim_wrapper_init
+INFO: [VRFC 10-311] analyzing module design_1_blk_mem_gen_0_0blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module design_1_blk_mem_gen_0_0blk_mem_gen_v8_3_5
+INFO: [VRFC 10-311] analyzing module design_1_blk_mem_gen_0_0blk_mem_gen_v8_3_5_synth
+INFO: [VRFC 10-311] analyzing module glbl

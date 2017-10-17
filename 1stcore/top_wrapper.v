@@ -1,8 +1,4 @@
 module top_wrapper(
-  input wire sw_n,
-  input wire sw_e,
-  input wire sw_s,
-  input wire sw_w,
   input wire clk,
   input wire [31:0] odata,
   input wire [31:0] rdata,
@@ -14,6 +10,15 @@ module top_wrapper(
   );
 
   assign d_addr = d_addr2[9:0];
+  wire sw_n;
+  wire sw_e;
+  wire sw_s;
+  wire sw_w;
+  
+  assign sw_n = 0;
+  assign sw_e = 0;
+  assign sw_s = 0;
+  assign sw_w = 0;
 
   wire [31:0] d_addr2;
 

@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.4 (lin64) Build 1756540 Mon Jan 23 19:11:19 MST 2017
-| Date         : Sat Oct  7 19:53:06 2017
+| Date         : Mon Oct 16 13:14:25 2017
 | Host         : ispc2016 running 64-bit Ubuntu 14.04.5 LTS
 | Command      : report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
 | Design       : design_1_wrapper
@@ -24,12 +24,11 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 2
+             Violations found: 1
 +----------+----------+-----------------------------------------------------+------------+
 | Rule     | Severity | Description                                         | Violations |
 +----------+----------+-----------------------------------------------------+------------+
 | CFGBVS-1 | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
-| CKLD-1   | Warning  | Clock Net has non-BUF driver and too many loads     | 1          |
 +----------+----------+-----------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -45,11 +44,6 @@ Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_des
  #where value2 is the voltage provided to configuration bank 0
 
 Refer to the device configuration user guide for more information.
-Related violations: <none>
-
-CKLD-1#1 Warning
-Clock Net has non-BUF driver and too many loads  
-Clock net design_1_i/top_wrapper_0/inst/t1/clk3 is not driven by a Clock Buffer and has more than 512 loads. Driver(s): design_1_i/top_wrapper_0/inst/t1/clk3_reg/Q
 Related violations: <none>
 
 
