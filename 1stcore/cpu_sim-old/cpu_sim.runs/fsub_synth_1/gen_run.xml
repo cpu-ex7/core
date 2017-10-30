@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="fsub_synth_1" LaunchPart="xcku040-ffva1156-2-e" LaunchTime="1509078276">
+  <File Type="RDS-DCP" Name="fsub.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="fsub_utilization_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="fsub_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="fsub_timing_summary_synth.pb"/>
+  <File Type="RDS-RDS" Name="fsub.vds"/>
+  <File Type="PA-TCL" Name="fsub.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="fsub_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="fsub_utilization_synth.rpt"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/fsub">
+    <File Path="$PSRCDIR/sources_1/ip/fsub_2/fsub.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="fsub"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/fsub">
+    <File Path="$PSRCDIR/sources_1/ip/fsub_2/fsub.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="fsub"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

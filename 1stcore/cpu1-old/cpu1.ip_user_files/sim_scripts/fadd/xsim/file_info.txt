@@ -1,0 +1,1 @@
+fadd.vhd,vhdl,xil_defaultlib,../../../../cpu1.srcs/sources_1/ip/fadd/sim/fadd.vhd,

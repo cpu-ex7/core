@@ -1,0 +1,61 @@
+
+*** Running vivado
+    with args -log fadd.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source fadd.tcl
+
+
+****** Vivado v2016.4 (64-bit)
+  **** SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+  **** IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source fadd.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1171.359 ; gain = 235.980 ; free physical = 9028 ; free virtual = 29265
+INFO: [Synth 8-638] synthesizing module 'fadd' [/home/tansei/Desktop/cpu/2017/1stcore/cpu1/cpu1.srcs/sources_1/ip/fadd/synth/fadd.vhd:73]
+INFO: [Synth 8-256] done synthesizing module 'fadd' (19#1) [/home/tansei/Desktop/cpu/2017/1stcore/cpu1/cpu1.srcs/sources_1/ip/fadd/synth/fadd.vhd:73]
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1253.832 ; gain = 318.453 ; free physical = 8944 ; free virtual = 29181
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1253.832 ; gain = 318.453 ; free physical = 8944 ; free virtual = 29180
+INFO: [Device 21-403] Loading part xcku040-ffva1156-2-e
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1630.461 ; gain = 0.004 ; free physical = 8646 ; free virtual = 28882
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1630.461 ; gain = 695.082 ; free physical = 8648 ; free virtual = 28882
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1630.461 ; gain = 695.082 ; free physical = 8648 ; free virtual = 28882
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1630.461 ; gain = 695.082 ; free physical = 8648 ; free virtual = 28882
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1630.461 ; gain = 695.082 ; free physical = 8633 ; free virtual = 28867
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1646.465 ; gain = 711.086 ; free physical = 8586 ; free virtual = 28828
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1851.664 ; gain = 916.285 ; free physical = 8167 ; free virtual = 28409
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/opt/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_VCOMP.vhd:15892]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/opt/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_VCOMP.vhd:15892]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/opt/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_VCOMP.vhd:15892]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/opt/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_VCOMP.vhd:15892]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/opt/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_VCOMP.vhd:15892]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/opt/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_VCOMP.vhd:15892]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/opt/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_VCOMP.vhd:15892]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/opt/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_VCOMP.vhd:15892]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/opt/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_VCOMP.vhd:15892]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/opt/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_VCOMP.vhd:15892]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/opt/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_VCOMP.vhd:15892]
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1862.676 ; gain = 927.297 ; free physical = 8150 ; free virtual = 28392
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1873.699 ; gain = 938.320 ; free physical = 8131 ; free virtual = 28373
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1873.703 ; gain = 938.324 ; free physical = 8117 ; free virtual = 28359
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1873.703 ; gain = 938.324 ; free physical = 8117 ; free virtual = 28359
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1873.703 ; gain = 938.324 ; free physical = 8117 ; free virtual = 28359
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1873.703 ; gain = 938.324 ; free physical = 8117 ; free virtual = 28359
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1873.703 ; gain = 938.324 ; free physical = 8117 ; free virtual = 28359
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1873.703 ; gain = 938.324 ; free physical = 8117 ; free virtual = 28359
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |DSP48E1 |     2|
+|2     |LUT1    |     2|
+|3     |LUT2    |    25|
+|4     |LUT3    |    64|
+|5     |LUT4    |    46|
+|6     |LUT5    |    61|
+|7     |LUT6    |    83|
+|8     |MUXCY   |    58|
+|9     |XORCY   |    17|
+|10    |FDRE    |    69|
++------+--------+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1873.703 ; gain = 938.324 ; free physical = 8117 ; free virtual = 28359
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1898.703 ; gain = 846.812 ; free physical = 8060 ; free virtual = 28302

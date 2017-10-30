@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Fri Oct 27 13:24:36 2017
+# Process ID: 6513
+# Current directory: /home/tansei/Desktop/cpu/2017/1stcore/cpu_sim/cpu_sim.runs/fsub_synth_1
+# Command line: vivado -log fsub.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fsub.tcl
+# Log file: /home/tansei/Desktop/cpu/2017/1stcore/cpu_sim/cpu_sim.runs/fsub_synth_1/fsub.vds
+# Journal file: /home/tansei/Desktop/cpu/2017/1stcore/cpu_sim/cpu_sim.runs/fsub_synth_1/vivado.jou
+#-----------------------------------------------------------
+source fsub.tcl -notrace

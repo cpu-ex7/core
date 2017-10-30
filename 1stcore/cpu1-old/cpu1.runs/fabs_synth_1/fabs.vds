@@ -1,0 +1,38 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Fri Oct 27 15:09:39 2017
+# Process ID: 17511
+# Current directory: /home/tansei/Desktop/cpu/2017/1stcore/cpu1/cpu1.runs/fabs_synth_1
+# Command line: vivado -log fabs.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fabs.tcl
+# Log file: /home/tansei/Desktop/cpu/2017/1stcore/cpu1/cpu1.runs/fabs_synth_1/fabs.vds
+# Journal file: /home/tansei/Desktop/cpu/2017/1stcore/cpu1/cpu1.runs/fabs_synth_1/vivado.jou
+#-----------------------------------------------------------
+source fabs.tcl -notrace
+Starting Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1171.352 ; gain = 235.980 ; free physical = 8109 ; free virtual = 28392
+INFO: [Synth 8-638] synthesizing module 'fabs' [/home/tansei/Desktop/cpu/2017/1stcore/cpu1/cpu1.srcs/sources_1/ip/fabs/synth/fabs.vhd:69]
+INFO: [Synth 8-256] done synthesizing module 'fabs' (6#1) [/home/tansei/Desktop/cpu/2017/1stcore/cpu1/cpu1.srcs/sources_1/ip/fabs/synth/fabs.vhd:69]
+Finished Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1248.824 ; gain = 313.453 ; free physical = 7950 ; free virtual = 28230
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1248.824 ; gain = 313.453 ; free physical = 7950 ; free virtual = 28230
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1256.824 ; gain = 321.453 ; free physical = 7950 ; free virtual = 28230
+INFO: [Device 21-403] Loading part xcku040-ffva1156-2-e
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1264.832 ; gain = 329.461 ; free physical = 7943 ; free virtual = 28222
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1502.980 ; gain = 567.609 ; free physical = 7592 ; free virtual = 27872
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1502.980 ; gain = 567.609 ; free physical = 7594 ; free virtual = 27873
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1510.984 ; gain = 575.613 ; free physical = 7586 ; free virtual = 27865
+Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1510.988 ; gain = 575.617 ; free physical = 7586 ; free virtual = 27866
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1510.988 ; gain = 575.617 ; free physical = 7586 ; free virtual = 27866
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1510.988 ; gain = 575.617 ; free physical = 7586 ; free virtual = 27866
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1510.988 ; gain = 575.617 ; free physical = 7586 ; free virtual = 27866
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1510.988 ; gain = 575.617 ; free physical = 7586 ; free virtual = 27866
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1510.988 ; gain = 575.617 ; free physical = 7586 ; free virtual = 27866
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1510.988 ; gain = 575.617 ; free physical = 7586 ; free virtual = 27866
+synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1564.535 ; gain = 512.652 ; free physical = 7511 ; free virtual = 27790
+write_checkpoint: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1777.047 ; gain = 212.512 ; free physical = 8356 ; free virtual = 28633

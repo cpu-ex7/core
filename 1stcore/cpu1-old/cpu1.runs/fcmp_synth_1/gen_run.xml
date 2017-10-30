@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="fcmp_synth_1" LaunchPart="xcku040-ffva1156-2-e" LaunchTime="1509331442">
+  <File Type="VDS-TIMING-PB" Name="fcmp_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="fcmp_timing_summary_synth.rpt"/>
+  <File Type="RDS-RDS" Name="fcmp.vds"/>
+  <File Type="PA-TCL" Name="fcmp.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="fcmp_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="fcmp_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="fcmp_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="fcmp.dcp"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/fcmp">
+    <File Path="$PSRCDIR/sources_1/ip/fcmp_1/fcmp.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="fcmp"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/fcmp">
+    <File Path="$PSRCDIR/sources_1/ip/fcmp_1/fcmp.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="fcmp"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

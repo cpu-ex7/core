@@ -1,0 +1,53 @@
+
+*** Running vivado
+    with args -log fadd.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source fadd.tcl
+
+
+****** Vivado v2016.4 (64-bit)
+  **** SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+  **** IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source fadd.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1171.363 ; gain = 235.980 ; free physical = 6994 ; free virtual = 27119
+INFO: [Synth 8-638] synthesizing module 'fadd' [/home/tansei/Desktop/cpu/2017/1stcore/cpu_sim/cpu_sim.srcs/sources_1/ip/fadd/synth/fadd.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'fadd' (19#1) [/home/tansei/Desktop/cpu/2017/1stcore/cpu_sim/cpu_sim.srcs/sources_1/ip/fadd/synth/fadd.vhd:74]
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1255.836 ; gain = 320.453 ; free physical = 6912 ; free virtual = 27034
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1255.836 ; gain = 320.453 ; free physical = 6912 ; free virtual = 27034
+INFO: [Device 21-403] Loading part xcku040-ffva1156-2-e
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1631.082 ; gain = 0.004 ; free physical = 6594 ; free virtual = 26731
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1631.082 ; gain = 695.699 ; free physical = 6593 ; free virtual = 26731
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1631.082 ; gain = 695.699 ; free physical = 6593 ; free virtual = 26731
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1631.082 ; gain = 695.699 ; free physical = 6593 ; free virtual = 26731
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1631.082 ; gain = 695.699 ; free physical = 6583 ; free virtual = 26720
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1631.086 ; gain = 695.703 ; free physical = 6560 ; free virtual = 26697
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1847.273 ; gain = 911.891 ; free physical = 6349 ; free virtual = 26475
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1861.289 ; gain = 925.906 ; free physical = 6336 ; free virtual = 26462
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1871.305 ; gain = 935.922 ; free physical = 6325 ; free virtual = 26451
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1871.309 ; gain = 935.926 ; free physical = 6325 ; free virtual = 26451
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1871.309 ; gain = 935.926 ; free physical = 6325 ; free virtual = 26451
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1871.309 ; gain = 935.926 ; free physical = 6325 ; free virtual = 26451
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1871.309 ; gain = 935.926 ; free physical = 6325 ; free virtual = 26451
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1871.309 ; gain = 935.926 ; free physical = 6325 ; free virtual = 26451
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1871.309 ; gain = 935.926 ; free physical = 6325 ; free virtual = 26451
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY8  |     2|
+|2     |DSP48E1 |     2|
+|3     |LUT1    |     4|
+|4     |LUT2    |    22|
+|5     |LUT3    |   145|
+|6     |LUT4    |    53|
+|7     |LUT5    |    53|
+|8     |LUT6    |    42|
+|9     |MUXCY   |    58|
+|10    |SRL16E  |    13|
+|11    |XORCY   |    17|
+|12    |FDE     |    12|
+|13    |FDRE    |   438|
++------+--------+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1871.309 ; gain = 935.926 ; free physical = 6325 ; free virtual = 26451
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1898.305 ; gain = 848.410 ; free physical = 6270 ; free virtual = 26394

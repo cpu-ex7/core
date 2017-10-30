@@ -1,0 +1,26 @@
+{
+   guistr: "# # String gsaved with Nlview 6.6.5b  2016-09-06 bk=1.3687 VDI=39 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port GPIO_SW_E -pg 1 -y 50 -defaultsOSRD
+preplace port default_sysclk_300 -pg 1 -y -120 -defaultsOSRD
+preplace port GPIO_SW_S -pg 1 -y 70 -defaultsOSRD
+preplace port GPIO_SW_W -pg 1 -y 90 -defaultsOSRD
+preplace port GPIO_SW_N -pg 1 -y 30 -defaultsOSRD
+preplace port reset -pg 1 -y -100 -defaultsOSRD
+preplace portBus GPIO_LED -pg 1 -y 60 -defaultsOSRD
+preplace inst top_wrapper_0 -pg 1 -lvl 1 -y 20 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -y -110 -defaultsOSRD
+preplace netloc default_sysclk_300_1 1 0 1 NJ
+preplace netloc GPIO_SW_S_1 1 0 1 30J
+preplace netloc GPIO_SW_E_1 1 0 1 20J
+preplace netloc clk_wiz_0_clk_out1 1 0 2 10 -170 240
+preplace netloc GPIO_SW_N_1 1 0 1 10J
+preplace netloc top_wrapper_0_led 1 1 1 240
+preplace netloc GPIO_SW_W_1 1 0 1 40J
+preplace netloc reset_1 1 0 1 N
+levelinfo -pg 1 -10 140 280 -top -180 -bot 810
+",
+}
+{
+   da_board_cnt: "1",
+}

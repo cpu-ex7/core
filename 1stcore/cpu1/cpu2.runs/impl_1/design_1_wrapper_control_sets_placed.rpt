@@ -1,0 +1,187 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (lin64) Build 1756540 Mon Jan 23 19:11:19 MST 2017
+| Date         : Mon Oct 30 19:05:32 2017
+| Host         : ispc2016 running 64-bit Ubuntu 14.04.5 LTS
+| Command      : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
+| Design       : design_1_wrapper
+| Device       : xcku040
+---------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |   117 |
+| Unused register locations in slices containing registers |    55 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             951 |          204 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             173 |           32 |
+| Yes          | No                    | No                     |            2861 |          978 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              56 |           20 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++-------------------------------------+-----------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+------------------+----------------+
+|             Clock Signal            |                                      Enable Signal                                      |                                     Set/Reset Signal                                     | Slice Load Count | Bel Load Count |
++-------------------------------------+-----------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+------------------+----------------+
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/f1/pc_mode_reg[1][0]                                   | design_1_i/top_wrapper_0/inst/t1/f1/fetch_finish                                         |                1 |              2 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/fpu_wrapper_0/inst/f1/fmul_in_valid_b_i_1_n_0                                |                                                                                          |                0 |              2 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/gpr_write/mode[1]_i_1_n_0                           |                                                                                          |                1 |              2 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/t1/nbite                                               | design_1_i/top_wrapper_0/inst/t1/t1/nbite[1]_i_1_n_0                                     |                1 |              2 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 |                                                                                         | design_1_i/top_wrapper_0/inst/t1/d1/mem_ls/wea_reg_0                                     |                0 |              2 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/start_finish                                           |                                                                                          |                0 |              2 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/f1/fpu_data_c_reg[5][0]                                |                                                                                          |                1 |              3 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/floating_point_6/U0/i_synth/need_combiner.use_3to1.skid_buffer_combiner/c_tx |                                                                                          |                0 |              3 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/t1/status[3]_i_1_n_0                                   |                                                                                          |                1 |              4 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/f1/alu_pattern_reg[3][0]                               |                                                                                          |                1 |              4 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 |                                                                                         | design_1_i/top_wrapper_0/inst/t1/f1/fetch_finish                                         |                2 |              5 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/f1/gpraddr_reg[4][0]                                   |                                                                                          |                1 |              5 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/f1/alu_data_a_reg[31]_0                                | design_1_i/top_wrapper_0/inst/t1/f1/alu_data_a_reg[15]_0                                 |                4 |              6 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 |                                                                                         | design_1_i/floating_point_3/U0/i_synth/DIV_OP.SPD.OP/EXP/state_op__0[0]                  |                1 |              7 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 |                                                                                         | design_1_i/floating_point_4/U0/i_synth/SQRT_OP.SPD.OP/i_mant_calc.EXP/state_op[0]        |                0 |              8 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/fpu_wrapper_0/inst/f1/p_0_in1_in                                             | design_1_i/fpu_wrapper_0/inst/f1/fpu_in_buffer[9]_i_1_n_0                                |                0 |              9 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/f1/fpu_in_valid_reg[9][0]                              | design_1_i/top_wrapper_0/inst/t1/f1/fetch_finish                                         |                2 |             10 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/pc/pc__0                                            |                                                                                          |                1 |             10 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d_addr[9]_i_1_n_0                                      |                                                                                          |                4 |             10 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/f1/pc_data_reg[9][0]                                   |                                                                                          |                2 |             10 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/count[9]_i_1_n_0                                       | design_1_i/top_wrapper_0/inst/t1/start_finish                                            |                3 |             10 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/f1/alu_data_b_reg[14]                                  |                                                                                          |                4 |             15 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/f1/alu_data_b_reg[14]                                  | design_1_i/top_wrapper_0/inst/t1/f1/alu_data_b_reg[31]                                   |                9 |             17 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 |                                                                                         | design_1_i/floating_point_8/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/LZE/ZERO_DET_CC_1/SR[0]      |                4 |             22 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 |                                                                                         | design_1_i/floating_point_3/U0/i_synth/DIV_OP.SPD.OP/EXP/SR[0]                           |                2 |             22 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 |                                                                                         | design_1_i/floating_point_2/U0/i_synth/MULT.OP/EXP/SIG_DELAY/i_pipe/SR[0]                |                4 |             22 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 |                                                                                         | design_1_i/floating_point_4/U0/i_synth/SQRT_OP.SPD.OP/i_mant_calc.EXP/state_op[1]        |                3 |             22 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/f1/alu_data_a_reg[31]_0                                |                                                                                          |                7 |             26 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/f1/fpraddr_reg[4]                                      |                                                                                          |                6 |             28 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 |                                                                                         | design_1_i/floating_point_7/U0/i_synth/need_combiner.use_2to1.skid_buffer_combiner/SR[0] |               12 |             31 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/mem_ls/fpr_reg[19][0][0]                            |                                                                                          |               20 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/mem_ls/fpr_reg[1][0][0]                             |                                                                                          |               13 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/mem_ls/fpr_reg[20][0][0]                            |                                                                                          |               18 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/mem_ls/fpr_reg[30][0][0]                            |                                                                                          |                7 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/mem_ls/fpr_reg[18][0][0]                            |                                                                                          |               19 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/mem_ls/fpr_reg[17][0][0]                            |                                                                                          |               24 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/mem_ls/fpr_reg[29][0][0]                            |                                                                                          |                7 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/mem_ls/fpr_reg[2][0][0]                             |                                                                                          |               12 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/mem_ls/fpr_reg[14][31]_0[0]                         |                                                                                          |               27 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/mem_ls/fpr_reg[21][0][0]                            |                                                                                          |               15 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/mem_ls/fpr_reg[22][0][0]                            |                                                                                          |               11 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/mem_ls/fpr_reg[23][0][0]                            |                                                                                          |               15 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/mem_ls/fpr_reg[10][31]_0[0]                         |                                                                                          |               26 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/mem_ls/fpr_reg[11][31]_0[0]                         |                                                                                          |               28 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/mem_ls/fpr_reg[12][0][0]                            |                                                                                          |               24 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/mem_ls/fpr_reg[13][31]_0[0]                         |                                                                                          |               23 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/gpr_write/gpr[7][31]_i_1_n_0                        |                                                                                          |                6 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/mem_ls/fpr_reg[5][0][0]                             |                                                                                          |                9 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/t1/txbuf_0                                             |                                                                                          |                1 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/f1/fpu_data_a_reg[0][0]                                |                                                                                          |                1 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/f1/fpu_data_b_reg[31][0]                               |                                                                                          |                4 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/f1/gpr_out_reg[31][0]                                  |                                                                                          |                0 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/f1/wdata_reg[0][0]                                     |                                                                                          |                3 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/mem_ls/fpr_reg[9][31]_0[0]                          |                                                                                          |                2 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/mem_ls/fpr_reg[3][31]_0[0]                          |                                                                                          |               10 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/mem_ls/fpr_reg[4][0][0]                             |                                                                                          |                6 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/mem_ls/fpr_reg[28][31]_0[0]                         |                                                                                          |               12 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/mem_ls/fpr_reg[6][0][0]                             |                                                                                          |                5 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/mem_ls/fpr_reg[7][0][0]                             |                                                                                          |                4 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/mem_ls/fpr_reg[8][0][0]                             |                                                                                          |                7 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/mem_ls/fpr_reg[24][31][0]                           |                                                                                          |               21 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/mem_ls/fpr_reg[25][0][0]                            |                                                                                          |               21 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/mem_ls/fpr_reg[26][0][0]                            |                                                                                          |               10 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/mem_ls/fpr_reg[27][31]_0[0]                         |                                                                                          |               16 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/floating_point_0/U0/i_synth/need_combiner.use_2to1.skid_buffer_combiner/b_tx |                                                                                          |                1 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/mem_ls/fpr_reg[15][31]_0[0]                         |                                                                                          |               25 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/gpr_write/gpr[23][31]_i_1_n_0                       |                                                                                          |                6 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/gpr_write/gpr[0][31]_i_1_n_0                        |                                                                                          |               22 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/gpr_write/gpr[10][31]_i_1_n_0                       |                                                                                          |               21 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/gpr_write/gpr[11][31]_i_1_n_0                       |                                                                                          |               18 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/gpr_write/gpr[12][31]_i_1_n_0                       |                                                                                          |               16 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/gpr_write/gpr[13][31]_i_1_n_0                       |                                                                                          |               13 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/gpr_write/gpr[14][31]_i_1_n_0                       |                                                                                          |               11 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/gpr_write/gpr[15][31]_i_1_n_0                       |                                                                                          |                9 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/gpr_write/gpr[16][31]_i_1_n_0                       |                                                                                          |               18 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/floating_point_7/U0/i_synth/need_combiner.use_2to1.skid_buffer_combiner/a_tx |                                                                                          |                6 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/floating_point_0/U0/i_synth/need_combiner.use_2to1.skid_buffer_combiner/a_tx |                                                                                          |                1 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/gpr_write/gpr[22][31]_i_1_n_0                       |                                                                                          |                6 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/floating_point_8/U0/i_synth/need_combiner.use_2to1.skid_buffer_combiner/a_tx |                                                                                          |                1 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/floating_point_4/U0/i_synth/need_combiner.use_2to1.skid_buffer_combiner/a_tx |                                                                                          |                0 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/floating_point_6/U0/i_synth/need_combiner.use_3to1.skid_buffer_combiner/b_tx |                                                                                          |                6 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/fpu_wrapper_0/inst/f1/fpu_out[31]_i_1_n_0                                    |                                                                                          |                7 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/floating_point_6/U0/i_synth/need_combiner.use_3to1.skid_buffer_combiner/a_tx |                                                                                          |                6 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/floating_point_3/U0/i_synth/need_combiner.use_2to1.skid_buffer_combiner/b_tx |                                                                                          |                1 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/floating_point_3/U0/i_synth/need_combiner.use_2to1.skid_buffer_combiner/a_tx |                                                                                          |                5 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/floating_point_1/U0/i_synth/need_combiner.use_2to1.skid_buffer_combiner/a_tx |                                                                                          |                2 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/floating_point_1/U0/i_synth/need_combiner.use_2to1.skid_buffer_combiner/b_tx |                                                                                          |                1 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/floating_point_2/U0/i_synth/need_combiner.use_2to1.skid_buffer_combiner/b_tx |                                                                                          |                3 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/floating_point_2/U0/i_synth/need_combiner.use_2to1.skid_buffer_combiner/a_tx |                                                                                          |                4 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 |                                                                                         | design_1_i/top_wrapper_0/inst/t1/t1/counter[0]_i_1_n_0                                   |                4 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/gpr_write/gpr[24][31]_i_1_n_0                       |                                                                                          |               18 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/mem_ls/fpr_reg[16][0][0]                            |                                                                                          |               20 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/mem_ls/E[0]                                         |                                                                                          |                9 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/mem_ls/fpr_reg[0][31][0]                            |                                                                                          |               25 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/gpr_write/gpr[5][31]_i_1_n_0                        |                                                                                          |               12 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/gpr_write/gpr[6][31]_i_1_n_0                        |                                                                                          |                3 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/gpr_write/gpr[8][31]_i_1_n_0                        |                                                                                          |                7 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/gpr_write/gpr[9][31]_i_1_n_0                        |                                                                                          |                3 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/gpr_write/gpr[30][31]_i_1_n_0                       |                                                                                          |                7 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/gpr_write/gpr[31][31]_i_1_n_0                       |                                                                                          |                1 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/gpr_write/gpr[3][31]_i_1_n_0                        |                                                                                          |               17 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/gpr_write/gpr[4][31]_i_1_n_0                        |                                                                                          |               11 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/gpr_write/gpr[21][31]_i_1_n_0                       |                                                                                          |               11 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/gpr_write/gpr[25][31]_i_1_n_0                       |                                                                                          |               13 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/gpr_write/gpr[26][31]_i_1_n_0                       |                                                                                          |               14 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/gpr_write/gpr[27][31]_i_1_n_0                       |                                                                                          |               12 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/gpr_write/gpr[28][31]_i_1_n_0                       |                                                                                          |               15 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/gpr_write/gpr[29][31]_i_1_n_0                       |                                                                                          |               10 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/gpr_write/gpr[2][31]_i_1_n_0                        |                                                                                          |               11 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/gpr_write/gpr[17][31]_i_1_n_0                       |                                                                                          |               18 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/gpr_write/gpr[18][31]_i_1_n_0                       |                                                                                          |               17 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/gpr_write/gpr[19][31]_i_1_n_0                       |                                                                                          |               13 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/gpr_write/gpr[1][31]_i_1_n_0                        |                                                                                          |               15 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/d1/gpr_write/gpr[20][31]_i_1_n_0                       |                                                                                          |               15 |             32 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/f1/E[0]                                                |                                                                                          |                8 |             33 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/top_wrapper_0/inst/t1/f1/fetch_finish0_n_0                                   |                                                                                          |                8 |             48 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 |                                                                                         |                                                                                          |              215 |           1001 |
++-------------------------------------+-----------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 2      |                     6 |
+| 3      |                     2 |
+| 4      |                     2 |
+| 5      |                     2 |
+| 6      |                     1 |
+| 7      |                     1 |
+| 8      |                     1 |
+| 9      |                     1 |
+| 10     |                     5 |
+| 15     |                     1 |
+| 16+    |                    95 |
++--------+-----------------------+
+
+

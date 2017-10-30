@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Fri Oct 27 15:08:42 2017
+# Process ID: 17116
+# Current directory: /home/tansei/Desktop/cpu/2017/1stcore/cpu1/cpu1.runs/fdiv_synth_1
+# Command line: vivado -log fdiv.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fdiv.tcl
+# Log file: /home/tansei/Desktop/cpu/2017/1stcore/cpu1/cpu1.runs/fdiv_synth_1/fdiv.vds
+# Journal file: /home/tansei/Desktop/cpu/2017/1stcore/cpu1/cpu1.runs/fdiv_synth_1/vivado.jou
+#-----------------------------------------------------------
+source fdiv.tcl -notrace

@@ -1,0 +1,1 @@
+fmul.vhd,vhdl,xil_defaultlib,../../../../cpu_sim.srcs/sources_1/ip/fmul_2/sim/fmul.vhd,

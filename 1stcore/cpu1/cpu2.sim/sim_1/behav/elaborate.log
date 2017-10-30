@@ -1,0 +1,26 @@
+Vivado Simulator 2016.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2016.4/bin/unwrapped/lnx64.o/xelab -wto be0c72a2fa99411b9bd48aa64f698f81 --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot top_wrapper_behav xil_defaultlib.top_wrapper xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 10 differs from formal bit length 32 for port d_addr [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv2/top.sv:73]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port led2 [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv2/top.sv:77]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port wfpr_valid2 [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv2/decode.sv:131]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/tansei/Desktop/cpu/2017/1stcore/cpu2/cpu2.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/tansei/Desktop/cpu/2017/1stcore/cpu2/cpu2.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.fetch
+Compiling module xil_defaultlib.gpr_write
+Compiling module xil_defaultlib.fpr_write
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.mem_ls
+Compiling module xil_defaultlib.pc
+Compiling module xil_defaultlib.decode
+Compiling module xil_defaultlib.uart_tx_default
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.top_wrapper
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot top_wrapper_behav

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Mon Oct 30 11:44:41 2017
+# Process ID: 7342
+# Current directory: /home/tansei/Desktop/cpu/2017/1stcore/cpu1/cpu1.runs/fftoi_synth_1
+# Command line: vivado -log fftoi.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fftoi.tcl
+# Log file: /home/tansei/Desktop/cpu/2017/1stcore/cpu1/cpu1.runs/fftoi_synth_1/fftoi.vds
+# Journal file: /home/tansei/Desktop/cpu/2017/1stcore/cpu1/cpu1.runs/fftoi_synth_1/vivado.jou
+#-----------------------------------------------------------
+source fftoi.tcl -notrace

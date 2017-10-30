@@ -2,7 +2,7 @@
 ; v3.0 or later.
 ;
 ; This .COE file specifies initialization values for a block 
-; memory of depth=64, and width=32. In this case, values are 
+; memory of depth=7, and width=32. In this case, values are 
 ; specified in hexadecimal format.
 memory_initialization_radix=2;
 memory_initialization_vector=

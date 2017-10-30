@@ -1,0 +1,14 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/tansei/Desktop/cpu/2017/1stcore/cpu_sim/cpu_sim.srcs/sources_1/ip/fsub_2/sim/fsub.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity fsub
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/tansei/Desktop/cpu/2017/1stcore/cpu_sim/cpu_sim.srcs/sources_1/ip/fsqrt_2/sim/fsqrt.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity fsqrt
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/tansei/Desktop/cpu/2017/1stcore/cpu_sim/cpu_sim.srcs/sources_1/ip/fmul_2/sim/fmul.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity fmul
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/tansei/Desktop/cpu/2017/1stcore/cpu_sim/cpu_sim.srcs/sources_1/ip/fdiv_2/sim/fdiv.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity fdiv
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/tansei/Desktop/cpu/2017/1stcore/cpu_sim/cpu_sim.srcs/sources_1/ip/fcmp_2/sim/fcmp.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity fcmp
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/tansei/Desktop/cpu/2017/1stcore/cpu_sim/cpu_sim.srcs/sources_1/ip/fadd_4/sim/fadd.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity fadd
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/tansei/Desktop/cpu/2017/1stcore/cpu_sim/cpu_sim.srcs/sources_1/ip/fabs_2/sim/fabs.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity fabs
