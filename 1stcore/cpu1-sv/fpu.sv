@@ -60,6 +60,7 @@ module fpu(
   logic mode;
   logic [9:0] fpu_in_buffer;
 
+
   initial begin
     mode <= IDLE;
     fadd_in_valid_a <= 1'b0;
@@ -74,6 +75,7 @@ module fpu(
     fabs_in_valid_a <= 1'b0;
     fcmp_in_valid_a <= 1'b0;
     fcmp_in_valid_b <= 1'b0;
+    fcmp_in_valid_op <= 1'b0;
     fftoi_in_valid_a <= 1'b0;
     fitof_in_valid_a <= 1'b0;
   end
@@ -190,7 +192,7 @@ module fpu(
         fpu_out_valid <= 1'b1;
         mode <= IDLE;
       end
-      else if(fpu_in_buffer[9] && fftoi_out_valid) begin
+      else if(fpu_in_buffer[9] && fitof_out_valid) begin
         fpu_out <= fitof_out;
         fpu_out_valid <= 1'b1;
         mode <= IDLE;

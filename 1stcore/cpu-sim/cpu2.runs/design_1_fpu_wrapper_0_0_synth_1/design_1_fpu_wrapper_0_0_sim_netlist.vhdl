@@ -1,7 +1,7 @@
 -- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2016.4 (lin64) Build 1756540 Mon Jan 23 19:11:19 MST 2017
--- Date        : Mon Oct 30 14:34:20 2017
+-- Date        : Sun Nov  5 10:51:23 2017
 -- Host        : ispc2016 running 64-bit Ubuntu 14.04.5 LTS
 -- Command     : write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_fpu_wrapper_0_0_sim_netlist.vhdl
@@ -32,7 +32,7 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fpu is
     fftoi_in_valid_a : out STD_LOGIC;
     fitof_in_valid_a : out STD_LOGIC;
     fpu_out_valid : out STD_LOGIC;
-    fftoi_out_valid : in STD_LOGIC;
+    fitof_out_valid : in STD_LOGIC;
     fftoi_out : in STD_LOGIC_VECTOR ( 31 downto 0 );
     fcmp_out : in STD_LOGIC_VECTOR ( 7 downto 0 );
     fitof_out : in STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -44,6 +44,7 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fpu is
     fdiv_out : in STD_LOGIC_VECTOR ( 31 downto 0 );
     fadd_out : in STD_LOGIC_VECTOR ( 31 downto 0 );
     fcmp_out_valid : in STD_LOGIC;
+    fftoi_out_valid : in STD_LOGIC;
     fabs_out : in STD_LOGIC_VECTOR ( 31 downto 0 );
     fabs_out_valid : in STD_LOGIC;
     fsqrt_out : in STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -399,7 +400,10 @@ fcmp_in_valid_op_i_1: unisim.vcomponents.LUT5
       O => fcmp_in_valid_op_i_1_n_0
     );
 fcmp_in_valid_op_reg: unisim.vcomponents.FDRE
-     port map (
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => clk,
       CE => '1',
       D => fcmp_in_valid_op_i_1_n_0,
@@ -1195,15 +1199,15 @@ fmul_in_valid_b_reg: unisim.vcomponents.FDRE
     );
 \fpu_out[1]_i_3\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"4555450040554000"
+      INIT => X"5455540004550400"
     )
         port map (
       I0 => \fpu_out[31]_i_3_n_0\,
-      I1 => fitof_out(1),
+      I1 => fftoi_out(1),
       I2 => \fpu_out[31]_i_10_n_0\,
       I3 => \fpu_out[7]_i_6_n_0\,
       I4 => fcmp_out(1),
-      I5 => fftoi_out(1),
+      I5 => fitof_out(1),
       O => \fpu_out[1]_i_3_n_0\
     );
 \fpu_out[1]_i_4\: unisim.vcomponents.LUT6
@@ -1849,7 +1853,7 @@ fmul_in_valid_b_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \fpu_out[31]_i_3_n_0\,
-      I1 => fftoi_out_valid,
+      I1 => fitof_out_valid,
       I2 => p_0_in9_in,
       I3 => \fpu_out[31]_i_4_n_0\,
       I4 => \fpu_out[31]_i_5_n_0\,
@@ -2165,15 +2169,15 @@ fmul_in_valid_b_reg: unisim.vcomponents.FDRE
     );
 \fpu_out[6]_i_3\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"4555450040554000"
+      INIT => X"5455540004550400"
     )
         port map (
       I0 => \fpu_out[31]_i_3_n_0\,
-      I1 => fitof_out(6),
+      I1 => fftoi_out(6),
       I2 => \fpu_out[31]_i_10_n_0\,
       I3 => \fpu_out[7]_i_6_n_0\,
       I4 => fcmp_out(6),
-      I5 => fftoi_out(6),
+      I5 => fitof_out(6),
       O => \fpu_out[6]_i_3_n_0\
     );
 \fpu_out[6]_i_4\: unisim.vcomponents.LUT6
@@ -2649,14 +2653,14 @@ fpu_out_valid_i_1: unisim.vcomponents.LUT3
     );
 fpu_out_valid_i_2: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFFFFFBBBBB"
+      INIT => X"FFFFFFFFFFBFBFBF"
     )
         port map (
       I0 => \fpu_out[31]_i_5_n_0\,
       I1 => \fpu_out[7]_i_6_n_0\,
-      I2 => p_0_in10_in,
+      I2 => \fpu_out[31]_i_10_n_0\,
       I3 => p_0_in9_in,
-      I4 => fftoi_out_valid,
+      I4 => fitof_out_valid,
       I5 => \fpu_out[31]_i_3_n_0\,
       O => fpu_out_valid_i_2_n_0
     );
@@ -2783,7 +2787,7 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fpu_wrapper is
     fftoi_in_valid_a : out STD_LOGIC;
     fitof_in_valid_a : out STD_LOGIC;
     fpu_out_valid : out STD_LOGIC;
-    fftoi_out_valid : in STD_LOGIC;
+    fitof_out_valid : in STD_LOGIC;
     fftoi_out : in STD_LOGIC_VECTOR ( 31 downto 0 );
     fcmp_out : in STD_LOGIC_VECTOR ( 7 downto 0 );
     fitof_out : in STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -2795,6 +2799,7 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fpu_wrapper is
     fdiv_out : in STD_LOGIC_VECTOR ( 31 downto 0 );
     fadd_out : in STD_LOGIC_VECTOR ( 31 downto 0 );
     fcmp_out_valid : in STD_LOGIC;
+    fftoi_out_valid : in STD_LOGIC;
     fabs_out : in STD_LOGIC_VECTOR ( 31 downto 0 );
     fabs_out_valid : in STD_LOGIC;
     fsqrt_out : in STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -2855,6 +2860,7 @@ f1: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fpu
       fitof_in_ready_a => fitof_in_ready_a,
       fitof_in_valid_a => fitof_in_valid_a,
       fitof_out(31 downto 0) => fitof_out(31 downto 0),
+      fitof_out_valid => fitof_out_valid,
       fmul_in_ready_a => fmul_in_ready_a,
       fmul_in_ready_b => fmul_in_ready_b,
       fmul_in_valid_a => fmul_in_valid_a,
@@ -2983,6 +2989,7 @@ inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fpu_wrapper
       fitof_in_ready_a => fitof_in_ready_a,
       fitof_in_valid_a => fitof_in_valid_a,
       fitof_out(31 downto 0) => fitof_out(31 downto 0),
+      fitof_out_valid => fitof_out_valid,
       fmul_in_ready_a => fmul_in_ready_a,
       fmul_in_ready_b => fmul_in_ready_b,
       fmul_in_valid_a => fmul_in_valid_a,

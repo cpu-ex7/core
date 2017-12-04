@@ -3,35 +3,36 @@ Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
 Running: /opt/Xilinx/Vivado/2016.4/bin/unwrapped/lnx64.o/xelab -wto be0c72a2fa99411b9bd48aa64f698f81 --debug typical --relax --mt 8 -L xil_defaultlib -L xbip_utils_v3_0_7 -L axi_utils_v2_0_3 -L xbip_pipe_v3_0_3 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_dsp48_addsub_v3_0_3 -L xbip_dsp48_multadd_v3_0_3 -L xbip_bram18k_v3_0_3 -L mult_gen_v12_0_12 -L floating_point_v7_1_3 -L blk_mem_gen_v8_3_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot design_1_wrapper_behav xil_defaultlib.design_1_wrapper xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port led2 [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv2/top.sv:77]
-WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port wfpr_valid2 [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv2/decode.sv:131]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port wfpr_valid2 [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/decode.sv:133]
 WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2016.4/nightly/2017_01_23_1756540/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2420]
 Completed static elaboration
 Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv2/fpu_wrapper.v" Line 2. Module fpu_wrapper doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv2/fpu.sv" Line 2. Module fpu doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv2/top_wrapper.v" Line 1. Module top_wrapper doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv2/top.sv" Line 12. Module top doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv2/fetch.sv" Line 2. Module fetch doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv2/decode.sv" Line 54. Module decode doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv2/write.sv" Line 4. Module gpr_write doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv2/write.sv" Line 89. Module fpr_write doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv2/alu.sv" Line 1. Module alu doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv2/mem_ls.sv" Line 2. Module mem_ls doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv2/pc.sv" Line 2. Module pc doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv2/uart_tx_7han.sv" Line 3. Module uart_tx_default doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv2/fpu_wrapper.v" Line 2. Module fpu_wrapper doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv2/fpu.sv" Line 2. Module fpu doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv2/top_wrapper.v" Line 1. Module top_wrapper doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv2/top.sv" Line 12. Module top doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv2/fetch.sv" Line 2. Module fetch doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv2/decode.sv" Line 54. Module decode doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv2/write.sv" Line 4. Module gpr_write doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv2/write.sv" Line 89. Module fpr_write doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv2/alu.sv" Line 1. Module alu doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv2/mem_ls.sv" Line 2. Module mem_ls doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv2/pc.sv" Line 2. Module pc doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv2/uart_tx_7han.sv" Line 3. Module uart_tx_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/fpu_wrapper.v" Line 2. Module fpu_wrapper doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/fpu.sv" Line 2. Module fpu doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/top_wrapper-sim.v" Line 1. Module top_wrapper doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/top.sv" Line 12. Module top doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/fetch.sv" Line 2. Module fetch doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/decode.sv" Line 55. Module decode doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/write.sv" Line 4. Module gpr_write doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/write.sv" Line 92. Module fpr_write doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/alu.sv" Line 1. Module alu doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/mem_ls.sv" Line 2. Module mem_ls doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/pc.sv" Line 2. Module pc doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/uart_tx_7han.sv" Line 15. Module uart_tx_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/uart_rx.sv" Line 15. Module uart_rx_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/fpu_wrapper.v" Line 2. Module fpu_wrapper doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/fpu.sv" Line 2. Module fpu doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/top_wrapper-sim.v" Line 1. Module top_wrapper doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/top.sv" Line 12. Module top doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/fetch.sv" Line 2. Module fetch doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/decode.sv" Line 55. Module decode doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/write.sv" Line 4. Module gpr_write doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/write.sv" Line 92. Module fpr_write doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/alu.sv" Line 1. Module alu doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/mem_ls.sv" Line 2. Module mem_ls doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/pc.sv" Line 2. Module pc doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/uart_tx_7han.sv" Line 15. Module uart_tx_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/uart_rx.sv" Line 15. Module uart_rx_default doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling package std.standard
@@ -423,6 +424,7 @@ Compiling module xil_defaultlib.mem_ls
 Compiling module xil_defaultlib.pc
 Compiling module xil_defaultlib.decode
 Compiling module xil_defaultlib.uart_tx_default
+Compiling module xil_defaultlib.uart_rx_default
 Compiling module xil_defaultlib.top
 Compiling module xil_defaultlib.top_wrapper
 Compiling module xil_defaultlib.design_1_top_wrapper_0_0

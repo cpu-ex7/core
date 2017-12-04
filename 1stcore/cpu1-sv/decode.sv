@@ -47,6 +47,7 @@
 `define FLOAT_MFC2  6'b001001
 `define FLOAT_ROUNDW 6'b001100
 `define FLOAT_CVTSW 6'b100000
+`define FLOAT_MV    6'b000110
 
 `define GPR_ZERO    5'd0
 `define GPR_RA      5'd31
@@ -61,7 +62,7 @@ module decode(
   input logic fpu_out_valid,
   output logic l_valid,
   output logic s_valid,
-  output logic led2,
+  output logic [31:0] led2,
   output logic [9:0] o_addr,
   output logic write_finish,
   output logic store_finish,
@@ -93,13 +94,12 @@ module decode(
   logic wfpr_finish;
   logic [31:0] alu_data_a;
   logic [31:0] alu_data_b;
-  logic [4:0] alu_data_c;
   logic [31:0] pc_data;
   logic [31:0] pc_out;
   logic [31:0] alu_out;
   logic [1:0] pc_mode;
-  logic [31:0] gpr_out;
-  logic [31:0] gpr_out_valid;
+  logic [31:0] fpr_in;
+  logic [31:0] fpr_in_valid;
 
   assign l_valid = fl_valid || gl_valid;
   assign led2 = gpr[2];
@@ -115,7 +115,9 @@ module decode(
     .gpraddr(gpraddr),
     .gpr(gpr),
     .gl_valid(gl_valid),
-    .wgpr_finish(wgpr_finish)
+    .wgpr_finish(wgpr_finish),
+    .uart_input(uart_recv_data),
+    .uart_input_valid(uart_recv_valid)
     );
 
   fpr_write fpr_write(
@@ -128,14 +130,13 @@ module decode(
     .fpr(fpr),
     .fl_valid(fl_valid),
     .wfpr_finish(wfpr_finish),
-    .wfpr_valid2(gpr_out_valid),
-    .gpr_out(gpr_out)
+    .wfpr_valid2(fpr_in_valid),
+    .gpr_out(fpr_in)
     );
 
   alu alu(
     .data_a(alu_data_a),
     .data_b(alu_data_b),
-    .data_c(alu_data_c),
     .alu_pattern(alu_pattern),
     .alu_out(alu_out)
     );
@@ -286,7 +287,7 @@ module decode(
           fpu_data_b <= fpr[op[10:6]];
           fpu_data_c <= {2'b0,op[3:0],2'b0};
           fpraddr <= 5'd31;
-          fpu_in_valid <= 10'b0010000010;
+          fpu_in_valid <= 10'b0010000001;
         end
         case(op[5:0])
           `FLOAT_ADD :
@@ -347,13 +348,14 @@ module decode(
           begin
             alu_data_a <= fpr[op[15:11]];
             alu_pattern <= 4'd0;
+            gpraddr <= op[20:16];
             wgpr_valid <= 1'b1;
           end
           `FLOAT_MFC2 :
           begin
-            gpr_out <= fpr[op[15:11]];
+            fpr_in <= gpr[op[15:11]];
             fpraddr <= op[20:16];
-            gpr_out_valid <= 1'b1;
+            fpr_in_valid <= 1'b1;
           end
           `FLOAT_BC1T :
           begin
@@ -374,6 +376,12 @@ module decode(
             else begin
               pc_data <= 32'b1;
             end
+          end
+          `FLOAT_MV :
+          begin
+            fpr_in <= fpr[op[15:11]];
+            fpraddr <= op[10:6];
+            fpr_in_valid <= 1'b1;
           end
         endcase
       end
@@ -412,6 +420,7 @@ module decode(
       `OP_LWC2 :
       begin
         uart_recv_ready <= 1'b1;
+        gpraddr <= op[25:21];
       end
       `OP_SW :
       begin
@@ -486,7 +495,9 @@ module decode(
       fpu_in_valid <= 9'b0;
       pc_mode <= 2'b0;
       pc_valid <= 1'b0;
-      gpr_out_valid <= 1'b0;
+      fpr_in_valid <= 1'b0;
+      uart_send_ready <= 1'b0;
+      uart_recv_ready <= 1'b0;
     end
   end
 endmodule

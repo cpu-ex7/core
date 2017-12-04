@@ -1,7 +1,7 @@
 // Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2016.4 (lin64) Build 1756540 Mon Jan 23 19:11:19 MST 2017
-// Date        : Mon Oct 30 14:34:20 2017
+// Date        : Sun Nov  5 10:51:22 2017
 // Host        : ispc2016 running 64-bit Ubuntu 14.04.5 LTS
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_fpu_wrapper_0_0_sim_netlist.v
@@ -151,6 +151,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
   wire fitof_in_ready_a;
   wire fitof_in_valid_a;
   wire [31:0]fitof_out;
+  wire fitof_out_valid;
   wire fmul_in_ready_a;
   wire fmul_in_ready_b;
   wire fmul_in_valid_a;
@@ -204,6 +205,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
         .fitof_in_ready_a(fitof_in_ready_a),
         .fitof_in_valid_a(fitof_in_valid_a),
         .fitof_out(fitof_out),
+        .fitof_out_valid(fitof_out_valid),
         .fmul_in_ready_a(fmul_in_ready_a),
         .fmul_in_ready_b(fmul_in_ready_b),
         .fmul_in_valid_a(fmul_in_valid_a),
@@ -242,7 +244,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fpu
     fftoi_in_valid_a,
     fitof_in_valid_a,
     fpu_out_valid,
-    fftoi_out_valid,
+    fitof_out_valid,
     fftoi_out,
     fcmp_out,
     fitof_out,
@@ -254,6 +256,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fpu
     fdiv_out,
     fadd_out,
     fcmp_out_valid,
+    fftoi_out_valid,
     fabs_out,
     fabs_out_valid,
     fsqrt_out,
@@ -292,7 +295,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fpu
   output fftoi_in_valid_a;
   output fitof_in_valid_a;
   output fpu_out_valid;
-  input fftoi_out_valid;
+  input fitof_out_valid;
   input [31:0]fftoi_out;
   input [7:0]fcmp_out;
   input [31:0]fitof_out;
@@ -304,6 +307,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fpu
   input [31:0]fdiv_out;
   input [31:0]fadd_out;
   input fcmp_out_valid;
+  input fftoi_out_valid;
   input [31:0]fabs_out;
   input fabs_out_valid;
   input [31:0]fsqrt_out;
@@ -366,6 +370,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fpu
   wire fitof_in_valid_a;
   wire fitof_in_valid_a_i_1_n_0;
   wire [31:0]fitof_out;
+  wire fitof_out_valid;
   wire fmul_in_ready_a;
   wire fmul_in_ready_b;
   wire fmul_in_valid_a;
@@ -641,7 +646,9 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fpu
         .I3(fpu_in_valid[0]),
         .I4(fcmp_in_valid_op),
         .O(fcmp_in_valid_op_i_1_n_0));
-  FDRE fcmp_in_valid_op_reg
+  FDRE #(
+    .INIT(1'b0)) 
+    fcmp_in_valid_op_reg
        (.C(clk),
         .CE(1'b1),
         .D(fcmp_in_valid_op_i_1_n_0),
@@ -1246,14 +1253,14 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fpu
         .I5(\fpu_out[7]_i_3_n_0 ),
         .O(\fpu_out[1]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h4555450040554000)) 
+    .INIT(64'h5455540004550400)) 
     \fpu_out[1]_i_3 
        (.I0(\fpu_out[31]_i_3_n_0 ),
-        .I1(fitof_out[1]),
+        .I1(fftoi_out[1]),
         .I2(\fpu_out[31]_i_10_n_0 ),
         .I3(\fpu_out[7]_i_6_n_0 ),
         .I4(fcmp_out[1]),
-        .I5(fftoi_out[1]),
+        .I5(fitof_out[1]),
         .O(\fpu_out[1]_i_3_n_0 ));
   LUT6 #(
     .INIT(64'h00005053FFFF5053)) 
@@ -1749,7 +1756,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fpu
     .INIT(64'hFFFFFFEA00000000)) 
     \fpu_out[31]_i_1 
        (.I0(\fpu_out[31]_i_3_n_0 ),
-        .I1(fftoi_out_valid),
+        .I1(fitof_out_valid),
         .I2(p_0_in9_in),
         .I3(\fpu_out[31]_i_4_n_0 ),
         .I4(\fpu_out[31]_i_5_n_0 ),
@@ -1989,14 +1996,14 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fpu
         .I5(\fpu_out[7]_i_3_n_0 ),
         .O(\fpu_out[6]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h4555450040554000)) 
+    .INIT(64'h5455540004550400)) 
     \fpu_out[6]_i_3 
        (.I0(\fpu_out[31]_i_3_n_0 ),
-        .I1(fitof_out[6]),
+        .I1(fftoi_out[6]),
         .I2(\fpu_out[31]_i_10_n_0 ),
         .I3(\fpu_out[7]_i_6_n_0 ),
         .I4(fcmp_out[6]),
-        .I5(fftoi_out[6]),
+        .I5(fitof_out[6]),
         .O(\fpu_out[6]_i_3_n_0 ));
   LUT6 #(
     .INIT(64'h00005053FFFF5053)) 
@@ -2354,13 +2361,13 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fpu
         .I2(mode),
         .O(fpu_out_valid_i_1_n_0));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFBBBBB)) 
+    .INIT(64'hFFFFFFFFFFBFBFBF)) 
     fpu_out_valid_i_2
        (.I0(\fpu_out[31]_i_5_n_0 ),
         .I1(\fpu_out[7]_i_6_n_0 ),
-        .I2(p_0_in10_in),
+        .I2(\fpu_out[31]_i_10_n_0 ),
         .I3(p_0_in9_in),
-        .I4(fftoi_out_valid),
+        .I4(fitof_out_valid),
         .I5(\fpu_out[31]_i_3_n_0 ),
         .O(fpu_out_valid_i_2_n_0));
   FDRE fpu_out_valid_reg
@@ -2457,7 +2464,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fpu_wrapper
     fftoi_in_valid_a,
     fitof_in_valid_a,
     fpu_out_valid,
-    fftoi_out_valid,
+    fitof_out_valid,
     fftoi_out,
     fcmp_out,
     fitof_out,
@@ -2469,6 +2476,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fpu_wrapper
     fdiv_out,
     fadd_out,
     fcmp_out_valid,
+    fftoi_out_valid,
     fabs_out,
     fabs_out_valid,
     fsqrt_out,
@@ -2507,7 +2515,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fpu_wrapper
   output fftoi_in_valid_a;
   output fitof_in_valid_a;
   output fpu_out_valid;
-  input fftoi_out_valid;
+  input fitof_out_valid;
   input [31:0]fftoi_out;
   input [7:0]fcmp_out;
   input [31:0]fitof_out;
@@ -2519,6 +2527,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fpu_wrapper
   input [31:0]fdiv_out;
   input [31:0]fadd_out;
   input fcmp_out_valid;
+  input fftoi_out_valid;
   input [31:0]fabs_out;
   input fabs_out_valid;
   input [31:0]fsqrt_out;
@@ -2573,6 +2582,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fpu_wrapper
   wire fitof_in_ready_a;
   wire fitof_in_valid_a;
   wire [31:0]fitof_out;
+  wire fitof_out_valid;
   wire fmul_in_ready_a;
   wire fmul_in_ready_b;
   wire fmul_in_valid_a;
@@ -2625,6 +2635,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fpu_wrapper
         .fitof_in_ready_a(fitof_in_ready_a),
         .fitof_in_valid_a(fitof_in_valid_a),
         .fitof_out(fitof_out),
+        .fitof_out_valid(fitof_out_valid),
         .fmul_in_ready_a(fmul_in_ready_a),
         .fmul_in_ready_b(fmul_in_ready_b),
         .fmul_in_valid_a(fmul_in_valid_a),

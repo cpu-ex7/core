@@ -55,7 +55,6 @@
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_top_wrapper_0_0 (
   clk,
-  sw_n,
   sw_e,
   sw_s,
   sw_w,
@@ -77,7 +76,6 @@ module design_1_top_wrapper_0_0 (
 
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
-input wire sw_n;
 input wire sw_e;
 input wire sw_s;
 input wire sw_w;
@@ -98,7 +96,6 @@ output wire wea;
 
   top_wrapper inst (
     .clk(clk),
-    .sw_n(sw_n),
     .sw_e(sw_e),
     .sw_s(sw_s),
     .sw_w(sw_w),
