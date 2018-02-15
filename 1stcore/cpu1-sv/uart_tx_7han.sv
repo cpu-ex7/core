@@ -12,11 +12,10 @@
 `define s_bit_7 4'd9
 `define s_stop_bit 4'd10
 
-module uart_tx #(CLK_PER_HALF_BIT = 434) (
+module uart_tx #(CLK_PER_HALF_BIT = 5208) (
                input wire [31:0] sdata,
                input wire ready,//tx_start
                output logic valid,
-               output logic     tx_busy,
                output logic     txd,
                input wire       clk,
                input wire       rstn);
@@ -27,16 +26,16 @@ module uart_tx #(CLK_PER_HALF_BIT = 434) (
 
    logic [31:0]                  txbuf;
    logic [3:0]                  status;
-   logic [1:0] nbite;
+  // logic [1:0] nbite;
    logic [31:0]                 counter;
    logic                        next;
    logic                        fin_stop_bit;
    logic                        rst_ctr;
 
    initial begin
-   	     txbuf <= 32'b0;
+   	     txbuf <= 8'b0;
          status <= `s_idle;
-         nbite <= 2'b0;
+         /*nbite <= 2'b0;*/
          rst_ctr <= 1'b0;
          txd <= 1'b1;
          valid <= 1'b0;
@@ -75,16 +74,23 @@ module uart_tx #(CLK_PER_HALF_BIT = 434) (
 
    always @(posedge clk) begin
       if (~rstn) begin
-         txbuf <= 32'b0;
+         txbuf <= 8'b0;
          status <= `s_idle;
-         nbite <= 2'b0;
+         /*nbite <= 2'b0;*/
          rst_ctr <= 0;
          txd <= 1;
          valid <= 0;
       end else begin
          rst_ctr <= 0;
          if (status == `s_idle) begin
-                  valid <= 0;
+            valid <= 0;
+            if(ready) begin
+              txbuf <= sdata[7:0];
+              status <= `s_start_bit;
+              rst_ctr <= 1;
+              txd <= 0;
+            end
+            /*
             if (ready && (nbite == 0)) begin //tx_start
                txbuf <= sdata;
                status <= `s_start_bit;
@@ -98,10 +104,13 @@ module uart_tx #(CLK_PER_HALF_BIT = 434) (
                rst_ctr <= 1;
                txd <= 0;
             end
+            */
          end else if (status == `s_stop_bit) begin
             if (fin_stop_bit) begin
                txd <= 1;
                status <= `s_idle;
+               valid <= 1;
+               /*
                if(nbite < 3) begin
                     nbite <= nbite + 1;
                 end else begin
@@ -109,6 +118,7 @@ module uart_tx #(CLK_PER_HALF_BIT = 434) (
                     tx_busy <= 0;
                     valid <= 1;
                 end
+                */
             end
          end else if (next) begin
             if (status == `s_bit_7) begin

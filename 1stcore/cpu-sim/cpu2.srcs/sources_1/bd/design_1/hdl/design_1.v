@@ -1,7 +1,7 @@
 //Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2016.4 (lin64) Build 1756540 Mon Jan 23 19:11:19 MST 2017
-//Date        : Sun Nov 19 15:08:45 2017
+//Date        : Thu Feb 15 08:08:50 2018
 //Host        : ispc2016 running 64-bit Ubuntu 14.04.5 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -12,26 +12,11 @@
 (* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=14,numReposBlks=14,numNonXlnxBlks=2,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (GPIO_LED,
-    GPIO_SW_E,
-    GPIO_SW_N,
-    GPIO_SW_S,
-    GPIO_SW_W,
-    USB_UART_RX,
     USB_UART_TX);
   output [7:0]GPIO_LED;
-  input GPIO_SW_E;
-  input GPIO_SW_N;
-  input GPIO_SW_S;
-  input GPIO_SW_W;
-  input USB_UART_RX;
   output USB_UART_TX;
 
-  wire GPIO_SW_E_1;
-  wire GPIO_SW_N_1;
-  wire GPIO_SW_S_1;
-  wire GPIO_SW_W_1;
   wire Net;
-  wire USB_UART_RX_1;
   wire [31:0]blk_mem_gen_0_douta;
   wire [31:0]blk_mem_gen_1_douta;
   wire [31:0]floating_point_0_m_axis_result_tdata;
@@ -84,23 +69,18 @@ module design_1
   wire fpu_wrapper_0_fsub_in_valid_a;
   wire fpu_wrapper_0_fsub_in_valid_b;
   wire sim_clk_gen_0_clk;
-  wire [9:0]top_wrapper_0_d_addr;
+  wire [18:0]top_wrapper_0_d_addr;
   wire [31:0]top_wrapper_0_fpu_data_a;
   wire [31:0]top_wrapper_0_fpu_data_b;
   wire [7:0]top_wrapper_0_fpu_data_c;
   wire [9:0]top_wrapper_0_fpu_in_valid;
   wire [7:0]top_wrapper_0_led;
-  wire [9:0]top_wrapper_0_o_addr;
+  wire [12:0]top_wrapper_0_o_addr;
   wire top_wrapper_0_txd;
   wire [31:0]top_wrapper_0_wdata;
   wire top_wrapper_0_wea;
 
   assign GPIO_LED[7:0] = top_wrapper_0_led;
-  assign GPIO_SW_E_1 = GPIO_SW_E;
-  assign GPIO_SW_N_1 = GPIO_SW_N;
-  assign GPIO_SW_S_1 = GPIO_SW_S;
-  assign GPIO_SW_W_1 = GPIO_SW_W;
-  assign USB_UART_RX_1 = USB_UART_RX;
   assign USB_UART_TX = top_wrapper_0_txd;
   design_1_blk_mem_gen_0_0 blk_mem_gen_0
        (.addra(top_wrapper_0_o_addr),
@@ -262,9 +242,6 @@ module design_1
         .o_addr(top_wrapper_0_o_addr),
         .odata(blk_mem_gen_0_douta),
         .rdata(blk_mem_gen_1_douta),
-        .sw_e(GPIO_SW_E_1),
-        .sw_s(GPIO_SW_S_1),
-        .sw_w(GPIO_SW_W_1),
         .txd(top_wrapper_0_txd),
         .wdata(top_wrapper_0_wdata),
         .wea(top_wrapper_0_wea));

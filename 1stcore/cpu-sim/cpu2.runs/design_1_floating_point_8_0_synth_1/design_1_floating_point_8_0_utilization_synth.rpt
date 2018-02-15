@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.4 (lin64) Build 1756540 Mon Jan 23 19:11:19 MST 2017
-| Date         : Mon Oct 30 14:32:45 2017
+| Date         : Mon Dec 18 16:00:59 2017
 | Host         : ispc2016 running 64-bit Ubuntu 14.04.5 LTS
 | Command      : report_utilization -file design_1_floating_point_8_0_utilization_synth.rpt -pb design_1_floating_point_8_0_utilization_synth.pb
 | Design       : design_1_floating_point_8_0
@@ -28,22 +28,20 @@ Table of Contents
 1. CLB Logic
 ------------
 
-+----------------------------+------+-------+-----------+-------+
-|          Site Type         | Used | Fixed | Available | Util% |
-+----------------------------+------+-------+-----------+-------+
-| CLB LUTs*                  |  158 |     0 |    242400 |  0.07 |
-|   LUT as Logic             |  155 |     0 |    242400 |  0.06 |
-|   LUT as Memory            |    3 |     0 |    112800 | <0.01 |
-|     LUT as Distributed RAM |    0 |     0 |           |       |
-|     LUT as Shift Register  |    3 |     0 |           |       |
-| CLB Registers              |  265 |     0 |    484800 |  0.05 |
-|   Register as Flip Flop    |  265 |     0 |    484800 |  0.05 |
-|   Register as Latch        |    0 |     0 |    484800 |  0.00 |
-| CARRY8                     |   11 |     0 |     30300 |  0.04 |
-| F7 Muxes                   |    0 |     0 |    121200 |  0.00 |
-| F8 Muxes                   |    0 |     0 |     60600 |  0.00 |
-| F9 Muxes                   |    0 |     0 |     30300 |  0.00 |
-+----------------------------+------+-------+-----------+-------+
++-------------------------+------+-------+-----------+-------+
+|        Site Type        | Used | Fixed | Available | Util% |
++-------------------------+------+-------+-----------+-------+
+| CLB LUTs*               |  172 |     0 |    242400 |  0.07 |
+|   LUT as Logic          |  172 |     0 |    242400 |  0.07 |
+|   LUT as Memory         |    0 |     0 |    112800 |  0.00 |
+| CLB Registers           |   37 |     0 |    484800 | <0.01 |
+|   Register as Flip Flop |   37 |     0 |    484800 | <0.01 |
+|   Register as Latch     |    0 |     0 |    484800 |  0.00 |
+| CARRY8                  |   11 |     0 |     30300 |  0.04 |
+| F7 Muxes                |    0 |     0 |    121200 |  0.00 |
+| F8 Muxes                |    0 |     0 |     60600 |  0.00 |
+| F9 Muxes                |    0 |     0 |     30300 |  0.00 |
++-------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
 
@@ -62,7 +60,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 265   |          Yes |       Reset |            - |
+| 37    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -153,15 +151,13 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  265 |            Register |
-| LUT2     |   55 |                 CLB |
-| LUT6     |   47 |                 CLB |
-| LUT3     |   37 |                 CLB |
-| LUT5     |   15 |                 CLB |
+| LUT6     |   57 |                 CLB |
+| LUT2     |   53 |                 CLB |
+| LUT3     |   46 |                 CLB |
+| FDRE     |   37 |            Register |
+| LUT5     |   24 |                 CLB |
+| LUT4     |   17 |                 CLB |
 | CARRY8   |   11 |                 CLB |
-| LUT4     |    9 |                 CLB |
-| SRL16E   |    3 |                 CLB |
-| LUT1     |    1 |                 CLB |
 +----------+------+---------------------+
 
 

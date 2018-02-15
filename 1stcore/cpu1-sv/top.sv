@@ -14,22 +14,27 @@ module top(
   input logic sw_e,
   input logic sw_s,
   input logic sw_w,
+  input logic sw_c,
   input logic clk,
   output logic [7:0] led,
-  output logic txd,
   output logic [31:0] fpu_data_a,
   output logic [31:0] fpu_data_b,
   output logic [7:0] fpu_data_c,
   input logic [31:0] fpu_out,
   output logic [9:0] fpu_in_valid,
   input logic fpu_out_valid,
-  output logic [9:0] o_addr,
-  output logic [31:0] d_addr,
+  output logic [12:0] o_addr,
+  output logic [18:0] d_addr2,
   input logic [31:0] odata,
   input logic [31:0] rdata,
   output logic [31:0] wdata,
   output logic wea,
-  input logic rxd
+  output logic [7:0] uart_send_data,
+  output logic uart_send_ready,
+  input logic uart_send_valid,
+  input logic [7:0] uart_recv_data,
+  output logic uart_recv_ready,
+  input logic uart_recv_valid
   );
 
   logic [9:0] mode;
@@ -51,17 +56,11 @@ module top(
   logic [31:0] pc_data;
   logic [31:0] pc_out;
   logic [9:0] count;
-  logic [31:0] uart_send_data;
-  logic uart_send_ready;
-  logic uart_send_valid;
-  logic [31:0] uart_recv_data;
-  logic uart_recv_ready;
-  logic uart_recv_valid;
   logic store_finish;
   logic jump_finish;
+  logic [31:0] d_addr;
 
-  logic [9:0] d_addr2;
-  assign d_addr2 = d_addr[9:0];
+  assign d_addr2 = d_addr[18:0];
 
   fetch f1(clk,start_finish,odata,op,write_finish,store_finish,fetch_finish,jump_finish,uart_send_valid);
   decode d1(
@@ -93,28 +92,6 @@ module top(
     .fpu_in_valid(fpu_in_valid)
     );
 
-  uart_tx t1(
-    .sdata(uart_send_data),
-    .ready(uart_send_ready),//tx_start
-    .valid(uart_send_valid),
-    .txd(txd),
-    .clk(clk),
-    .rstn(1'b1)
-    );
-
-  uart_rx r1(
-    .rdata(uart_recv_data),
-    .rdata_valid(uart_recv_valid),
-    .rdata_ready(uart_recv_ready),
-    .rxd(rxd),
-    .clk(clk),
-    .rstn(1'b1)
-    );
-
-  assign led = (sw_n)? led2[31:24] :
-               (sw_e)? led2[23:16] :
-               (sw_s)? led2[15:8] :
-               (sw_w)? led2[7:0] : 8'b0;
 
   initial begin
     mode <= `START;
@@ -126,19 +103,21 @@ module top(
       start_finish <= 1'b0;
     end
     if(mode == `START) begin
-      if(sw_n) begin
+      /*
+      if(sw_c) begin
         mode <= `FETCH;
         start_finish <= 1'b1;
       end
-      /*
-      if(count > 10'd10) begin
+      */
+
+      if(count > 10'd1000) begin
         count <= 10'b0;
         mode <= `FETCH;
         start_finish <= 1'b1;
       end
       else begin
         count <= count + 1;
-      end*/
+      end
     end
   end
 endmodule

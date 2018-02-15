@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/tansei/Desktop/cpu/2017/1stcore/cpu2/cpu2.runs/design_1_blk_mem_gen_1_0_synth_1'
+HD_PWD='/home/tansei/Desktop/cpu/2017/1stcore/cpu1/cpu2.runs/design_1_blk_mem_gen_1_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

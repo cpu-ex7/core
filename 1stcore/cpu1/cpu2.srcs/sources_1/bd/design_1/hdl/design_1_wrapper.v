@@ -1,7 +1,7 @@
 //Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2016.4 (lin64) Build 1756540 Mon Jan 23 19:11:19 MST 2017
-//Date        : Sun Nov  5 13:18:32 2017
+//Date        : Thu Feb 15 13:41:27 2018
 //Host        : ispc2016 running 64-bit Ubuntu 14.04.5 LTS
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -11,6 +11,7 @@
 
 module design_1_wrapper
    (GPIO_LED,
+    GPIO_SW_C,
     GPIO_SW_E,
     GPIO_SW_N,
     GPIO_SW_S,
@@ -20,6 +21,7 @@ module design_1_wrapper
     default_sysclk_300_clk_n,
     default_sysclk_300_clk_p);
   output [7:0]GPIO_LED;
+  input GPIO_SW_C;
   input GPIO_SW_E;
   input GPIO_SW_N;
   input GPIO_SW_S;
@@ -30,6 +32,7 @@ module design_1_wrapper
   input default_sysclk_300_clk_p;
 
   wire [7:0]GPIO_LED;
+  wire GPIO_SW_C;
   wire GPIO_SW_E;
   wire GPIO_SW_N;
   wire GPIO_SW_S;
@@ -41,6 +44,7 @@ module design_1_wrapper
 
   design_1 design_1_i
        (.GPIO_LED(GPIO_LED),
+        .GPIO_SW_C(GPIO_SW_C),
         .GPIO_SW_E(GPIO_SW_E),
         .GPIO_SW_N(GPIO_SW_N),
         .GPIO_SW_S(GPIO_SW_S),

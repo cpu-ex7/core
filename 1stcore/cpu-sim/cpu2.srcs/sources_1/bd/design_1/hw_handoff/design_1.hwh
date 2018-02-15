@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Nov 19 15:08:45 2017" VIVADOVERSION="2016.4">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Feb 15 08:08:50 2018" VIVADOVERSION="2016.4">
 
   <SYSTEMINFO ARCH="kintexu" BOARD="xilinx.com:kcu105:part0:1.1" DEVICE="xcku040" NAME="design_1" PACKAGE="ffva1156" SPEEDGRADE="-2"/>
 
@@ -14,23 +14,6 @@
         <CONNECTION INSTANCE="top_wrapper_0" PORT="led"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="GPIO_SW_E" SIGIS="data" SIGNAME="External_Ports_GPIO_SW_E">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="top_wrapper_0" PORT="sw_e"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="GPIO_SW_S" SIGIS="undef" SIGNAME="External_Ports_GPIO_SW_S">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="top_wrapper_0" PORT="sw_s"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="GPIO_SW_W" SIGIS="data" SIGNAME="External_Ports_GPIO_SW_W">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="top_wrapper_0" PORT="sw_w"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="USB_UART_RX" SIGIS="data"/>
-    <PORT DIR="I" NAME="GPIO_SW_N" SIGIS="data"/>
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES/>
@@ -72,9 +55,9 @@
         <PARAMETER NAME="C_WRITE_MODE_A" VALUE="WRITE_FIRST"/>
         <PARAMETER NAME="C_WRITE_WIDTH_A" VALUE="32"/>
         <PARAMETER NAME="C_READ_WIDTH_A" VALUE="32"/>
-        <PARAMETER NAME="C_WRITE_DEPTH_A" VALUE="1024"/>
-        <PARAMETER NAME="C_READ_DEPTH_A" VALUE="1024"/>
-        <PARAMETER NAME="C_ADDRA_WIDTH" VALUE="10"/>
+        <PARAMETER NAME="C_WRITE_DEPTH_A" VALUE="8192"/>
+        <PARAMETER NAME="C_READ_DEPTH_A" VALUE="8192"/>
+        <PARAMETER NAME="C_ADDRA_WIDTH" VALUE="13"/>
         <PARAMETER NAME="C_HAS_RSTB" VALUE="0"/>
         <PARAMETER NAME="C_RST_PRIORITY_B" VALUE="CE"/>
         <PARAMETER NAME="C_RSTRAM_B" VALUE="0"/>
@@ -86,9 +69,9 @@
         <PARAMETER NAME="C_WRITE_MODE_B" VALUE="WRITE_FIRST"/>
         <PARAMETER NAME="C_WRITE_WIDTH_B" VALUE="32"/>
         <PARAMETER NAME="C_READ_WIDTH_B" VALUE="32"/>
-        <PARAMETER NAME="C_WRITE_DEPTH_B" VALUE="1024"/>
-        <PARAMETER NAME="C_READ_DEPTH_B" VALUE="1024"/>
-        <PARAMETER NAME="C_ADDRB_WIDTH" VALUE="10"/>
+        <PARAMETER NAME="C_WRITE_DEPTH_B" VALUE="8192"/>
+        <PARAMETER NAME="C_READ_DEPTH_B" VALUE="8192"/>
+        <PARAMETER NAME="C_ADDRB_WIDTH" VALUE="13"/>
         <PARAMETER NAME="C_HAS_MEM_OUTPUT_REGS_A" VALUE="0"/>
         <PARAMETER NAME="C_HAS_MEM_OUTPUT_REGS_B" VALUE="0"/>
         <PARAMETER NAME="C_HAS_MUX_OUTPUT_REGS_A" VALUE="0"/>
@@ -111,9 +94,9 @@
         <PARAMETER NAME="C_EN_SHUTDOWN_PIN" VALUE="0"/>
         <PARAMETER NAME="C_EN_SAFETY_CKT" VALUE="0"/>
         <PARAMETER NAME="C_DISABLE_WARN_BHV_RANGE" VALUE="0"/>
-        <PARAMETER NAME="C_COUNT_36K_BRAM" VALUE="1"/>
-        <PARAMETER NAME="C_COUNT_18K_BRAM" VALUE="0"/>
-        <PARAMETER NAME="C_EST_POWER_SUMMARY" VALUE="Estimated Power for IP     :     2.8413249999999999 mW"/>
+        <PARAMETER NAME="C_COUNT_36K_BRAM" VALUE="7"/>
+        <PARAMETER NAME="C_COUNT_18K_BRAM" VALUE="1"/>
+        <PARAMETER NAME="C_EST_POWER_SUMMARY" VALUE="Estimated Power for IP     :     11.661293000000001 mW"/>
         <PARAMETER NAME="Component_Name" VALUE="design_1_blk_mem_gen_0_0"/>
         <PARAMETER NAME="Interface_Type" VALUE="Native"/>
         <PARAMETER NAME="AXI_Type" VALUE="AXI4_Full"/>
@@ -140,7 +123,7 @@
         <PARAMETER NAME="Primitive" VALUE="8kx2"/>
         <PARAMETER NAME="Assume_Synchronous_Clk" VALUE="false"/>
         <PARAMETER NAME="Write_Width_A" VALUE="32"/>
-        <PARAMETER NAME="Write_Depth_A" VALUE="1024"/>
+        <PARAMETER NAME="Write_Depth_A" VALUE="8192"/>
         <PARAMETER NAME="Read_Width_A" VALUE="32"/>
         <PARAMETER NAME="Operating_Mode_A" VALUE="WRITE_FIRST"/>
         <PARAMETER NAME="Enable_A" VALUE="Always_Enabled"/>
@@ -158,7 +141,7 @@
         <PARAMETER NAME="register_portb_output_of_softecc" VALUE="false"/>
         <PARAMETER NAME="Pipeline_Stages" VALUE="0"/>
         <PARAMETER NAME="Load_Init_File" VALUE="true"/>
-        <PARAMETER NAME="Coe_File" VALUE="../../../../../../../fpu_test.coe"/>
+        <PARAMETER NAME="Coe_File" VALUE="../../../../../../../mandel2.coe"/>
         <PARAMETER NAME="Fill_Remaining_Memory_Locations" VALUE="false"/>
         <PARAMETER NAME="Remaining_Memory_Locations" VALUE="0"/>
         <PARAMETER NAME="Use_RSTA_Pin" VALUE="false"/>
@@ -193,7 +176,7 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="0" NAME="wea" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="9" NAME="addra" RIGHT="0" SIGIS="undef" SIGNAME="top_wrapper_0_o_addr">
+        <PORT DIR="I" LEFT="12" NAME="addra" RIGHT="0" SIGIS="undef" SIGNAME="top_wrapper_0_o_addr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="top_wrapper_0" PORT="o_addr"/>
           </CONNECTIONS>
@@ -258,9 +241,9 @@
         <PARAMETER NAME="C_WRITE_MODE_A" VALUE="WRITE_FIRST"/>
         <PARAMETER NAME="C_WRITE_WIDTH_A" VALUE="32"/>
         <PARAMETER NAME="C_READ_WIDTH_A" VALUE="32"/>
-        <PARAMETER NAME="C_WRITE_DEPTH_A" VALUE="1024"/>
-        <PARAMETER NAME="C_READ_DEPTH_A" VALUE="1024"/>
-        <PARAMETER NAME="C_ADDRA_WIDTH" VALUE="10"/>
+        <PARAMETER NAME="C_WRITE_DEPTH_A" VALUE="524288"/>
+        <PARAMETER NAME="C_READ_DEPTH_A" VALUE="524288"/>
+        <PARAMETER NAME="C_ADDRA_WIDTH" VALUE="19"/>
         <PARAMETER NAME="C_HAS_RSTB" VALUE="0"/>
         <PARAMETER NAME="C_RST_PRIORITY_B" VALUE="CE"/>
         <PARAMETER NAME="C_RSTRAM_B" VALUE="0"/>
@@ -272,9 +255,9 @@
         <PARAMETER NAME="C_WRITE_MODE_B" VALUE="WRITE_FIRST"/>
         <PARAMETER NAME="C_WRITE_WIDTH_B" VALUE="32"/>
         <PARAMETER NAME="C_READ_WIDTH_B" VALUE="32"/>
-        <PARAMETER NAME="C_WRITE_DEPTH_B" VALUE="1024"/>
-        <PARAMETER NAME="C_READ_DEPTH_B" VALUE="1024"/>
-        <PARAMETER NAME="C_ADDRB_WIDTH" VALUE="10"/>
+        <PARAMETER NAME="C_WRITE_DEPTH_B" VALUE="524288"/>
+        <PARAMETER NAME="C_READ_DEPTH_B" VALUE="524288"/>
+        <PARAMETER NAME="C_ADDRB_WIDTH" VALUE="19"/>
         <PARAMETER NAME="C_HAS_MEM_OUTPUT_REGS_A" VALUE="0"/>
         <PARAMETER NAME="C_HAS_MEM_OUTPUT_REGS_B" VALUE="0"/>
         <PARAMETER NAME="C_HAS_MUX_OUTPUT_REGS_A" VALUE="0"/>
@@ -297,9 +280,9 @@
         <PARAMETER NAME="C_EN_SHUTDOWN_PIN" VALUE="0"/>
         <PARAMETER NAME="C_EN_SAFETY_CKT" VALUE="0"/>
         <PARAMETER NAME="C_DISABLE_WARN_BHV_RANGE" VALUE="0"/>
-        <PARAMETER NAME="C_COUNT_36K_BRAM" VALUE="1"/>
+        <PARAMETER NAME="C_COUNT_36K_BRAM" VALUE="464"/>
         <PARAMETER NAME="C_COUNT_18K_BRAM" VALUE="0"/>
-        <PARAMETER NAME="C_EST_POWER_SUMMARY" VALUE="Estimated Power for IP     :     2.8413249999999999 mW"/>
+        <PARAMETER NAME="C_EST_POWER_SUMMARY" VALUE="Estimated Power for IP     :     81.921616 mW"/>
         <PARAMETER NAME="Component_Name" VALUE="design_1_blk_mem_gen_1_0"/>
         <PARAMETER NAME="Interface_Type" VALUE="Native"/>
         <PARAMETER NAME="AXI_Type" VALUE="AXI4_Full"/>
@@ -326,7 +309,7 @@
         <PARAMETER NAME="Primitive" VALUE="8kx2"/>
         <PARAMETER NAME="Assume_Synchronous_Clk" VALUE="false"/>
         <PARAMETER NAME="Write_Width_A" VALUE="32"/>
-        <PARAMETER NAME="Write_Depth_A" VALUE="1024"/>
+        <PARAMETER NAME="Write_Depth_A" VALUE="524288"/>
         <PARAMETER NAME="Read_Width_A" VALUE="32"/>
         <PARAMETER NAME="Operating_Mode_A" VALUE="WRITE_FIRST"/>
         <PARAMETER NAME="Enable_A" VALUE="Always_Enabled"/>
@@ -383,7 +366,7 @@
             <CONNECTION INSTANCE="top_wrapper_0" PORT="wea"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="9" NAME="addra" RIGHT="0" SIGIS="undef" SIGNAME="top_wrapper_0_d_addr">
+        <PORT DIR="I" LEFT="18" NAME="addra" RIGHT="0" SIGIS="undef" SIGNAME="top_wrapper_0_d_addr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="top_wrapper_0" PORT="d_addr"/>
           </CONNECTIONS>
@@ -2657,21 +2640,6 @@
             <CONNECTION INSTANCE="sim_clk_gen_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="sw_e" SIGIS="undef" SIGNAME="External_Ports_GPIO_SW_E">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="GPIO_SW_E"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="sw_s" SIGIS="undef" SIGNAME="External_Ports_GPIO_SW_S">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="GPIO_SW_S"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="sw_w" SIGIS="undef" SIGNAME="External_Ports_GPIO_SW_W">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="GPIO_SW_W"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="O" LEFT="7" NAME="led" RIGHT="0" SIGIS="undef" SIGNAME="top_wrapper_0_led">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="GPIO_LED"/>
@@ -2724,12 +2692,12 @@
             <CONNECTION INSTANCE="fpu_wrapper_0" PORT="fpu_out_valid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="9" NAME="o_addr" RIGHT="0" SIGIS="undef" SIGNAME="top_wrapper_0_o_addr">
+        <PORT DIR="O" LEFT="12" NAME="o_addr" RIGHT="0" SIGIS="undef" SIGNAME="top_wrapper_0_o_addr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="blk_mem_gen_0" PORT="addra"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="9" NAME="d_addr" RIGHT="0" SIGIS="undef" SIGNAME="top_wrapper_0_d_addr">
+        <PORT DIR="O" LEFT="18" NAME="d_addr" RIGHT="0" SIGIS="undef" SIGNAME="top_wrapper_0_d_addr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="blk_mem_gen_1" PORT="addra"/>
           </CONNECTIONS>

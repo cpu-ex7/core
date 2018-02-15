@@ -1,6 +1,4 @@
 set_property SRC_FILE_INFO {cfile:/home/tansei/Desktop/cpu/2017/1stcore/example.xdc rfile:../../../../example.xdc id:1} [current_design]
-set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
-GPIO LEDs
 set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN AP8 [get_ports "GPIO_LED[0]"]
 set_property src_info {type:XDC file:1 line:4 export:INPUT save:INPUT read:READ} [current_design]
@@ -19,8 +17,6 @@ set_property src_info {type:XDC file:1 line:16 export:INPUT save:INPUT read:READ
 set_property PACKAGE_PIN P23 [get_ports "GPIO_LED[7]"]
 set_property src_info {type:XDC file:1 line:32 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN AE10 [get_ports "GPIO_SW_C"]
-set_property src_info {type:XDC file:1 line:33 export:INPUT save:INPUT read:READ} [current_design]
-set_property IOSTANDARD LVCMOS18 [get_ports "GPIO_SW_C"]
 set_property src_info {type:XDC file:1 line:34 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN AE8 [get_ports "GPIO_SW_E"]
 set_property src_info {type:XDC file:1 line:36 export:INPUT save:INPUT read:READ} [current_design]

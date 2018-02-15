@@ -3,7 +3,6 @@ Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
 Running: /opt/Xilinx/Vivado/2016.4/bin/unwrapped/lnx64.o/xelab -wto be0c72a2fa99411b9bd48aa64f698f81 --debug typical --relax --mt 8 -L xil_defaultlib -L xbip_utils_v3_0_7 -L axi_utils_v2_0_3 -L xbip_pipe_v3_0_3 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_dsp48_addsub_v3_0_3 -L xbip_dsp48_multadd_v3_0_3 -L xbip_bram18k_v3_0_3 -L mult_gen_v12_0_12 -L floating_point_v7_1_3 -L blk_mem_gen_v8_3_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot design_1_wrapper_behav xil_defaultlib.design_1_wrapper xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port wfpr_valid2 [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/decode.sv:133]
 WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2016.4/nightly/2017_01_23_1756540/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2420]
 Completed static elaboration
 Starting simulation data flow analysis
@@ -12,7 +11,7 @@ WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/fpu.sv" L
 WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/top_wrapper-sim.v" Line 1. Module top_wrapper doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/top.sv" Line 12. Module top doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/fetch.sv" Line 2. Module fetch doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/decode.sv" Line 55. Module decode doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/decode.sv" Line 59. Module decode doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/write.sv" Line 4. Module gpr_write doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/write.sv" Line 92. Module fpr_write doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/alu.sv" Line 1. Module alu doesn't have a timescale but at least one module in design has a timescale.
@@ -25,7 +24,7 @@ WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/fpu.sv" L
 WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/top_wrapper-sim.v" Line 1. Module top_wrapper doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/top.sv" Line 12. Module top doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/fetch.sv" Line 2. Module fetch doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/decode.sv" Line 55. Module decode doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/decode.sv" Line 59. Module decode doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/write.sv" Line 4. Module gpr_write doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/write.sv" Line 92. Module fpr_write doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/alu.sv" Line 1. Module alu doesn't have a timescale but at least one module in design has a timescale.
@@ -64,6 +63,9 @@ Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_softecc_outpu...
 Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_mem_module(C_...
 Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5(C_FAMILY="kin...
 Compiling module xil_defaultlib.design_1_blk_mem_gen_0_0
+Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_output_stage(...
+Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_output_stage(...
+Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_softecc_outpu...
 Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_mem_module(C_...
 Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5(C_FAMILY="kin...
 Compiling module xil_defaultlib.design_1_blk_mem_gen_1_0
@@ -374,40 +376,18 @@ Compiling architecture synth of entity floating_point_v7_1_3.flt_to_fix_conv [\f
 Compiling architecture xilinx of entity floating_point_v7_1_3.floating_point_v7_1_3_viv [\floating_point_v7_1_3_viv(c_xde...]
 Compiling architecture xilinx of entity floating_point_v7_1_3.floating_point_v7_1_3 [\floating_point_v7_1_3(c_xdevice...]
 Compiling architecture design_1_floating_point_7_0_arch of entity xil_defaultlib.design_1_floating_point_7_0 [design_1_floating_point_7_0_defa...]
-Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(width=31,length=0)\]
-Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(width=32)\]
 Compiling architecture struct of entity floating_point_v7_1_3.carry_chain [\carry_chain(c_xdevicefamily="ki...]
-Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(width=4)\]
 Compiling architecture rtl of entity floating_point_v7_1_3.norm_zero_det [\norm_zero_det(data_width=7,norm...]
 Compiling architecture rtl of entity floating_point_v7_1_3.mux4 [\mux4(c_xdevicefamily="kintexu",...]
-Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(width=2,length=2)\]
 Compiling architecture rtl of entity floating_point_v7_1_3.mux4 [\mux4(c_xdevicefamily="kintexu",...]
-Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(width=2)\]
-Compiling architecture fdre_v of entity unisim.FDRE [fdre_default]
-Compiling architecture fde_v of entity unisim.FDE [fde_default]
 Compiling architecture struct of entity floating_point_v7_1_3.carry_chain [\carry_chain(c_xdevicefamily="ki...]
 Compiling architecture rtl of entity floating_point_v7_1_3.lead_zero_encode [\lead_zero_encode(c_xdevicefamil...]
 Compiling architecture rtl of entity floating_point_v7_1_3.shift_msb_first [\shift_msb_first(a_width=32,resu...]
-Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(width=12)\]
 Compiling architecture struct of entity floating_point_v7_1_3.carry_chain [\carry_chain(c_xdevicefamily="ki...]
-Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(width=11)\]
 Compiling architecture struct of entity floating_point_v7_1_3.carry_chain [\carry_chain(c_xdevicefamily="ki...]
-Compiling architecture rtl of entity floating_point_v7_1_3.flt_round_bit [\flt_round_bit(c_xdevicefamily="...]
 Compiling architecture rtl of entity floating_point_v7_1_3.renorm_and_round_logic [\renorm_and_round_logic(c_xdevic...]
-Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(length=5)\]
-Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_3.delay [\delay(length=2)\]
 Compiling architecture synth of entity floating_point_v7_1_3.fix_to_flt_conv_exp [\fix_to_flt_conv_exp(c_xdevicefa...]
 Compiling architecture struct of entity floating_point_v7_1_3.fix_to_flt_conv [\fix_to_flt_conv(c_xdevicefamily...]
-Compiling architecture synth of entity xbip_pipe_v3_0_3.xbip_pipe_v3_0_3_viv [\xbip_pipe_v3_0_3_viv(c_latency=...]
 Compiling architecture xilinx of entity floating_point_v7_1_3.floating_point_v7_1_3_viv [\floating_point_v7_1_3_viv(c_xde...]
 Compiling architecture xilinx of entity floating_point_v7_1_3.floating_point_v7_1_3 [\floating_point_v7_1_3(c_xdevice...]
 Compiling architecture design_1_floating_point_8_0_arch of entity xil_defaultlib.design_1_floating_point_8_0 [design_1_floating_point_8_0_defa...]

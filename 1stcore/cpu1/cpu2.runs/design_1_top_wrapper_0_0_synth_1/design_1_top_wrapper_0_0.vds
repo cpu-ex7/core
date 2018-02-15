@@ -2,8 +2,8 @@
 # Vivado v2016.4 (64-bit)
 # SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
 # IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
-# Start of session at: Sun Nov  5 13:18:34 2017
-# Process ID: 7133
+# Start of session at: Thu Feb 15 13:13:12 2018
+# Process ID: 25588
 # Current directory: /home/tansei/Desktop/cpu/2017/1stcore/cpu1/cpu2.runs/design_1_top_wrapper_0_0_synth_1
 # Command line: vivado -log design_1_top_wrapper_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_top_wrapper_0_0.tcl
 # Log file: /home/tansei/Desktop/cpu/2017/1stcore/cpu1/cpu2.runs/design_1_top_wrapper_0_0_synth_1/design_1_top_wrapper_0_0.vds
@@ -14,53 +14,57 @@ Command: synth_design -top design_1_top_wrapper_0_0 -part xcku040-ffva1156-2-e -
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xcku040'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku040'
-INFO: [Common 17-1223] The version limit for your license is '2017.03' and will expire in -219 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+INFO: [Common 17-1223] The version limit for your license is '2017.03' and will expire in -321 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 7140 
+INFO: Helper process launched with PID 25605 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1177.352 ; gain = 241.977 ; free physical = 10627 ; free virtual = 29380
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1177.344 ; gain = 241.977 ; free physical = 5673 ; free virtual = 26832
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'design_1_top_wrapper_0_0' [/home/tansei/Desktop/cpu/2017/1stcore/cpu1/cpu2.srcs/sources_1/bd/design_1/ip/design_1_top_wrapper_0_0/synth/design_1_top_wrapper_0_0.v:56]
 INFO: [Synth 8-638] synthesizing module 'top_wrapper' [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/top_wrapper.v:1]
 INFO: [Synth 8-638] synthesizing module 'top' [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/top.sv:12]
 INFO: [Synth 8-638] synthesizing module 'fetch' [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/fetch.sv:2]
 INFO: [Synth 8-256] done synthesizing module 'fetch' (1#1) [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/fetch.sv:2]
-INFO: [Synth 8-638] synthesizing module 'decode' [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/decode.sv:54]
+INFO: [Synth 8-638] synthesizing module 'decode' [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/decode.sv:59]
 INFO: [Synth 8-638] synthesizing module 'gpr_write' [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/write.sv:4]
 	Parameter IDLE bound to: 2'b00 
 	Parameter CALCWAIT bound to: 2'b01 
 	Parameter LOADWAIT bound to: 2'b10 
 	Parameter WRITE bound to: 2'b11 
 INFO: [Synth 8-256] done synthesizing module 'gpr_write' (2#1) [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/write.sv:4]
-INFO: [Synth 8-638] synthesizing module 'fpr_write' [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/write.sv:95]
+INFO: [Synth 8-638] synthesizing module 'fpr_write' [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/write.sv:92]
 	Parameter IDLE bound to: 1'b0 
 	Parameter WAIT_LOAD bound to: 1'b1 
-INFO: [Synth 8-256] done synthesizing module 'fpr_write' (3#1) [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/write.sv:95]
+INFO: [Synth 8-256] done synthesizing module 'fpr_write' (3#1) [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/write.sv:92]
 INFO: [Synth 8-638] synthesizing module 'alu' [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/alu.sv:1]
 INFO: [Synth 8-256] done synthesizing module 'alu' (4#1) [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/alu.sv:1]
 INFO: [Synth 8-638] synthesizing module 'mem_ls' [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/mem_ls.sv:2]
 INFO: [Synth 8-256] done synthesizing module 'mem_ls' (5#1) [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/mem_ls.sv:2]
 INFO: [Synth 8-638] synthesizing module 'pc' [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/pc.sv:2]
 INFO: [Synth 8-256] done synthesizing module 'pc' (6#1) [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/pc.sv:2]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/decode.sv:178]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/decode.sv:291]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/decode.sv:175]
-INFO: [Synth 8-256] done synthesizing module 'decode' (7#1) [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/decode.sv:54]
-INFO: [Synth 8-638] synthesizing module 'uart_tx' [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/uart_tx_7han.sv:15]
-	Parameter CLK_PER_HALF_BIT bound to: 434 - type: integer 
-	Parameter e_clk_bit bound to: 867 - type: integer 
-	Parameter e_clk_stop_bit bound to: 780 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'uart_tx' (8#1) [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/uart_tx_7han.sv:15]
-WARNING: [Synth 8-350] instance 't1' of module 'uart_tx' requires 7 connections, but only 6 given [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/top.sv:96]
-INFO: [Synth 8-638] synthesizing module 'uart_rx' [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/uart_rx.sv:15]
-	Parameter CLK_PER_HALF_BIT bound to: 434 - type: integer 
-	Parameter e_clk_bit bound to: 867 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'uart_rx' (9#1) [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/uart_rx.sv:15]
-INFO: [Synth 8-256] done synthesizing module 'top' (10#1) [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/top.sv:12]
-INFO: [Synth 8-256] done synthesizing module 'top_wrapper' (11#1) [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/top_wrapper.v:1]
-INFO: [Synth 8-256] done synthesizing module 'design_1_top_wrapper_0_0' (12#1) [/home/tansei/Desktop/cpu/2017/1stcore/cpu1/cpu2.srcs/sources_1/bd/design_1/ip/design_1_top_wrapper_0_0/synth/design_1_top_wrapper_0_0.v:56]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/decode.sv:185]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/decode.sv:315]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/decode.sv:182]
+INFO: [Synth 8-256] done synthesizing module 'decode' (7#1) [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/decode.sv:59]
+WARNING: [Synth 8-3848] Net led in module/entity top does not have driver. [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/top.sv:19]
+INFO: [Synth 8-256] done synthesizing module 'top' (8#1) [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/top.sv:12]
+INFO: [Synth 8-256] done synthesizing module 'top_wrapper' (9#1) [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/top_wrapper.v:1]
+INFO: [Synth 8-256] done synthesizing module 'design_1_top_wrapper_0_0' (10#1) [/home/tansei/Desktop/cpu/2017/1stcore/cpu1/cpu2.srcs/sources_1/bd/design_1/ip/design_1_top_wrapper_0_0/synth/design_1_top_wrapper_0_0.v:56]
+WARNING: [Synth 8-3331] design top has unconnected port led[7]
+WARNING: [Synth 8-3331] design top has unconnected port led[6]
+WARNING: [Synth 8-3331] design top has unconnected port led[5]
+WARNING: [Synth 8-3331] design top has unconnected port led[4]
+WARNING: [Synth 8-3331] design top has unconnected port led[3]
+WARNING: [Synth 8-3331] design top has unconnected port led[2]
+WARNING: [Synth 8-3331] design top has unconnected port led[1]
+WARNING: [Synth 8-3331] design top has unconnected port led[0]
+WARNING: [Synth 8-3331] design top has unconnected port sw_n
+WARNING: [Synth 8-3331] design top has unconnected port sw_e
+WARNING: [Synth 8-3331] design top has unconnected port sw_s
+WARNING: [Synth 8-3331] design top has unconnected port sw_w
+WARNING: [Synth 8-3331] design top has unconnected port sw_c
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1233.828 ; gain = 298.453 ; free physical = 10568 ; free virtual = 29323
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1232.820 ; gain = 297.453 ; free physical = 5914 ; free virtual = 27073
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -70,7 +74,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1233.828 ; gain = 298.453 ; free physical = 10568 ; free virtual = 29322
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1232.820 ; gain = 297.453 ; free physical = 5914 ; free virtual = 27073
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xcku040-ffva1156-2-e
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -82,22 +86,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.11 . Memory (MB): peak = 1693.141 ; gain = 4.996 ; free physical = 10144 ; free virtual = 28898
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.12 . Memory (MB): peak = 1690.129 ; gain = 4.000 ; free physical = 5576 ; free virtual = 26737
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1693.145 ; gain = 757.770 ; free physical = 10143 ; free virtual = 28897
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1690.129 ; gain = 754.762 ; free physical = 5575 ; free virtual = 26735
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xcku040-ffva1156-2-e
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1693.145 ; gain = 757.770 ; free physical = 10143 ; free virtual = 28897
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1690.129 ; gain = 754.762 ; free physical = 5575 ; free virtual = 26735
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1693.145 ; gain = 757.770 ; free physical = 10143 ; free virtual = 28897
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1690.129 ; gain = 754.762 ; free physical = 5575 ; free virtual = 26735
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "gpr_reg[31]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "gpr_reg[30]" won't be mapped to RAM because it is too sparse
@@ -164,24 +168,23 @@ INFO: [Synth 8-5546] ROM "fpr_reg[2]" won't be mapped to RAM because it is too s
 INFO: [Synth 8-5546] ROM "fpr_reg[1]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "fpr_reg[0]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "count" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+WARNING: [Synth 8-3936] Found unconnected internal register 'uart_send_data2_reg' and it is trimmed from '32' to '8' bits. [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/decode.sv:109]
 INFO: [Synth 8-5546] ROM "alu_pattern" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "alu_pattern" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "alu_data_a" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "pc_mode" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "pc_mode" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "fpu_data_b" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "fpu_in_valid" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gpr_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fpr_in" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "gl_valid" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "fl_valid" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "uart_recv_ready" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "wdata" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "uart_send_ready" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5544] ROM "txbuf" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "valid" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "count" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "rdata" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "count" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1693.145 ; gain = 757.770 ; free physical = 10223 ; free virtual = 28977
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1690.129 ; gain = 754.762 ; free physical = 5563 ; free virtual = 26724
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -194,42 +197,38 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 4     
-	   2 Input      4 Bit       Adders := 2     
-	   2 Input      2 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 3     
+	   2 Input     10 Bit       Adders := 1     
 	   3 Input      1 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 80    
-	               10 Bit    Registers := 2     
-	                8 Bit    Registers := 1     
+	               32 Bit    Registers := 74    
+	               10 Bit    Registers := 3     
+	                8 Bit    Registers := 2     
 	                5 Bit    Registers := 2     
-	                4 Bit    Registers := 3     
-	                3 Bit    Registers := 1     
-	                2 Bit    Registers := 3     
-	                1 Bit    Registers := 28    
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 21    
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 221   
-	  16 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 217   
+	  18 Input     32 Bit        Muxes := 2     
+	  16 Input     32 Bit        Muxes := 2     
 	   6 Input     32 Bit        Muxes := 1     
-	  13 Input     10 Bit        Muxes := 1     
-	  16 Input      5 Bit        Muxes := 1     
-	   3 Input      5 Bit        Muxes := 1     
-	  14 Input      4 Bit        Muxes := 1     
+	  14 Input     10 Bit        Muxes := 1     
+	   3 Input      5 Bit        Muxes := 2     
+	  18 Input      5 Bit        Muxes := 1     
 	  16 Input      4 Bit        Muxes := 1     
-	   4 Input      4 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 3     
-	  16 Input      3 Bit        Muxes := 1     
+	  18 Input      4 Bit        Muxes := 1     
+	  18 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 4     
-	   3 Input      2 Bit        Muxes := 1     
-	  16 Input      2 Bit        Muxes := 8     
-	  13 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 426   
-	   3 Input      1 Bit        Muxes := 7     
-	  16 Input      1 Bit        Muxes := 9     
-	  13 Input      1 Bit        Muxes := 5     
-	  14 Input      1 Bit        Muxes := 2     
-	   4 Input      1 Bit        Muxes := 6     
-	   5 Input      1 Bit        Muxes := 1     
+	  18 Input      2 Bit        Muxes := 8     
+	  16 Input      2 Bit        Muxes := 1     
+	  14 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 382   
+	  18 Input      1 Bit        Muxes := 10    
+	  14 Input      1 Bit        Muxes := 5     
+	  16 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 5     
+	   3 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -249,10 +248,8 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 106   
-	   2 Input      2 Bit        Muxes := 3     
-	   3 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 167   
-	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 168   
 Module fpr_write 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -266,6 +263,8 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input     32 Bit       Adders := 1     
 	   3 Input      1 Bit       Adders := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
 Module mem_ls 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -286,72 +285,42 @@ Detailed RTL Component Info :
 Module decode 
 Detailed RTL Component Info : 
 +---Registers : 
-	               32 Bit    Registers := 9     
+	               32 Bit    Registers := 7     
 	               10 Bit    Registers := 1     
-	                8 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
 	                5 Bit    Registers := 2     
 	                4 Bit    Registers := 1     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 7     
+	                1 Bit    Registers := 8     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 3     
-	  16 Input     32 Bit        Muxes := 1     
+	  18 Input     32 Bit        Muxes := 2     
+	  16 Input     32 Bit        Muxes := 2     
 	   6 Input     32 Bit        Muxes := 1     
-	  13 Input     10 Bit        Muxes := 1     
-	  16 Input      5 Bit        Muxes := 1     
-	   3 Input      5 Bit        Muxes := 1     
-	  14 Input      4 Bit        Muxes := 1     
+	  14 Input     10 Bit        Muxes := 1     
+	   3 Input      5 Bit        Muxes := 2     
+	  18 Input      5 Bit        Muxes := 1     
 	  16 Input      4 Bit        Muxes := 1     
-	  16 Input      3 Bit        Muxes := 1     
-	  16 Input      2 Bit        Muxes := 8     
-	  13 Input      2 Bit        Muxes := 1     
-	  16 Input      1 Bit        Muxes := 9     
+	  18 Input      4 Bit        Muxes := 1     
+	  18 Input      3 Bit        Muxes := 1     
+	  18 Input      2 Bit        Muxes := 8     
+	  16 Input      2 Bit        Muxes := 1     
+	  14 Input      2 Bit        Muxes := 1     
+	  18 Input      1 Bit        Muxes := 10    
 	   2 Input      1 Bit        Muxes := 1     
-	  13 Input      1 Bit        Muxes := 5     
-	  14 Input      1 Bit        Muxes := 2     
+	  14 Input      1 Bit        Muxes := 5     
+	  16 Input      1 Bit        Muxes := 3     
 	   4 Input      1 Bit        Muxes := 5     
 	   3 Input      1 Bit        Muxes := 2     
-Module uart_tx 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      4 Bit       Adders := 1     
-	   2 Input      2 Bit       Adders := 1     
-+---Registers : 
-	               32 Bit    Registers := 1     
-	                4 Bit    Registers := 1     
-	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   4 Input      4 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 12    
-	   3 Input      1 Bit        Muxes := 4     
-	   4 Input      1 Bit        Muxes := 1     
-Module uart_rx 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-	   2 Input      4 Bit       Adders := 1     
-	   2 Input      2 Bit       Adders := 1     
-+---Registers : 
-	               32 Bit    Registers := 3     
-	                4 Bit    Registers := 1     
-	                3 Bit    Registers := 1     
-	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 3     
-	   2 Input      4 Bit        Muxes := 3     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 36    
-	   5 Input      1 Bit        Muxes := 1     
 Module top 
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
 +---Registers : 
-	               10 Bit    Registers := 1     
+	               10 Bit    Registers := 2     
 	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -368,6 +337,20 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "fpu_in_valid" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "inst/t1/count" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3331] design design_1_top_wrapper_0_0 has unconnected port led[7]
+WARNING: [Synth 8-3331] design design_1_top_wrapper_0_0 has unconnected port led[6]
+WARNING: [Synth 8-3331] design design_1_top_wrapper_0_0 has unconnected port led[5]
+WARNING: [Synth 8-3331] design design_1_top_wrapper_0_0 has unconnected port led[4]
+WARNING: [Synth 8-3331] design design_1_top_wrapper_0_0 has unconnected port led[3]
+WARNING: [Synth 8-3331] design design_1_top_wrapper_0_0 has unconnected port led[2]
+WARNING: [Synth 8-3331] design design_1_top_wrapper_0_0 has unconnected port led[1]
+WARNING: [Synth 8-3331] design design_1_top_wrapper_0_0 has unconnected port led[0]
+WARNING: [Synth 8-3331] design design_1_top_wrapper_0_0 has unconnected port sw_n
+WARNING: [Synth 8-3331] design design_1_top_wrapper_0_0 has unconnected port sw_e
+WARNING: [Synth 8-3331] design design_1_top_wrapper_0_0 has unconnected port sw_s
+WARNING: [Synth 8-3331] design design_1_top_wrapper_0_0 has unconnected port sw_w
+WARNING: [Synth 8-3331] design design_1_top_wrapper_0_0 has unconnected port sw_c
 INFO: [Synth 8-3886] merging instance 'inst/t1/mode_reg[9]' (FDE) to 'inst/t1/mode_reg[1]'
 INFO: [Synth 8-3886] merging instance 'inst/t1/mode_reg[1]' (FDE) to 'inst/t1/mode_reg[3]'
 INFO: [Synth 8-3886] merging instance 'inst/t1/mode_reg[8]' (FDE) to 'inst/t1/mode_reg[3]'
@@ -399,9 +382,6 @@ WARNING: [Synth 8-3332] Sequential element (pc_reg[16]) is unused and will be re
 WARNING: [Synth 8-3332] Sequential element (pc_reg[15]) is unused and will be removed from module pc.
 WARNING: [Synth 8-3332] Sequential element (pc_reg[14]) is unused and will be removed from module pc.
 WARNING: [Synth 8-3332] Sequential element (pc_reg[13]) is unused and will be removed from module pc.
-WARNING: [Synth 8-3332] Sequential element (pc_reg[12]) is unused and will be removed from module pc.
-WARNING: [Synth 8-3332] Sequential element (pc_reg[11]) is unused and will be removed from module pc.
-WARNING: [Synth 8-3332] Sequential element (pc_reg[10]) is unused and will be removed from module pc.
 WARNING: [Synth 8-3332] Sequential element (mem_ls/d_addr_reg[31]) is unused and will be removed from module decode.
 WARNING: [Synth 8-3332] Sequential element (mem_ls/d_addr_reg[30]) is unused and will be removed from module decode.
 WARNING: [Synth 8-3332] Sequential element (mem_ls/d_addr_reg[29]) is unused and will be removed from module decode.
@@ -415,47 +395,7 @@ WARNING: [Synth 8-3332] Sequential element (mem_ls/d_addr_reg[22]) is unused and
 WARNING: [Synth 8-3332] Sequential element (mem_ls/d_addr_reg[21]) is unused and will be removed from module decode.
 WARNING: [Synth 8-3332] Sequential element (mem_ls/d_addr_reg[20]) is unused and will be removed from module decode.
 WARNING: [Synth 8-3332] Sequential element (mem_ls/d_addr_reg[19]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (mem_ls/d_addr_reg[18]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (mem_ls/d_addr_reg[17]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (mem_ls/d_addr_reg[16]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (mem_ls/d_addr_reg[15]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (mem_ls/d_addr_reg[14]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (mem_ls/d_addr_reg[13]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (mem_ls/d_addr_reg[12]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (mem_ls/d_addr_reg[11]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (mem_ls/d_addr_reg[10]) is unused and will be removed from module decode.
 WARNING: [Synth 8-3332] Sequential element (fpu_data_c_reg[7]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (gpr_out_valid_reg[31]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (gpr_out_valid_reg[30]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (gpr_out_valid_reg[29]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (gpr_out_valid_reg[28]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (gpr_out_valid_reg[27]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (gpr_out_valid_reg[26]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (gpr_out_valid_reg[25]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (gpr_out_valid_reg[24]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (gpr_out_valid_reg[23]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (gpr_out_valid_reg[22]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (gpr_out_valid_reg[21]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (gpr_out_valid_reg[20]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (gpr_out_valid_reg[19]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (gpr_out_valid_reg[18]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (gpr_out_valid_reg[17]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (gpr_out_valid_reg[16]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (gpr_out_valid_reg[15]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (gpr_out_valid_reg[14]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (gpr_out_valid_reg[13]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (gpr_out_valid_reg[12]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (gpr_out_valid_reg[11]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (gpr_out_valid_reg[10]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (gpr_out_valid_reg[9]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (gpr_out_valid_reg[8]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (gpr_out_valid_reg[7]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (gpr_out_valid_reg[6]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (gpr_out_valid_reg[5]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (gpr_out_valid_reg[4]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (gpr_out_valid_reg[3]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (gpr_out_valid_reg[2]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (gpr_out_valid_reg[1]) is unused and will be removed from module decode.
 WARNING: [Synth 8-3332] Sequential element (pc_data_reg[31]) is unused and will be removed from module decode.
 WARNING: [Synth 8-3332] Sequential element (pc_data_reg[30]) is unused and will be removed from module decode.
 WARNING: [Synth 8-3332] Sequential element (pc_data_reg[29]) is unused and will be removed from module decode.
@@ -475,12 +415,9 @@ WARNING: [Synth 8-3332] Sequential element (pc_data_reg[16]) is unused and will 
 WARNING: [Synth 8-3332] Sequential element (pc_data_reg[15]) is unused and will be removed from module decode.
 WARNING: [Synth 8-3332] Sequential element (pc_data_reg[14]) is unused and will be removed from module decode.
 WARNING: [Synth 8-3332] Sequential element (pc_data_reg[13]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (pc_data_reg[12]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (pc_data_reg[11]) is unused and will be removed from module decode.
-WARNING: [Synth 8-3332] Sequential element (pc_data_reg[10]) is unused and will be removed from module decode.
 INFO: [Synth 8-3332] Sequential element (inst/t1/mode_reg[3]) is unused and will be removed from module design_1_top_wrapper_0_0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1780.930 ; gain = 845.555 ; free physical = 10058 ; free virtual = 28806
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1755.352 ; gain = 819.984 ; free physical = 5417 ; free virtual = 26577
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -495,10 +432,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:00:42 . Memory (MB): peak = 1948.027 ; gain = 1012.652 ; free physical = 9891 ; free virtual = 28639
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 1948.527 ; gain = 1013.160 ; free physical = 5224 ; free virtual = 26384
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 1954.023 ; gain = 1018.648 ; free physical = 9884 ; free virtual = 28633
+Finished Timing Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 1954.523 ; gain = 1019.156 ; free physical = 5218 ; free virtual = 26378
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -510,7 +447,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:00:45 . Memory (MB): peak = 2056.766 ; gain = 1121.391 ; free physical = 9754 ; free virtual = 28502
+Finished Technology Mapping : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 2058.156 ; gain = 1122.789 ; free physical = 5114 ; free virtual = 26274
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -534,7 +471,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 2056.770 ; gain = 1121.395 ; free physical = 9754 ; free virtual = 28502
+Finished IO Insertion : Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 2058.160 ; gain = 1122.793 ; free physical = 5111 ; free virtual = 26274
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -547,7 +484,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 2056.770 ; gain = 1121.395 ; free physical = 9754 ; free virtual = 28502
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 2058.160 ; gain = 1122.793 ; free physical = 5111 ; free virtual = 26274
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -559,25 +496,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:46 ; elapsed = 00:00:46 . Memory (MB): peak = 2056.770 ; gain = 1121.395 ; free physical = 9754 ; free virtual = 28502
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 2058.160 ; gain = 1122.793 ; free physical = 5111 ; free virtual = 26275
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:46 ; elapsed = 00:00:46 . Memory (MB): peak = 2056.770 ; gain = 1121.395 ; free physical = 9754 ; free virtual = 28502
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 2058.160 ; gain = 1122.793 ; free physical = 5111 ; free virtual = 26275
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 2056.770 ; gain = 1121.395 ; free physical = 9753 ; free virtual = 28502
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 2058.160 ; gain = 1122.793 ; free physical = 5114 ; free virtual = 26274
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 2056.770 ; gain = 1121.395 ; free physical = 9753 ; free virtual = 28502
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 2058.160 ; gain = 1122.793 ; free physical = 5114 ; free virtual = 26274
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -593,41 +530,39 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |CARRY8 |    22|
-|2     |LUT1   |    97|
-|3     |LUT2   |   168|
-|4     |LUT3   |   189|
-|5     |LUT4   |   186|
-|6     |LUT5   |  1122|
-|7     |LUT6   |  4404|
-|8     |MUXF7  |   657|
-|9     |MUXF8  |    32|
-|10    |FDRE   |  2609|
-|11    |FDSE   |    18|
+|1     |CARRY8 |    16|
+|2     |LUT1   |    15|
+|3     |LUT2   |   173|
+|4     |LUT3   |   261|
+|5     |LUT4   |   235|
+|6     |LUT5   |   834|
+|7     |LUT6   |  3804|
+|8     |MUXF7  |   631|
+|9     |MUXF8  |    64|
+|10    |FDRE   |  2427|
+|11    |FDSE   |    17|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+------------------+------------+------+
 |      |Instance          |Module      |Cells |
 +------+------------------+------------+------+
-|1     |top               |            |  9504|
-|2     |  inst            |top_wrapper |  9504|
-|3     |    t1            |top         |  9504|
-|4     |      d1          |decode      |  8807|
-|5     |        fpr_write |fpr_write   |  2822|
-|6     |        gpr_write |gpr_write   |  4250|
-|7     |        mem_ls    |mem_ls      |  1374|
-|8     |        pc        |pc          |    48|
-|9     |      f1          |fetch       |   302|
-|10    |      r1          |uart_rx     |   208|
-|11    |      t1          |uart_tx     |   174|
+|1     |top               |            |  8477|
+|2     |  inst            |top_wrapper |  8477|
+|3     |    t1            |top         |  8477|
+|4     |      d1          |decode      |  8118|
+|5     |        fpr_write |fpr_write   |  2916|
+|6     |        gpr_write |gpr_write   |  3303|
+|7     |        mem_ls    |mem_ls      |  1517|
+|8     |        pc        |pc          |    60|
+|9     |      f1          |fetch       |   321|
 +------+------------------+------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 2056.770 ; gain = 1121.395 ; free physical = 9753 ; free virtual = 28502
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 2058.160 ; gain = 1122.793 ; free physical = 5114 ; free virtual = 26274
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 98 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 2056.770 ; gain = 495.098 ; free physical = 9753 ; free virtual = 28502
-Synthesis Optimization Complete : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 2056.773 ; gain = 1121.398 ; free physical = 9753 ; free virtual = 28502
+Synthesis finished with 0 errors, 0 critical warnings and 66 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 2058.160 ; gain = 499.504 ; free physical = 5114 ; free virtual = 26274
+Synthesis Optimization Complete : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 2058.164 ; gain = 1122.797 ; free physical = 5114 ; free virtual = 26274
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -635,11 +570,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-154 Infos, 99 Warnings, 0 Critical Warnings and 0 Errors encountered.
+145 Infos, 80 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 2056.773 ; gain = 1004.887 ; free physical = 9749 ; free virtual = 28497
+synth_design: Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 2058.164 ; gain = 1007.285 ; free physical = 5108 ; free virtual = 26268
 INFO: [Common 17-1381] The checkpoint '/home/tansei/Desktop/cpu/2017/1stcore/cpu1/cpu2.runs/design_1_top_wrapper_0_0_synth_1/design_1_top_wrapper_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1174] Renamed 10 cell refs.
+INFO: [Coretcl 2-1174] Renamed 8 cell refs.
 INFO: [Common 17-1381] The checkpoint '/home/tansei/Desktop/cpu/2017/1stcore/cpu1/cpu2.runs/design_1_top_wrapper_0_0_synth_1/design_1_top_wrapper_0_0.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.11 . Memory (MB): peak = 2080.781 ; gain = 0.000 ; free physical = 9740 ; free virtual = 28496
-INFO: [Common 17-206] Exiting Vivado at Sun Nov  5 13:19:32 2017...
+report_utilization: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.13 . Memory (MB): peak = 2082.172 ; gain = 0.000 ; free physical = 5100 ; free virtual = 26266
+INFO: [Common 17-206] Exiting Vivado at Thu Feb 15 13:14:13 2018...

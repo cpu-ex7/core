@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2017 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2018 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -59,8 +59,8 @@ module design_1_top_wrapper_0_0 (
   sw_e,
   sw_s,
   sw_w,
+  sw_c,
   led,
-  txd,
   fpu_data_a,
   fpu_data_b,
   fpu_data_c,
@@ -73,7 +73,12 @@ module design_1_top_wrapper_0_0 (
   rdata,
   wdata,
   wea,
-  rxd
+  uart_send_data,
+  uart_send_ready,
+  uart_send_valid,
+  uart_recv_data,
+  uart_recv_ready,
+  uart_recv_valid
 );
 
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
@@ -82,21 +87,26 @@ input wire sw_n;
 input wire sw_e;
 input wire sw_s;
 input wire sw_w;
+input wire sw_c;
 output wire [7 : 0] led;
-output wire txd;
 output wire [31 : 0] fpu_data_a;
 output wire [31 : 0] fpu_data_b;
 output wire [7 : 0] fpu_data_c;
 input wire [31 : 0] fpu_out;
 output wire [9 : 0] fpu_in_valid;
 input wire fpu_out_valid;
-output wire [9 : 0] o_addr;
-output wire [9 : 0] d_addr;
+output wire [12 : 0] o_addr;
+output wire [18 : 0] d_addr;
 input wire [31 : 0] odata;
 input wire [31 : 0] rdata;
 output wire [31 : 0] wdata;
 output wire wea;
-input wire rxd;
+output wire [7 : 0] uart_send_data;
+output wire uart_send_ready;
+input wire uart_send_valid;
+input wire [7 : 0] uart_recv_data;
+output wire uart_recv_ready;
+input wire uart_recv_valid;
 
   top_wrapper inst (
     .clk(clk),
@@ -104,8 +114,8 @@ input wire rxd;
     .sw_e(sw_e),
     .sw_s(sw_s),
     .sw_w(sw_w),
+    .sw_c(sw_c),
     .led(led),
-    .txd(txd),
     .fpu_data_a(fpu_data_a),
     .fpu_data_b(fpu_data_b),
     .fpu_data_c(fpu_data_c),
@@ -118,6 +128,11 @@ input wire rxd;
     .rdata(rdata),
     .wdata(wdata),
     .wea(wea),
-    .rxd(rxd)
+    .uart_send_data(uart_send_data),
+    .uart_send_ready(uart_send_ready),
+    .uart_send_valid(uart_send_valid),
+    .uart_recv_data(uart_recv_data),
+    .uart_recv_ready(uart_recv_ready),
+    .uart_recv_valid(uart_recv_valid)
   );
 endmodule

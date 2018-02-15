@@ -81,9 +81,9 @@ vlog -work blk_mem_gen_v8_3_5 -64 \
 vlog -work xil_defaultlib -64 \
 "../../../bd/design_1/ip/design_1_blk_mem_gen_0_0/sim/design_1_blk_mem_gen_0_0.v" \
 "../../../bd/design_1/ip/design_1_blk_mem_gen_1_0/sim/design_1_blk_mem_gen_1_0.v" \
-"../../../bd/design_1/hdl/design_1.v" \
 "../../../bd/design_1/ipshared/68f7/hdl/sim_clk_gen.v" \
 "../../../bd/design_1/ip/design_1_sim_clk_gen_0_0/sim/design_1_sim_clk_gen_0_0.v" \
+"../../../bd/design_1/hdl/design_1.v" \
 
 vlog -work xil_defaultlib "glbl.v"
 

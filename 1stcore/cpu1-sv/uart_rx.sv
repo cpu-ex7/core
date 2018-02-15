@@ -12,13 +12,14 @@
 `define s_bit_7 4'd9
 `define s_stop_bit 4'd10
 
-module uart_rx #(CLK_PER_HALF_BIT = 434) (
+module uart_rx #(CLK_PER_HALF_BIT = 5208) (
                output logic [31:0] rdata,
                output logic rdata_valid,
                input wire rdata_ready,
                input wire rxd,
                input wire clk,
-               input wire rstn);
+               input wire rstn,
+               output logic error_led);
 
    localparam e_clk_bit = CLK_PER_HALF_BIT * 2 - 1;
 
@@ -26,12 +27,14 @@ module uart_rx #(CLK_PER_HALF_BIT = 434) (
    logic [31:0] rxbuf;
    logic [3:0] status;
    logic [31:0] count;
+   logic [31:0] rxmem;
    //logic                        next;
    //logic                        fin_stop_bit;
    //logic                        rst_ctr;
    logic [2:0] rxdsr;
    logic [1:0] nbits;
    logic waiting;
+   logic empty;
 
    initial begin
       rxbuf <= 32'b0;
@@ -44,6 +47,8 @@ module uart_rx #(CLK_PER_HALF_BIT = 434) (
       rxdsr <= 3'b0;
       nbits <= 2'b0;
       waiting <= 1'b0;
+      empty <= 1'b1;
+      error_led <= 1'b0;
     end
 
    always @(posedge clk) begin
@@ -52,6 +57,12 @@ module uart_rx #(CLK_PER_HALF_BIT = 434) (
       end
       if(rdata_valid) begin
         rdata_valid <= 1'b0;
+      end
+      if(waiting && ~empty) begin
+        rdata <= rxmem;
+        rdata_valid <= 1'b1;
+        waiting <= 1'b0;
+        empty <= 1'b1;
       end
       if (~rstn) begin
          rxbuf <= 32'b0;
@@ -105,11 +116,11 @@ module uart_rx #(CLK_PER_HALF_BIT = 434) (
             end
             else begin
               if(nbits == 2'd3) begin
-                if (waiting) begin
-                  rdata_valid <= 1'b1;
-                  waiting <= 1'b0;
+                if(~empty) begin
+                  error_led <= 1'b1;
                 end
-                rdata <= rxbuf;
+                empty <= 1'b0;
+                rxmem <= rxbuf;
                 count <= 4'b0;
                 status <= 32'b0;
                 nbits <= 2'd0;

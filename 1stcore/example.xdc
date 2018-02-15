@@ -1,4 +1,4 @@
-GPIO LEDs
+#GPIO LEDs
 set_property PACKAGE_PIN AP8 [get_ports "GPIO_LED[0]"]
 set_property IOSTANDARD LVCMOS18 [get_ports "GPIO_LED[0]"]
 set_property PACKAGE_PIN H23 [get_ports "GPIO_LED[1]"]

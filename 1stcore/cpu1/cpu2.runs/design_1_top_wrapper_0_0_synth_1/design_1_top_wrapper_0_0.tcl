@@ -24,10 +24,8 @@ read_verilog -library xil_defaultlib -sv {
   /home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/pc.sv
   /home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/mem_ls.sv
   /home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/alu.sv
-  /home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/decode.sv
   /home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/fetch.sv
-  /home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/uart_tx_7han.sv
-  /home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/uart_rx.sv
+  /home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/decode.sv
   /home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/top.sv
 }
 read_verilog -library xil_defaultlib /home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/top_wrapper.v

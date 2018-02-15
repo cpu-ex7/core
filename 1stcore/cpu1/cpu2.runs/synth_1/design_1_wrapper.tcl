@@ -23,6 +23,12 @@ add_files /home/tansei/Desktop/cpu/2017/1stcore/fib.coe
 add_files /home/tansei/Desktop/cpu/2017/1stcore/fpu_test.coe
 add_files /home/tansei/Desktop/cpu/2017/1stcore/uart_test.coe
 add_files /home/tansei/Desktop/cpu/2017/1stcore/uart_test2.coe
+add_files /home/tansei/Desktop/cpu/2017/1stcore/mandel-code.coe
+add_files /home/tansei/Desktop/cpu/2017/1stcore/test-code.coe
+add_files /home/tansei/Desktop/cpu/2017/1stcore/asm.coe
+add_files /home/tansei/Desktop/cpu/2017/1stcore/mandelbrot.coe
+add_files /home/tansei/Desktop/cpu/2017/1stcore/example.coe
+add_files /home/tansei/Desktop/cpu/2017/1stcore/min-rt.coe
 read_verilog -library xil_defaultlib /home/tansei/Desktop/cpu/2017/1stcore/cpu1/cpu2.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
 add_files /home/tansei/Desktop/cpu/2017/1stcore/cpu1/cpu2.srcs/sources_1/bd/design_1/design_1.bd
 set_property used_in_implementation false [get_files -all /home/tansei/Desktop/cpu/2017/1stcore/cpu1/cpu2.srcs/sources_1/bd/design_1/ip/design_1_floating_point_0_1/design_1_floating_point_0_1_ooc.xdc]
@@ -38,6 +44,9 @@ set_property used_in_implementation false [get_files -all /home/tansei/Desktop/c
 set_property used_in_implementation false [get_files -all /home/tansei/Desktop/cpu/2017/1stcore/cpu1/cpu2.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/tansei/Desktop/cpu/2017/1stcore/cpu1/cpu2.srcs/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_0/design_1_blk_mem_gen_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/tansei/Desktop/cpu/2017/1stcore/cpu1/cpu2.srcs/sources_1/bd/design_1/ip/design_1_blk_mem_gen_1_0/design_1_blk_mem_gen_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/tansei/Desktop/cpu/2017/1stcore/cpu1/cpu2.srcs/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_1/design_1_axi_uartlite_0_1_board.xdc]
+set_property used_in_implementation false [get_files -all /home/tansei/Desktop/cpu/2017/1stcore/cpu1/cpu2.srcs/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_1/design_1_axi_uartlite_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/tansei/Desktop/cpu/2017/1stcore/cpu1/cpu2.srcs/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_1/design_1_axi_uartlite_0_1.xdc]
 set_property used_in_implementation false [get_files -all /home/tansei/Desktop/cpu/2017/1stcore/cpu1/cpu2.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
 set_property is_locked true [get_files /home/tansei/Desktop/cpu/2017/1stcore/cpu1/cpu2.srcs/sources_1/bd/design_1/design_1.bd]
 

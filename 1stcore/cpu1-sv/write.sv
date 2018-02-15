@@ -11,7 +11,7 @@ module gpr_write(
   input logic [4:0] gpraddr,
   output logic [31:0] [31:0] gpr,
   output logic wgpr_finish,
-  input logic [31:0] uart_input,
+  input logic [7:0] uart_input,
   input logic uart_input_valid
   );
 
@@ -68,7 +68,7 @@ module gpr_write(
       wgpr_finish <= 1'b0;
     end
     if(uart_input_valid) begin
-      gpr[gpraddr] <= uart_input;
+      gpr[gpraddr] <= {24'b0, uart_input};
       wgpr_finish <= 1'b1;
     end
     if(mode == WRITE) begin

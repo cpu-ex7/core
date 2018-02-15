@@ -4,34 +4,36 @@ module top_wrapper(
   input wire sw_e,
   input wire sw_s,
   input wire sw_w,
+  input wire sw_c,
   output wire [7:0] led,
-  output wire txd,
   output wire [31:0] fpu_data_a,
   output wire [31:0] fpu_data_b,
   output wire [7:0] fpu_data_c,
   input wire [31:0] fpu_out,
   output wire [9:0] fpu_in_valid,
   input wire fpu_out_valid,
-  output wire [9:0] o_addr,
-  output wire [9:0] d_addr,
+  output wire [12:0] o_addr,
+  output wire [18:0] d_addr,
   input wire [31:0] odata,
   input wire [31:0] rdata,
   output wire [31:0] wdata,
   output wire wea,
-  input wire rxd
+  output wire [7:0] uart_send_data,
+  output wire uart_send_ready,
+  input wire uart_send_valid,
+  input wire [7:0] uart_recv_data,
+  output wire uart_recv_ready,
+  input wire uart_recv_valid
   );
-
-  wire [31:0] d_addr2;
-  assign d_addr = d_addr2[9:0];
 
   top t1(
     .sw_n(sw_n),
     .sw_e(sw_e),
     .sw_s(sw_s),
     .sw_w(sw_w),
+    .sw_c(sw_c),
     .clk(clk),
     .led(led),
-    .txd(txd),
     .fpu_data_a(fpu_data_a),
     .fpu_data_b(fpu_data_b),
     .fpu_data_c(fpu_data_c),
@@ -39,12 +41,17 @@ module top_wrapper(
     .fpu_in_valid(fpu_in_valid),
     .fpu_out_valid(fpu_out_valid),
     .o_addr(o_addr),
-    .d_addr(d_addr2),
+    .d_addr2(d_addr),
     .odata(odata),
     .rdata(rdata),
     .wdata(wdata),
     .wea(wea),
-    .rxd(rxd)
+    .uart_send_data(uart_send_data),
+    .uart_send_ready(uart_send_ready),
+    .uart_send_valid(uart_send_valid),
+    .uart_recv_data(uart_recv_data),
+    .uart_recv_ready(uart_recv_ready),
+    .uart_recv_valid(uart_recv_valid)
     );
 
 endmodule

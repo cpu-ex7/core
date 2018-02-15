@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2017 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2018 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -55,9 +55,6 @@
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_top_wrapper_0_0 (
   clk,
-  sw_e,
-  sw_s,
-  sw_w,
   led,
   txd,
   fpu_data_a,
@@ -76,9 +73,6 @@ module design_1_top_wrapper_0_0 (
 
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
-input wire sw_e;
-input wire sw_s;
-input wire sw_w;
 output wire [7 : 0] led;
 output wire txd;
 output wire [31 : 0] fpu_data_a;
@@ -87,8 +81,8 @@ output wire [7 : 0] fpu_data_c;
 input wire [31 : 0] fpu_out;
 output wire [9 : 0] fpu_in_valid;
 input wire fpu_out_valid;
-output wire [9 : 0] o_addr;
-output wire [9 : 0] d_addr;
+output wire [12 : 0] o_addr;
+output wire [18 : 0] d_addr;
 input wire [31 : 0] odata;
 input wire [31 : 0] rdata;
 output wire [31 : 0] wdata;
@@ -96,9 +90,6 @@ output wire wea;
 
   top_wrapper inst (
     .clk(clk),
-    .sw_e(sw_e),
-    .sw_s(sw_s),
-    .sw_w(sw_w),
     .led(led),
     .txd(txd),
     .fpu_data_a(fpu_data_a),

@@ -7,13 +7,15 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tansei/Desktop/cpu/2017
 INFO: [VRFC 10-311] analyzing module mem_ls
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/alu.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module alu
-INFO: [VRFC 10-2458] undeclared symbol data_sub, assumed default net type wire [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/alu.sv:25]
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/uart_tx_7han.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_tx
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/fetch.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module fetch
+INFO: [VRFC 10-2458] undeclared symbol data_sub, assumed default net type wire [/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/alu.sv:24]
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/decode.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module decode
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/fetch.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fetch
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/uart_tx_7han.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_tx
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/uart_rx.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_rx
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/top.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module top
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tansei/Desktop/cpu/2017/1stcore/cpu1-sv/top_wrapper.v" into library xil_defaultlib
