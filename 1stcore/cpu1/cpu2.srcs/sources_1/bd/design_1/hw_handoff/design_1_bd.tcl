@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# fpu_wrapper, top_wrapper, uart_wrapper
+# fpu_wrapper, top_wrapper, uart
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -400,26 +400,20 @@ CONFIG.Result_Precision_Type {Single} \
      return 1
    }
   
-  # Create instance: uart_wrapper_0, and set properties
-  set block_name uart_wrapper
-  set block_cell_name uart_wrapper_0
-  if { [catch {set uart_wrapper_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+  # Create instance: uart_0, and set properties
+  set block_name uart
+  set block_cell_name uart_0
+  if { [catch {set uart_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
      catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
-   } elseif { $uart_wrapper_0 eq "" } {
+   } elseif { $uart_0 eq "" } {
      catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
   
-  set_property -dict [ list \
-CONFIG.SUPPORTS_NARROW_BURST {0} \
-CONFIG.NUM_READ_OUTSTANDING {1} \
-CONFIG.NUM_WRITE_OUTSTANDING {1} \
-CONFIG.MAX_BURST_LENGTH {1} \
- ] [get_bd_intf_pins /uart_wrapper_0/uart]
-
   # Create interface connections
   connect_bd_intf_net -intf_net default_sysclk_300_1 [get_bd_intf_ports default_sysclk_300] [get_bd_intf_pins clk_wiz_0/CLK_IN1_D]
+  connect_bd_intf_net -intf_net uart_0_interface_aximm [get_bd_intf_pins axi_uartlite_0/S_AXI] [get_bd_intf_pins uart_0/interface_aximm]
 
   # Create port connections
   connect_bd_net -net GPIO_SW_C_1 [get_bd_ports GPIO_SW_C] [get_bd_pins top_wrapper_0/sw_c]
@@ -429,18 +423,10 @@ CONFIG.MAX_BURST_LENGTH {1} \
   connect_bd_net -net GPIO_SW_W_1 [get_bd_ports GPIO_SW_W] [get_bd_pins top_wrapper_0/sw_w]
   connect_bd_net -net Net [get_bd_pins floating_point_4/s_axis_a_tvalid] [get_bd_pins fpu_wrapper_0/fsqrt_in_valid_a]
   connect_bd_net -net USB_UART_RX_1 [get_bd_ports USB_UART_RX] [get_bd_pins axi_uartlite_0/rx]
-  connect_bd_net -net axi_uartlite_0_s_axi_arready [get_bd_pins axi_uartlite_0/s_axi_arready] [get_bd_pins uart_wrapper_0/uart_arready]
-  connect_bd_net -net axi_uartlite_0_s_axi_awready [get_bd_pins axi_uartlite_0/s_axi_awready] [get_bd_pins uart_wrapper_0/uart_awready]
-  connect_bd_net -net axi_uartlite_0_s_axi_bresp [get_bd_pins axi_uartlite_0/s_axi_bresp] [get_bd_pins uart_wrapper_0/uart_bresp]
-  connect_bd_net -net axi_uartlite_0_s_axi_bvalid [get_bd_pins axi_uartlite_0/s_axi_bvalid] [get_bd_pins uart_wrapper_0/uart_bvalid]
-  connect_bd_net -net axi_uartlite_0_s_axi_rdata [get_bd_pins axi_uartlite_0/s_axi_rdata] [get_bd_pins uart_wrapper_0/uart_rdata]
-  connect_bd_net -net axi_uartlite_0_s_axi_rresp [get_bd_pins axi_uartlite_0/s_axi_rresp] [get_bd_pins uart_wrapper_0/uart_rresp]
-  connect_bd_net -net axi_uartlite_0_s_axi_rvalid [get_bd_pins axi_uartlite_0/s_axi_rvalid] [get_bd_pins uart_wrapper_0/uart_rvalid]
-  connect_bd_net -net axi_uartlite_0_s_axi_wready [get_bd_pins axi_uartlite_0/s_axi_wready] [get_bd_pins uart_wrapper_0/uart_wready]
   connect_bd_net -net axi_uartlite_0_tx [get_bd_ports USB_UART_TX] [get_bd_pins axi_uartlite_0/tx]
   connect_bd_net -net blk_mem_gen_0_douta [get_bd_pins blk_mem_gen_0/douta] [get_bd_pins top_wrapper_0/odata]
   connect_bd_net -net blk_mem_gen_1_douta [get_bd_pins blk_mem_gen_1/douta] [get_bd_pins top_wrapper_0/rdata]
-  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins axi_uartlite_0/s_axi_aclk] [get_bd_pins blk_mem_gen_0/clka] [get_bd_pins blk_mem_gen_1/clka] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins floating_point_0/aclk] [get_bd_pins floating_point_1/aclk] [get_bd_pins floating_point_2/aclk] [get_bd_pins floating_point_3/aclk] [get_bd_pins floating_point_4/aclk] [get_bd_pins floating_point_6/aclk] [get_bd_pins floating_point_7/aclk] [get_bd_pins floating_point_8/aclk] [get_bd_pins fpu_wrapper_0/clk] [get_bd_pins top_wrapper_0/clk] [get_bd_pins uart_wrapper_0/clk]
+  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins axi_uartlite_0/s_axi_aclk] [get_bd_pins blk_mem_gen_0/clka] [get_bd_pins blk_mem_gen_1/clka] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins floating_point_0/aclk] [get_bd_pins floating_point_1/aclk] [get_bd_pins floating_point_2/aclk] [get_bd_pins floating_point_3/aclk] [get_bd_pins floating_point_4/aclk] [get_bd_pins floating_point_6/aclk] [get_bd_pins floating_point_7/aclk] [get_bd_pins floating_point_8/aclk] [get_bd_pins fpu_wrapper_0/clk] [get_bd_pins top_wrapper_0/clk] [get_bd_pins uart_0/CLK]
   connect_bd_net -net floating_point_0_m_axis_result_tdata [get_bd_pins floating_point_0/m_axis_result_tdata] [get_bd_pins fpu_wrapper_0/fadd_out]
   connect_bd_net -net floating_point_0_m_axis_result_tvalid [get_bd_pins floating_point_0/m_axis_result_tvalid] [get_bd_pins fpu_wrapper_0/fadd_out_valid]
   connect_bd_net -net floating_point_0_s_axis_a_tready [get_bd_pins floating_point_0/s_axis_a_tready] [get_bd_pins fpu_wrapper_0/fadd_in_ready_a]
@@ -497,23 +483,14 @@ CONFIG.MAX_BURST_LENGTH {1} \
   connect_bd_net -net top_wrapper_0_fpu_in_valid [get_bd_pins fpu_wrapper_0/fpu_in_valid] [get_bd_pins top_wrapper_0/fpu_in_valid]
   connect_bd_net -net top_wrapper_0_led [get_bd_ports GPIO_LED] [get_bd_pins top_wrapper_0/led]
   connect_bd_net -net top_wrapper_0_o_addr [get_bd_pins blk_mem_gen_0/addra] [get_bd_pins top_wrapper_0/o_addr]
-  connect_bd_net -net top_wrapper_0_uart_recv_ready [get_bd_pins top_wrapper_0/uart_recv_ready] [get_bd_pins uart_wrapper_0/uart_inready]
-  connect_bd_net -net top_wrapper_0_uart_send_data [get_bd_pins top_wrapper_0/uart_send_data] [get_bd_pins uart_wrapper_0/uart_output]
-  connect_bd_net -net top_wrapper_0_uart_send_ready [get_bd_pins top_wrapper_0/uart_send_ready] [get_bd_pins uart_wrapper_0/uart_outready]
+  connect_bd_net -net top_wrapper_0_uart_recv_ready [get_bd_pins top_wrapper_0/uart_recv_ready] [get_bd_pins uart_0/uart_inready]
+  connect_bd_net -net top_wrapper_0_uart_send_data [get_bd_pins top_wrapper_0/uart_send_data] [get_bd_pins uart_0/uart_output]
+  connect_bd_net -net top_wrapper_0_uart_send_ready [get_bd_pins top_wrapper_0/uart_send_ready] [get_bd_pins uart_0/uart_outready]
   connect_bd_net -net top_wrapper_0_wdata [get_bd_pins blk_mem_gen_1/dina] [get_bd_pins top_wrapper_0/wdata]
   connect_bd_net -net top_wrapper_0_wea [get_bd_pins blk_mem_gen_1/wea] [get_bd_pins top_wrapper_0/wea]
-  connect_bd_net -net uart_wrapper_0_uart_araddr [get_bd_pins axi_uartlite_0/s_axi_araddr] [get_bd_pins uart_wrapper_0/uart_araddr]
-  connect_bd_net -net uart_wrapper_0_uart_arvalid [get_bd_pins axi_uartlite_0/s_axi_arvalid] [get_bd_pins uart_wrapper_0/uart_arvalid]
-  connect_bd_net -net uart_wrapper_0_uart_awaddr [get_bd_pins axi_uartlite_0/s_axi_awaddr] [get_bd_pins uart_wrapper_0/uart_awaddr]
-  connect_bd_net -net uart_wrapper_0_uart_awvalid [get_bd_pins axi_uartlite_0/s_axi_awvalid] [get_bd_pins uart_wrapper_0/uart_awvalid]
-  connect_bd_net -net uart_wrapper_0_uart_bready [get_bd_pins axi_uartlite_0/s_axi_bready] [get_bd_pins uart_wrapper_0/uart_bready]
-  connect_bd_net -net uart_wrapper_0_uart_input [get_bd_pins top_wrapper_0/uart_recv_data] [get_bd_pins uart_wrapper_0/uart_input]
-  connect_bd_net -net uart_wrapper_0_uart_invalid [get_bd_pins top_wrapper_0/uart_recv_valid] [get_bd_pins uart_wrapper_0/uart_invalid]
-  connect_bd_net -net uart_wrapper_0_uart_outvalid [get_bd_pins top_wrapper_0/uart_send_valid] [get_bd_pins uart_wrapper_0/uart_outvalid]
-  connect_bd_net -net uart_wrapper_0_uart_rready [get_bd_pins axi_uartlite_0/s_axi_rready] [get_bd_pins uart_wrapper_0/uart_rready]
-  connect_bd_net -net uart_wrapper_0_uart_wdata [get_bd_pins axi_uartlite_0/s_axi_wdata] [get_bd_pins uart_wrapper_0/uart_wdata]
-  connect_bd_net -net uart_wrapper_0_uart_wstrb [get_bd_pins axi_uartlite_0/s_axi_wstrb] [get_bd_pins uart_wrapper_0/uart_wstrb]
-  connect_bd_net -net uart_wrapper_0_uart_wvalid [get_bd_pins axi_uartlite_0/s_axi_wvalid] [get_bd_pins uart_wrapper_0/uart_wvalid]
+  connect_bd_net -net uart_wrapper_0_uart_input [get_bd_pins top_wrapper_0/uart_recv_data] [get_bd_pins uart_0/uart_input]
+  connect_bd_net -net uart_wrapper_0_uart_invalid [get_bd_pins top_wrapper_0/uart_recv_valid] [get_bd_pins uart_0/uart_invalid]
+  connect_bd_net -net uart_wrapper_0_uart_outvalid [get_bd_pins top_wrapper_0/uart_send_valid] [get_bd_pins uart_0/uart_outvalid]
 
   # Create address segments
 
@@ -530,11 +507,11 @@ preplace port USB_UART_RX -pg 1 -y 40 -defaultsOSRD
 preplace port GPIO_SW_N -pg 1 -y -280 -defaultsOSRD
 preplace port GPIO_SW_C -pg 1 -y -400 -defaultsOSRD
 preplace portBus GPIO_LED -pg 1 -y -350 -defaultsOSRD
-preplace inst uart_wrapper_0 -pg 1 -lvl 5 -y -380 -defaultsOSRD
 preplace inst floating_point_0 -pg 1 -lvl 1 -y -950 -defaultsOSRD
 preplace inst floating_point_1 -pg 1 -lvl 1 -y -680 -defaultsOSRD
 preplace inst floating_point_2 -pg 1 -lvl 1 -y -360 -defaultsOSRD
 preplace inst top_wrapper_0 -pg 1 -lvl 4 -y 320 -defaultsOSRD
+preplace inst uart_0 -pg 1 -lvl 4 -y -430 -defaultsOSRD
 preplace inst floating_point_3 -pg 1 -lvl 1 -y -40 -defaultsOSRD
 preplace inst floating_point_4 -pg 1 -lvl 2 -y -1030 -defaultsOSRD
 preplace inst blk_mem_gen_0 -pg 1 -lvl 4 -y 700 -defaultsOSRD
@@ -546,100 +523,84 @@ preplace inst floating_point_7 -pg 1 -lvl 2 -y -130 -defaultsOSRD
 preplace inst axi_uartlite_0 -pg 1 -lvl 4 -y -610 -defaultsOSRD
 preplace inst floating_point_8 -pg 1 -lvl 2 -y 100 -defaultsOSRD
 preplace inst clk_wiz_0 -pg 1 -lvl 1 -y -1150 -defaultsOSRD
-preplace netloc GPIO_SW_E_1 1 0 4 -1060J 220 NJ 220 NJ 220 900
-preplace netloc floating_point_2_s_axis_b_tready 1 0 3 -940 -500 -520J -260 240J
-preplace netloc top_wrapper_0_led 1 4 2 N 210 1970
-preplace netloc floating_point_8_m_axis_result_tvalid 1 2 1 410
-preplace netloc axi_uartlite_0_s_axi_rresp 1 3 3 980 -130 NJ -130 1830
+preplace netloc GPIO_SW_E_1 1 0 4 -1070J 240 NJ 240 NJ 240 N
+preplace netloc floating_point_2_s_axis_b_tready 1 0 3 -950 -500 -470J -260 230J
+preplace netloc top_wrapper_0_led 1 4 1 1480
+preplace netloc floating_point_8_m_axis_result_tvalid 1 2 1 380
 preplace netloc GPIO_SW_C_1 1 0 4 -1080J 300 NJ 300 NJ 300 N
-preplace netloc floating_point_0_m_axis_result_tdata 1 1 2 -470J -940 400J
-preplace netloc axi_uartlite_0_s_axi_bvalid 1 3 3 870 -920 NJ -920 1870
-preplace netloc floating_point_2_m_axis_result_tdata 1 1 2 -470J -690 330J
-preplace netloc axi_uartlite_0_s_axi_rvalid 1 3 3 990 -120 NJ -120 1820
-preplace netloc uart_wrapper_0_uart_wstrb 1 3 3 1020 -100 NJ -100 1900
-preplace netloc top_wrapper_0_wdata 1 3 2 980 140 1400
+preplace netloc floating_point_0_m_axis_result_tdata 1 1 2 -440J -940 370J
+preplace netloc floating_point_2_m_axis_result_tdata 1 1 2 -440J -650 NJ
+preplace netloc top_wrapper_0_wdata 1 3 2 980 140 1380
 preplace netloc GPIO_SW_W_1 1 0 4 -1100J 280 NJ 280 NJ 280 N
-preplace netloc fpu_wrapper_0_fsub_in_valid_a 1 0 4 -1020 250 NJ 250 NJ 250 880
-preplace netloc floating_point_1_m_axis_result_tvalid 1 1 2 -490J -700 290J
-preplace netloc floating_point_0_m_axis_result_tvalid 1 1 2 -470J -920 370J
-preplace netloc uart_wrapper_0_uart_rready 1 3 3 850 -950 NJ -950 1950
-preplace netloc axi_uartlite_0_tx 1 4 2 1470 -930 1970
-preplace netloc fpu_wrapper_0_fsub_in_valid_b 1 0 4 -970 -200 -520J -10 140J 30 870
-preplace netloc USB_UART_RX_1 1 0 5 -1070J -550 -520J -1190 NJ -1190 NJ -1190 1420
+preplace netloc fpu_wrapper_0_fsub_in_valid_a 1 0 4 -1010 190 NJ 190 NJ 190 900
+preplace netloc floating_point_1_m_axis_result_tvalid 1 1 2 -480J -700 270J
+preplace netloc floating_point_0_m_axis_result_tvalid 1 1 2 NJ -930 340J
+preplace netloc axi_uartlite_0_tx 1 4 1 1480
+preplace netloc fpu_wrapper_0_fsub_in_valid_b 1 0 4 -940 -530 -510J -10 140J 30 840
+preplace netloc USB_UART_RX_1 1 0 5 -1060J -1090 -550J -1190 NJ -1190 NJ -1190 1390
 preplace netloc floating_point_6_m_axis_result_tdata 1 2 1 140
-preplace netloc floating_point_3_s_axis_a_tready 1 0 3 -940 -220 NJ -220 290J
-preplace netloc fpu_wrapper_0_fftoi_in_valid_a 1 1 3 -430 -710 150J -780 780
-preplace netloc uart_wrapper_0_uart_invalid 1 3 3 970 -70 N -70 1840
-preplace netloc uart_wrapper_0_uart_araddr 1 3 3 1020 -860 NJ -860 1850
-preplace netloc GPIO_SW_N_1 1 0 4 -1050J 230 NJ 230 NJ 230 930
-preplace netloc floating_point_5_m_axis_result_tvalid 1 2 1 260
-preplace netloc fpu_wrapper_0_fadd_in_valid_a 1 0 4 -1000 -1090 -540J -1180 NJ -1180 820
-preplace netloc fpu_wrapper_0_fadd_in_valid_b 1 0 4 -970 -1080 -530J -1170 NJ -1170 810
+preplace netloc floating_point_3_s_axis_a_tready 1 0 3 -950 -210 -430J -250 270J
+preplace netloc fpu_wrapper_0_fftoi_in_valid_a 1 1 3 -390 -880 NJ -880 820
+preplace netloc uart_wrapper_0_uart_invalid 1 3 2 990 -340 1370
+preplace netloc GPIO_SW_N_1 1 0 4 -1050J 220 NJ 220 NJ 220 N
+preplace netloc floating_point_5_m_axis_result_tvalid 1 2 1 240
+preplace netloc fpu_wrapper_0_fadd_in_valid_a 1 0 4 -1000 -1080 -480J -1160 NJ -1160 770
+preplace netloc fpu_wrapper_0_fadd_in_valid_b 1 0 4 -1000 -200 -520J -40 170J 0 800
 preplace netloc floating_point_7_m_axis_result_tvalid 1 2 1 130
-preplace netloc floating_point_0_s_axis_a_tready 1 0 3 -930 -820 -510J -870 350J
-preplace netloc fpu_wrapper_0_fcmp_in_valid_op 1 1 3 -400 -880 NJ -880 790
-preplace netloc top_wrapper_0_fpu_in_valid 1 2 3 410 -870 NJ -870 1430
-preplace netloc blk_mem_gen_1_douta 1 3 1 1000
-preplace netloc fpu_wrapper_0_fpu_out_valid 1 3 1 890
-preplace netloc floating_point_5_m_axis_result_tdata 1 2 1 340
-preplace netloc floating_point_3_s_axis_b_tready 1 0 3 -960 -210 -460J -250 280J
-preplace netloc fpu_wrapper_0_fpu_out 1 3 1 920
-preplace netloc top_wrapper_0_fpu_data_a 1 0 5 -1040 190 -480J 190 NJ 190 900J 110 1370
-preplace netloc floating_point_3_m_axis_result_tvalid 1 1 2 N -20 370J
-preplace netloc top_wrapper_0_fpu_data_b 1 0 5 -1010 -520 -450 -930 NJ -930 NJ -930 1410
-preplace netloc floating_point_6_s_axis_operation_tready 1 1 2 -370 -640 170J
-preplace netloc top_wrapper_0_wea 1 3 2 950 150 1390
-preplace netloc uart_wrapper_0_uart_bready 1 3 3 860 -960 NJ -960 1930
-preplace netloc floating_point_8_m_axis_result_tdata 1 2 1 270
+preplace netloc floating_point_0_s_axis_a_tready 1 0 3 -990 -820 -550J -870 320J
+preplace netloc fpu_wrapper_0_fcmp_in_valid_op 1 1 3 -360 -890 NJ -890 830
+preplace netloc top_wrapper_0_fpu_in_valid 1 2 3 380 -790 NJ -790 1420
+preplace netloc blk_mem_gen_1_douta 1 3 1 1010
+preplace netloc fpu_wrapper_0_fpu_out_valid 1 3 1 910
+preplace netloc floating_point_5_m_axis_result_tdata 1 2 1 310
+preplace netloc floating_point_3_s_axis_b_tready 1 0 3 -970 -220 NJ -220 290J
+preplace netloc fpu_wrapper_0_fpu_out 1 3 1 930
+preplace netloc top_wrapper_0_fpu_data_a 1 0 5 -1020 -510 -460J -1170 NJ -1170 NJ -1170 1450
+preplace netloc floating_point_3_m_axis_result_tvalid 1 1 2 NJ -20 340J
+preplace netloc top_wrapper_0_fpu_data_b 1 0 5 -1030 -520 -420 -1150 NJ -1150 NJ -1150 1440
+preplace netloc floating_point_6_s_axis_operation_tready 1 1 2 -330 -660 170J
+preplace netloc top_wrapper_0_wea 1 3 2 960 150 1370
+preplace netloc floating_point_8_m_axis_result_tdata 1 2 1 260
 preplace netloc floating_point_6_m_axis_result_tvalid 1 2 1 140
-preplace netloc top_wrapper_0_o_addr 1 3 2 990 120 1380
-preplace netloc top_wrapper_0_fpu_data_c 1 1 4 -440 -1130 NJ -1130 NJ -1130 1450
-preplace netloc fpu_wrapper_0_fmul_in_valid_a 1 0 4 -990 200 NJ 200 NJ 200 860
-preplace netloc axi_uartlite_0_s_axi_arready 1 3 3 970 -1000 NJ -1000 1960
-preplace netloc uart_wrapper_0_uart_outvalid 1 3 3 1010 -50 N -50 1890
-preplace netloc floating_point_1_s_axis_b_tready 1 0 3 -930 -530 -490J -290 200J
-preplace netloc fpu_wrapper_0_fmul_in_valid_b 1 0 4 -980 240 NJ 240 NJ 240 850
-preplace netloc uart_wrapper_0_uart_arvalid 1 3 3 1010 -850 NJ -850 1840
-preplace netloc uart_wrapper_0_uart_wvalid 1 3 3 1010 -60 NJ -60 1940
-preplace netloc floating_point_1_m_axis_result_tdata 1 1 2 NJ -680 320J
-preplace netloc axi_uartlite_0_s_axi_wready 1 3 3 970 -90 NJ -90 1880
-preplace netloc floating_point_7_s_axis_a_tready 1 1 2 -390 -650 150J
-preplace netloc floating_point_2_m_axis_result_tvalid 1 1 2 -550 -280 230J
+preplace netloc top_wrapper_0_o_addr 1 3 2 1000 100 1400
+preplace netloc top_wrapper_0_fpu_data_c 1 1 4 -410 -1140 NJ -1140 NJ -1140 1430
+preplace netloc fpu_wrapper_0_fmul_in_valid_a 1 0 4 -990 200 NJ 200 NJ 200 890
+preplace netloc uart_wrapper_0_uart_outvalid 1 3 2 950 -510 1370
+preplace netloc floating_point_1_s_axis_b_tready 1 0 3 -970 -230 NJ -230 220J
+preplace netloc fpu_wrapper_0_fmul_in_valid_b 1 0 4 -980 230 NJ 230 NJ 230 880
+preplace netloc floating_point_1_m_axis_result_tdata 1 1 2 -550J -690 300J
+preplace netloc floating_point_7_s_axis_a_tready 1 1 2 -340 -640 150J
+preplace netloc floating_point_2_m_axis_result_tvalid 1 1 2 -490 -280 210J
 preplace netloc floating_point_7_m_axis_result_tdata 1 2 1 130
-preplace netloc Net 1 1 3 -400 -1160 NJ -1160 800
-preplace netloc floating_point_4_m_axis_result_tvalid 1 2 1 360
-preplace netloc uart_wrapper_0_uart_input 1 3 3 960 -80 N -80 1850
-preplace netloc floating_point_8_s_axis_a_tready 1 1 2 -370 -30 400J
-preplace netloc top_wrapper_0_uart_recv_ready 1 4 1 1490
-preplace netloc uart_wrapper_0_uart_awvalid 1 3 3 990 -910 NJ -910 1830
-preplace netloc fpu_wrapper_0_fdiv_in_valid_a 1 0 4 -930 -190 -530J -40 180J 0 760
-preplace netloc top_wrapper_0_uart_send_ready 1 4 1 1480
-preplace netloc floating_point_0_s_axis_b_tready 1 0 3 -1000 -230 NJ -230 210J
-preplace netloc fpu_wrapper_0_fabs_in_valid_a 1 1 3 -370 -900 NJ -900 770
-preplace netloc fpu_wrapper_0_fdiv_in_valid_b 1 0 4 -950 -180 -550J 0 150J 10 750
-preplace netloc floating_point_3_m_axis_result_tdata 1 1 2 -540 -670 310J
-preplace netloc floating_point_5_s_axis_a_tready 1 1 2 -360 -890 300J
-preplace netloc axi_uartlite_0_s_axi_awready 1 3 3 980 -940 NJ -940 1860
-preplace netloc top_wrapper_0_d_addr 1 3 2 940 100 1440
-preplace netloc floating_point_6_s_axis_b_tready 1 1 2 -360 -660 190J
-preplace netloc default_sysclk_300_1 1 0 1 -1040J
-preplace netloc floating_point_4_m_axis_result_tdata 1 2 1 390
-preplace netloc clk_wiz_0_clk_out1 1 0 5 -1030 710 -500 710 250J 710 910J -370 1460
-preplace netloc floating_point_1_s_axis_a_tready 1 0 3 -940 -540 -460J -300 180J
+preplace netloc Net 1 1 3 -350 -1200 NJ -1200 870
+preplace netloc floating_point_4_m_axis_result_tvalid 1 2 1 330
+preplace netloc uart_wrapper_0_uart_input 1 3 2 940 -530 1390
+preplace netloc floating_point_8_s_axis_a_tready 1 1 2 -320 -30 370J
+preplace netloc top_wrapper_0_uart_recv_ready 1 3 2 1000 -330 1460
+preplace netloc fpu_wrapper_0_fdiv_in_valid_a 1 0 4 -940 -180 -540J 10 NJ 10 780
+preplace netloc top_wrapper_0_uart_send_ready 1 3 2 990 -350 1470
+preplace netloc floating_point_0_s_axis_b_tready 1 0 3 -980 -550 -430J -300 160J
+preplace netloc fpu_wrapper_0_fabs_in_valid_a 1 1 3 -380 -1180 NJ -1180 860
+preplace netloc fpu_wrapper_0_fdiv_in_valid_b 1 0 4 -960 -170 -550J 0 130J 20 770
+preplace netloc floating_point_3_m_axis_result_tdata 1 1 2 -530 -680 290J
+preplace netloc floating_point_5_s_axis_a_tready 1 1 2 -320 -900 280J
+preplace netloc top_wrapper_0_d_addr 1 3 2 970 120 1390
+preplace netloc floating_point_6_s_axis_b_tready 1 1 2 -320 -240 160J
+preplace netloc default_sysclk_300_1 1 0 1 -1080J
+preplace netloc uart_0_interface_aximm 1 3 2 950 -690 1380
+preplace netloc floating_point_4_m_axis_result_tdata 1 2 1 360
+preplace netloc clk_wiz_0_clk_out1 1 0 4 -1040 710 -500 710 250J 710 920J
+preplace netloc floating_point_1_s_axis_a_tready 1 0 3 -950 -540 -450J -290 180J
 preplace netloc GPIO_SW_S_1 1 0 4 -1090J 260 NJ 260 NJ 260 N
-preplace netloc floating_point_4_s_axis_a_tready 1 1 2 -360 -1120 380J
+preplace netloc floating_point_4_s_axis_a_tready 1 1 2 -320 -1120 350J
 preplace netloc blk_mem_gen_0_douta 1 3 1 1020
-preplace netloc uart_wrapper_0_uart_awaddr 1 3 3 890 -980 NJ -980 1910
-preplace netloc uart_wrapper_0_uart_wdata 1 3 3 1000 -110 NJ -110 1910
-preplace netloc fpu_wrapper_0_fitof_in_valid_a 1 1 3 -360 10 130J 20 740
-preplace netloc axi_uartlite_0_s_axi_rdata 1 3 3 920 -900 NJ -900 1920
-preplace netloc floating_point_6_s_axis_a_tready 1 1 2 -380 -240 160J
-preplace netloc fpu_wrapper_0_fcmp_in_valid_a 1 1 3 -420 -1140 NJ -1140 840
-preplace netloc axi_uartlite_0_s_axi_bresp 1 3 3 1000 -880 NJ -880 1820
-preplace netloc top_wrapper_0_uart_send_data 1 4 1 1470
-preplace netloc floating_point_2_s_axis_a_tready 1 0 3 -930 -490 -530J -270 220J
-preplace netloc fpu_wrapper_0_fcmp_in_valid_b 1 1 3 -410 -910 NJ -910 830
-levelinfo -pg 1 -1120 -740 -70 580 1200 1660 2000 -top -1200 -bot 1340
+preplace netloc fpu_wrapper_0_fitof_in_valid_a 1 1 3 -400 -710 190J -780 810
+preplace netloc floating_point_6_s_axis_a_tready 1 1 2 -320 -670 190J
+preplace netloc fpu_wrapper_0_fcmp_in_valid_a 1 1 3 -350 -910 NJ -910 790
+preplace netloc top_wrapper_0_uart_send_data 1 3 2 980 -320 1410
+preplace netloc floating_point_2_s_axis_a_tready 1 0 3 -940 -490 -480J -270 200J
+preplace netloc fpu_wrapper_0_fcmp_in_valid_b 1 1 3 -370 -920 NJ -920 850
+levelinfo -pg 1 -1120 -740 -70 610 1200 1790 -top -1210 -bot 1340
 ",
 }
 

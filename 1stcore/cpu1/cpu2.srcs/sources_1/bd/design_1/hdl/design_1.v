@@ -1,7 +1,7 @@
 //Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2016.4 (lin64) Build 1756540 Mon Jan 23 19:11:19 MST 2017
-//Date        : Thu Feb 15 13:41:27 2018
+//Date        : Mon Feb 19 06:28:49 2018
 //Host        : ispc2016 running 64-bit Ubuntu 14.04.5 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -39,14 +39,6 @@ module design_1
   wire GPIO_SW_W_1;
   wire Net;
   wire USB_UART_RX_1;
-  wire axi_uartlite_0_s_axi_arready;
-  wire axi_uartlite_0_s_axi_awready;
-  wire [1:0]axi_uartlite_0_s_axi_bresp;
-  wire axi_uartlite_0_s_axi_bvalid;
-  wire [31:0]axi_uartlite_0_s_axi_rdata;
-  wire [1:0]axi_uartlite_0_s_axi_rresp;
-  wire axi_uartlite_0_s_axi_rvalid;
-  wire axi_uartlite_0_s_axi_wready;
   wire axi_uartlite_0_tx;
   wire [31:0]blk_mem_gen_0_douta;
   wire [31:0]blk_mem_gen_1_douta;
@@ -102,7 +94,7 @@ module design_1
   wire fpu_wrapper_0_fpu_out_valid;
   wire fpu_wrapper_0_fsub_in_valid_a;
   wire fpu_wrapper_0_fsub_in_valid_b;
-  wire [18:0]top_wrapper_0_d_addr;
+  wire [16:0]top_wrapper_0_d_addr;
   wire [31:0]top_wrapper_0_fpu_data_a;
   wire [31:0]top_wrapper_0_fpu_data_b;
   wire [7:0]top_wrapper_0_fpu_data_c;
@@ -114,18 +106,26 @@ module design_1
   wire top_wrapper_0_uart_send_ready;
   wire [31:0]top_wrapper_0_wdata;
   wire top_wrapper_0_wea;
-  wire [3:0]uart_wrapper_0_uart_araddr;
-  wire uart_wrapper_0_uart_arvalid;
-  wire [3:0]uart_wrapper_0_uart_awaddr;
-  wire uart_wrapper_0_uart_awvalid;
-  wire uart_wrapper_0_uart_bready;
+  wire [3:0]uart_0_interface_aximm_ARADDR;
+  wire uart_0_interface_aximm_ARREADY;
+  wire uart_0_interface_aximm_ARVALID;
+  wire [3:0]uart_0_interface_aximm_AWADDR;
+  wire uart_0_interface_aximm_AWREADY;
+  wire uart_0_interface_aximm_AWVALID;
+  wire uart_0_interface_aximm_BREADY;
+  wire [1:0]uart_0_interface_aximm_BRESP;
+  wire uart_0_interface_aximm_BVALID;
+  wire [31:0]uart_0_interface_aximm_RDATA;
+  wire uart_0_interface_aximm_RREADY;
+  wire [1:0]uart_0_interface_aximm_RRESP;
+  wire uart_0_interface_aximm_RVALID;
+  wire [31:0]uart_0_interface_aximm_WDATA;
+  wire uart_0_interface_aximm_WREADY;
+  wire [3:0]uart_0_interface_aximm_WSTRB;
+  wire uart_0_interface_aximm_WVALID;
   wire [7:0]uart_wrapper_0_uart_input;
   wire uart_wrapper_0_uart_invalid;
   wire uart_wrapper_0_uart_outvalid;
-  wire uart_wrapper_0_uart_rready;
-  wire [31:0]uart_wrapper_0_uart_wdata;
-  wire [3:0]uart_wrapper_0_uart_wstrb;
-  wire uart_wrapper_0_uart_wvalid;
 
   assign GPIO_LED[7:0] = top_wrapper_0_led;
   assign GPIO_SW_C_1 = GPIO_SW_C;
@@ -140,24 +140,24 @@ module design_1
   design_1_axi_uartlite_0_1 axi_uartlite_0
        (.rx(USB_UART_RX_1),
         .s_axi_aclk(clk_wiz_0_clk_out1),
-        .s_axi_araddr(uart_wrapper_0_uart_araddr),
+        .s_axi_araddr(uart_0_interface_aximm_ARADDR),
         .s_axi_aresetn(1'b1),
-        .s_axi_arready(axi_uartlite_0_s_axi_arready),
-        .s_axi_arvalid(uart_wrapper_0_uart_arvalid),
-        .s_axi_awaddr(uart_wrapper_0_uart_awaddr),
-        .s_axi_awready(axi_uartlite_0_s_axi_awready),
-        .s_axi_awvalid(uart_wrapper_0_uart_awvalid),
-        .s_axi_bready(uart_wrapper_0_uart_bready),
-        .s_axi_bresp(axi_uartlite_0_s_axi_bresp),
-        .s_axi_bvalid(axi_uartlite_0_s_axi_bvalid),
-        .s_axi_rdata(axi_uartlite_0_s_axi_rdata),
-        .s_axi_rready(uart_wrapper_0_uart_rready),
-        .s_axi_rresp(axi_uartlite_0_s_axi_rresp),
-        .s_axi_rvalid(axi_uartlite_0_s_axi_rvalid),
-        .s_axi_wdata(uart_wrapper_0_uart_wdata),
-        .s_axi_wready(axi_uartlite_0_s_axi_wready),
-        .s_axi_wstrb(uart_wrapper_0_uart_wstrb),
-        .s_axi_wvalid(uart_wrapper_0_uart_wvalid),
+        .s_axi_arready(uart_0_interface_aximm_ARREADY),
+        .s_axi_arvalid(uart_0_interface_aximm_ARVALID),
+        .s_axi_awaddr(uart_0_interface_aximm_AWADDR),
+        .s_axi_awready(uart_0_interface_aximm_AWREADY),
+        .s_axi_awvalid(uart_0_interface_aximm_AWVALID),
+        .s_axi_bready(uart_0_interface_aximm_BREADY),
+        .s_axi_bresp(uart_0_interface_aximm_BRESP),
+        .s_axi_bvalid(uart_0_interface_aximm_BVALID),
+        .s_axi_rdata(uart_0_interface_aximm_RDATA),
+        .s_axi_rready(uart_0_interface_aximm_RREADY),
+        .s_axi_rresp(uart_0_interface_aximm_RRESP),
+        .s_axi_rvalid(uart_0_interface_aximm_RVALID),
+        .s_axi_wdata(uart_0_interface_aximm_WDATA),
+        .s_axi_wready(uart_0_interface_aximm_WREADY),
+        .s_axi_wstrb(uart_0_interface_aximm_WSTRB),
+        .s_axi_wvalid(uart_0_interface_aximm_WVALID),
         .tx(axi_uartlite_0_tx));
   design_1_blk_mem_gen_0_0 blk_mem_gen_0
        (.addra(top_wrapper_0_o_addr),
@@ -335,29 +335,29 @@ module design_1
         .uart_send_valid(uart_wrapper_0_uart_outvalid),
         .wdata(top_wrapper_0_wdata),
         .wea(top_wrapper_0_wea));
-  design_1_uart_wrapper_0_0 uart_wrapper_0
-       (.clk(clk_wiz_0_clk_out1),
-        .uart_araddr(uart_wrapper_0_uart_araddr),
-        .uart_arready(axi_uartlite_0_s_axi_arready),
-        .uart_arvalid(uart_wrapper_0_uart_arvalid),
-        .uart_awaddr(uart_wrapper_0_uart_awaddr),
-        .uart_awready(axi_uartlite_0_s_axi_awready),
-        .uart_awvalid(uart_wrapper_0_uart_awvalid),
-        .uart_bready(uart_wrapper_0_uart_bready),
-        .uart_bresp(axi_uartlite_0_s_axi_bresp),
-        .uart_bvalid(axi_uartlite_0_s_axi_bvalid),
+  design_1_uart_0_0 uart_0
+       (.ARADDR(uart_0_interface_aximm_ARADDR),
+        .ARREADY(uart_0_interface_aximm_ARREADY),
+        .ARVALID(uart_0_interface_aximm_ARVALID),
+        .AWADDR(uart_0_interface_aximm_AWADDR),
+        .AWREADY(uart_0_interface_aximm_AWREADY),
+        .AWVALID(uart_0_interface_aximm_AWVALID),
+        .BREADY(uart_0_interface_aximm_BREADY),
+        .BRESP(uart_0_interface_aximm_BRESP),
+        .BVALID(uart_0_interface_aximm_BVALID),
+        .CLK(clk_wiz_0_clk_out1),
+        .RDATA(uart_0_interface_aximm_RDATA),
+        .RREADY(uart_0_interface_aximm_RREADY),
+        .RRESP(uart_0_interface_aximm_RRESP),
+        .RVALID(uart_0_interface_aximm_RVALID),
+        .WDATA(uart_0_interface_aximm_WDATA),
+        .WREADY(uart_0_interface_aximm_WREADY),
+        .WSTRB(uart_0_interface_aximm_WSTRB),
+        .WVALID(uart_0_interface_aximm_WVALID),
         .uart_input(uart_wrapper_0_uart_input),
         .uart_inready(top_wrapper_0_uart_recv_ready),
         .uart_invalid(uart_wrapper_0_uart_invalid),
         .uart_output(top_wrapper_0_uart_send_data),
         .uart_outready(top_wrapper_0_uart_send_ready),
-        .uart_outvalid(uart_wrapper_0_uart_outvalid),
-        .uart_rdata(axi_uartlite_0_s_axi_rdata),
-        .uart_rready(uart_wrapper_0_uart_rready),
-        .uart_rresp(axi_uartlite_0_s_axi_rresp),
-        .uart_rvalid(axi_uartlite_0_s_axi_rvalid),
-        .uart_wdata(uart_wrapper_0_uart_wdata),
-        .uart_wready(axi_uartlite_0_s_axi_wready),
-        .uart_wstrb(uart_wrapper_0_uart_wstrb),
-        .uart_wvalid(uart_wrapper_0_uart_wvalid));
+        .uart_outvalid(uart_wrapper_0_uart_outvalid));
 endmodule

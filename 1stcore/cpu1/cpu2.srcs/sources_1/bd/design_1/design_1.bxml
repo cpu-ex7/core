@@ -2,9 +2,9 @@
 <Root MajorVersion="0" MinorVersion="33">
   <CompositeFile CompositeFileTopName="design_1" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1518669690"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1518669690"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1518669690"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1518989330"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1518989330"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1518989330"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/design_1_top_wrapper_0_0/design_1_top_wrapper_0_0.xci" Type="IP">
         <Instance HierarchyPath="top_wrapper_0"/>
@@ -133,8 +133,8 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/design_1_uart_wrapper_0_0/design_1_uart_wrapper_0_0.xci" Type="IP">
-        <Instance HierarchyPath="uart_wrapper_0"/>
+      <File Name="ip/design_1_uart_0_0/design_1_uart_0_0.xci" Type="IP">
+        <Instance HierarchyPath="uart_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

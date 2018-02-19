@@ -24,7 +24,7 @@ module top(
   output logic [9:0] fpu_in_valid,
   input logic fpu_out_valid,
   output logic [12:0] o_addr,
-  output logic [18:0] d_addr2,
+  output logic [16:0] d_addr2,
   input logic [31:0] odata,
   input logic [31:0] rdata,
   output logic [31:0] wdata,
@@ -60,7 +60,7 @@ module top(
   logic jump_finish;
   logic [31:0] d_addr;
 
-  assign d_addr2 = d_addr[18:0];
+  assign d_addr2 = d_addr[16:0];
 
   fetch f1(clk,start_finish,odata,op,write_finish,store_finish,fetch_finish,jump_finish,uart_send_valid);
   decode d1(

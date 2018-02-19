@@ -80,7 +80,7 @@ preplace netloc floating_point_1_m_axis_result_tdata 1 2 2 -200J -690 600J
 preplace netloc floating_point_1_s_axis_b_tready 1 1 3 -590J -510 -120J -660 530J
 preplace netloc floating_point_0_s_axis_b_tready 1 1 3 -610J -530 -190J -700 590J
 preplace netloc floating_point_0_s_axis_a_tready 1 1 3 -640J -1160 NJ -1160 640J
-levelinfo -pg 1 -960 -820 -390 250 860 1370 1600 -top -1180 -bot 450
+levelinfo -pg 1 -960 -820 -390 250 860 1370 1610 -top -1180 -bot 450
 ",
 }
 0

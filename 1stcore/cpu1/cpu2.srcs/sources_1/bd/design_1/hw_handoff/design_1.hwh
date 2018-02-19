@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Feb 15 13:41:29 2018" VIVADOVERSION="2016.4">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Feb 19 06:28:50 2018" VIVADOVERSION="2016.4">
 
   <SYSTEMINFO ARCH="kintexu" BOARD="xilinx.com:kcu105:part0:1.1" DEVICE="xcku040" NAME="design_1" PACKAGE="ffva1156" SPEEDGRADE="-2"/>
 
@@ -87,89 +87,89 @@
         </PORT>
         <PORT DIR="I" NAME="s_axi_aresetn" SIGIS="rst"/>
         <PORT DIR="O" NAME="interrupt" SENSITIVITY="EDGE_RISING" SIGIS="INTERRUPT"/>
-        <PORT DIR="I" LEFT="3" NAME="s_axi_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="uart_wrapper_0_uart_awaddr">
+        <PORT DIR="I" LEFT="3" NAME="s_axi_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_awaddr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="uart_wrapper_0" PORT="uart_awaddr"/>
+            <CONNECTION INSTANCE="uart_0" PORT="AWADDR"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_awvalid" SIGIS="undef" SIGNAME="uart_wrapper_0_uart_awvalid">
+        <PORT DIR="I" NAME="s_axi_awvalid" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_awvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="uart_wrapper_0" PORT="uart_awvalid"/>
+            <CONNECTION INSTANCE="uart_0" PORT="AWVALID"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="s_axi_awready" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_awready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="uart_wrapper_0" PORT="uart_awready"/>
+            <CONNECTION INSTANCE="uart_0" PORT="AWREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="s_axi_wdata" RIGHT="0" SIGIS="undef" SIGNAME="uart_wrapper_0_uart_wdata">
+        <PORT DIR="I" LEFT="31" NAME="s_axi_wdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_wdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="uart_wrapper_0" PORT="uart_wdata"/>
+            <CONNECTION INSTANCE="uart_0" PORT="WDATA"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="s_axi_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="uart_wrapper_0_uart_wstrb">
+        <PORT DIR="I" LEFT="3" NAME="s_axi_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_wstrb">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="uart_wrapper_0" PORT="uart_wstrb"/>
+            <CONNECTION INSTANCE="uart_0" PORT="WSTRB"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_wvalid" SIGIS="undef" SIGNAME="uart_wrapper_0_uart_wvalid">
+        <PORT DIR="I" NAME="s_axi_wvalid" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_wvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="uart_wrapper_0" PORT="uart_wvalid"/>
+            <CONNECTION INSTANCE="uart_0" PORT="WVALID"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="s_axi_wready" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_wready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="uart_wrapper_0" PORT="uart_wready"/>
+            <CONNECTION INSTANCE="uart_0" PORT="WREADY"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="1" NAME="s_axi_bresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_bresp">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="uart_wrapper_0" PORT="uart_bresp"/>
+            <CONNECTION INSTANCE="uart_0" PORT="BRESP"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="s_axi_bvalid" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_bvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="uart_wrapper_0" PORT="uart_bvalid"/>
+            <CONNECTION INSTANCE="uart_0" PORT="BVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_bready" SIGIS="undef" SIGNAME="uart_wrapper_0_uart_bready">
+        <PORT DIR="I" NAME="s_axi_bready" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_bready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="uart_wrapper_0" PORT="uart_bready"/>
+            <CONNECTION INSTANCE="uart_0" PORT="BREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="s_axi_araddr" RIGHT="0" SIGIS="undef" SIGNAME="uart_wrapper_0_uart_araddr">
+        <PORT DIR="I" LEFT="3" NAME="s_axi_araddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_araddr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="uart_wrapper_0" PORT="uart_araddr"/>
+            <CONNECTION INSTANCE="uart_0" PORT="ARADDR"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_arvalid" SIGIS="undef" SIGNAME="uart_wrapper_0_uart_arvalid">
+        <PORT DIR="I" NAME="s_axi_arvalid" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_arvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="uart_wrapper_0" PORT="uart_arvalid"/>
+            <CONNECTION INSTANCE="uart_0" PORT="ARVALID"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="s_axi_arready" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_arready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="uart_wrapper_0" PORT="uart_arready"/>
+            <CONNECTION INSTANCE="uart_0" PORT="ARREADY"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="s_axi_rdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_rdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="uart_wrapper_0" PORT="uart_rdata"/>
+            <CONNECTION INSTANCE="uart_0" PORT="RDATA"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="1" NAME="s_axi_rresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_rresp">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="uart_wrapper_0" PORT="uart_rresp"/>
+            <CONNECTION INSTANCE="uart_0" PORT="RRESP"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="s_axi_rvalid" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_rvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="uart_wrapper_0" PORT="uart_rvalid"/>
+            <CONNECTION INSTANCE="uart_0" PORT="RVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_rready" SIGIS="undef" SIGNAME="uart_wrapper_0_uart_rready">
+        <PORT DIR="I" NAME="s_axi_rready" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_rready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="uart_wrapper_0" PORT="uart_rready"/>
+            <CONNECTION INSTANCE="uart_0" PORT="RREADY"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="rx" SIGIS="undef" SIGNAME="External_Ports_USB_UART_RX">
@@ -184,7 +184,7 @@
         </PORT>
       </PORTS>
       <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="__NOC__" DATAWIDTH="32" NAME="S_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
+        <BUSINTERFACE BUSNAME="uart_0_interface_aximm" DATAWIDTH="32" NAME="S_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
           <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
           <PARAMETER NAME="PROTOCOL" VALUE="AXI4LITE"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
@@ -1210,8 +1210,8 @@
             <CONNECTION INSTANCE="blk_mem_gen_1" PORT="clka"/>
             <CONNECTION INSTANCE="fpu_wrapper_0" PORT="clk"/>
             <CONNECTION INSTANCE="axi_uartlite_0" PORT="s_axi_aclk"/>
+            <CONNECTION INSTANCE="uart_0" PORT="CLK"/>
             <CONNECTION INSTANCE="top_wrapper_0" PORT="clk"/>
-            <CONNECTION INSTANCE="uart_wrapper_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="locked" SIGIS="undef"/>
@@ -3512,7 +3512,7 @@
             <CONNECTION INSTANCE="blk_mem_gen_0" PORT="addra"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="18" NAME="d_addr" RIGHT="0" SIGIS="undef" SIGNAME="top_wrapper_0_d_addr">
+        <PORT DIR="O" LEFT="16" NAME="d_addr" RIGHT="0" SIGIS="undef" SIGNAME="top_wrapper_0_d_addr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="blk_mem_gen_1" PORT="addra"/>
           </CONNECTIONS>
@@ -3539,132 +3539,132 @@
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="uart_send_data" RIGHT="0" SIGIS="undef" SIGNAME="top_wrapper_0_uart_send_data">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="uart_wrapper_0" PORT="uart_output"/>
+            <CONNECTION INSTANCE="uart_0" PORT="uart_output"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="uart_send_ready" SIGIS="undef" SIGNAME="top_wrapper_0_uart_send_ready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="uart_wrapper_0" PORT="uart_outready"/>
+            <CONNECTION INSTANCE="uart_0" PORT="uart_outready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="uart_send_valid" SIGIS="undef" SIGNAME="uart_wrapper_0_uart_outvalid">
+        <PORT DIR="I" NAME="uart_send_valid" SIGIS="undef" SIGNAME="uart_0_uart_outvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="uart_wrapper_0" PORT="uart_outvalid"/>
+            <CONNECTION INSTANCE="uart_0" PORT="uart_outvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="uart_recv_data" RIGHT="0" SIGIS="undef" SIGNAME="uart_wrapper_0_uart_input">
+        <PORT DIR="I" LEFT="7" NAME="uart_recv_data" RIGHT="0" SIGIS="undef" SIGNAME="uart_0_uart_input">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="uart_wrapper_0" PORT="uart_input"/>
+            <CONNECTION INSTANCE="uart_0" PORT="uart_input"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="uart_recv_ready" SIGIS="undef" SIGNAME="top_wrapper_0_uart_recv_ready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="uart_wrapper_0" PORT="uart_inready"/>
+            <CONNECTION INSTANCE="uart_0" PORT="uart_inready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="uart_recv_valid" SIGIS="undef" SIGNAME="uart_wrapper_0_uart_invalid">
+        <PORT DIR="I" NAME="uart_recv_valid" SIGIS="undef" SIGNAME="uart_0_uart_invalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="uart_wrapper_0" PORT="uart_invalid"/>
+            <CONNECTION INSTANCE="uart_0" PORT="uart_invalid"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE FULLNAME="/uart_wrapper_0" HWVERSION="1.0" INSTANCE="uart_wrapper_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="uart_wrapper" VLNV="user.org:module_ref:uart_wrapper:1.0">
+    <MODULE FULLNAME="/uart_0" HWVERSION="1.0" INSTANCE="uart_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="uart" VLNV="user.org:module_ref:uart:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_uart_wrapper_0_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_uart_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="CLK" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
           <CONNECTIONS>
             <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="uart_araddr" RIGHT="0" SIGIS="undef" SIGNAME="uart_wrapper_0_uart_araddr">
+        <PORT DIR="O" LEFT="3" NAME="ARADDR" RIGHT="0" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_araddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_uartlite_0" PORT="s_axi_araddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="uart_arready" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_arready">
+        <PORT DIR="I" NAME="ARREADY" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_arready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_uartlite_0" PORT="s_axi_arready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="uart_arvalid" SIGIS="undef" SIGNAME="uart_wrapper_0_uart_arvalid">
+        <PORT DIR="O" NAME="ARVALID" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_arvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_uartlite_0" PORT="s_axi_arvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="uart_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="uart_wrapper_0_uart_awaddr">
+        <PORT DIR="O" LEFT="3" NAME="AWADDR" RIGHT="0" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_awaddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_uartlite_0" PORT="s_axi_awaddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="uart_awready" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_awready">
+        <PORT DIR="I" NAME="AWREADY" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_awready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_uartlite_0" PORT="s_axi_awready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="uart_awvalid" SIGIS="undef" SIGNAME="uart_wrapper_0_uart_awvalid">
+        <PORT DIR="O" NAME="AWVALID" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_awvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_uartlite_0" PORT="s_axi_awvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="uart_bready" SIGIS="undef" SIGNAME="uart_wrapper_0_uart_bready">
+        <PORT DIR="O" NAME="BREADY" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_bready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_uartlite_0" PORT="s_axi_bready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="uart_bresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_bresp">
+        <PORT DIR="I" LEFT="1" NAME="BRESP" RIGHT="0" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_bresp">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_uartlite_0" PORT="s_axi_bresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="uart_bvalid" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_bvalid">
+        <PORT DIR="I" NAME="BVALID" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_bvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_uartlite_0" PORT="s_axi_bvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="uart_rdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_rdata">
+        <PORT DIR="I" LEFT="31" NAME="RDATA" RIGHT="0" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_rdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_uartlite_0" PORT="s_axi_rdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="uart_rready" SIGIS="undef" SIGNAME="uart_wrapper_0_uart_rready">
+        <PORT DIR="O" NAME="RREADY" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_rready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_uartlite_0" PORT="s_axi_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="uart_rresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_rresp">
+        <PORT DIR="I" LEFT="1" NAME="RRESP" RIGHT="0" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_rresp">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_uartlite_0" PORT="s_axi_rresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="uart_rvalid" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_rvalid">
+        <PORT DIR="I" NAME="RVALID" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_rvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_uartlite_0" PORT="s_axi_rvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="uart_wdata" RIGHT="0" SIGIS="undef" SIGNAME="uart_wrapper_0_uart_wdata">
+        <PORT DIR="O" LEFT="31" NAME="WDATA" RIGHT="0" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_wdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_uartlite_0" PORT="s_axi_wdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="uart_wready" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_wready">
+        <PORT DIR="I" NAME="WREADY" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_wready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_uartlite_0" PORT="s_axi_wready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="uart_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="uart_wrapper_0_uart_wstrb">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_uartlite_0" PORT="s_axi_wstrb"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="uart_wvalid" SIGIS="undef" SIGNAME="uart_wrapper_0_uart_wvalid">
+        <PORT DIR="O" NAME="WVALID" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_wvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_uartlite_0" PORT="s_axi_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="WSTRB" RIGHT="0" SIGIS="undef" SIGNAME="axi_uartlite_0_s_axi_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_uartlite_0" PORT="s_axi_wstrb"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="7" NAME="uart_output" RIGHT="0" SIGIS="undef" SIGNAME="top_wrapper_0_uart_send_data">
@@ -3677,12 +3677,12 @@
             <CONNECTION INSTANCE="top_wrapper_0" PORT="uart_send_ready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="uart_outvalid" SIGIS="undef" SIGNAME="uart_wrapper_0_uart_outvalid">
+        <PORT DIR="O" NAME="uart_outvalid" SIGIS="undef" SIGNAME="uart_0_uart_outvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="top_wrapper_0" PORT="uart_send_valid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="7" NAME="uart_input" RIGHT="0" SIGIS="undef" SIGNAME="uart_wrapper_0_uart_input">
+        <PORT DIR="O" LEFT="7" NAME="uart_input" RIGHT="0" SIGIS="undef" SIGNAME="uart_0_uart_input">
           <CONNECTIONS>
             <CONNECTION INSTANCE="top_wrapper_0" PORT="uart_recv_data"/>
           </CONNECTIONS>
@@ -3692,14 +3692,14 @@
             <CONNECTION INSTANCE="top_wrapper_0" PORT="uart_recv_ready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="uart_invalid" SIGIS="undef" SIGNAME="uart_wrapper_0_uart_invalid">
+        <PORT DIR="O" NAME="uart_invalid" SIGIS="undef" SIGNAME="uart_0_uart_invalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="top_wrapper_0" PORT="uart_recv_valid"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
       <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="__NOC__" DATAWIDTH="32" NAME="uart" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
+        <BUSINTERFACE BUSNAME="uart_0_interface_aximm" DATAWIDTH="32" NAME="interface_aximm" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
           <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
           <PARAMETER NAME="PROTOCOL" VALUE="AXI4LITE"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
@@ -3731,28 +3731,30 @@
           <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
           <PARAMETER NAME="WUSER_BITS_PER_BYTE" VALUE="0"/>
           <PORTMAPS>
-            <PORTMAP LOGICAL="AWADDR" PHYSICAL="uart_awaddr"/>
-            <PORTMAP LOGICAL="AWVALID" PHYSICAL="uart_awvalid"/>
-            <PORTMAP LOGICAL="AWREADY" PHYSICAL="uart_awready"/>
-            <PORTMAP LOGICAL="WDATA" PHYSICAL="uart_wdata"/>
-            <PORTMAP LOGICAL="WSTRB" PHYSICAL="uart_wstrb"/>
-            <PORTMAP LOGICAL="WVALID" PHYSICAL="uart_wvalid"/>
-            <PORTMAP LOGICAL="WREADY" PHYSICAL="uart_wready"/>
-            <PORTMAP LOGICAL="BRESP" PHYSICAL="uart_bresp"/>
-            <PORTMAP LOGICAL="BVALID" PHYSICAL="uart_bvalid"/>
-            <PORTMAP LOGICAL="BREADY" PHYSICAL="uart_bready"/>
-            <PORTMAP LOGICAL="ARADDR" PHYSICAL="uart_araddr"/>
-            <PORTMAP LOGICAL="ARVALID" PHYSICAL="uart_arvalid"/>
-            <PORTMAP LOGICAL="ARREADY" PHYSICAL="uart_arready"/>
-            <PORTMAP LOGICAL="RDATA" PHYSICAL="uart_rdata"/>
-            <PORTMAP LOGICAL="RRESP" PHYSICAL="uart_rresp"/>
-            <PORTMAP LOGICAL="RVALID" PHYSICAL="uart_rvalid"/>
-            <PORTMAP LOGICAL="RREADY" PHYSICAL="uart_rready"/>
+            <PORTMAP LOGICAL="AWADDR" PHYSICAL="AWADDR"/>
+            <PORTMAP LOGICAL="AWVALID" PHYSICAL="AWVALID"/>
+            <PORTMAP LOGICAL="AWREADY" PHYSICAL="AWREADY"/>
+            <PORTMAP LOGICAL="WDATA" PHYSICAL="WDATA"/>
+            <PORTMAP LOGICAL="WSTRB" PHYSICAL="WSTRB"/>
+            <PORTMAP LOGICAL="WVALID" PHYSICAL="WVALID"/>
+            <PORTMAP LOGICAL="WREADY" PHYSICAL="WREADY"/>
+            <PORTMAP LOGICAL="BRESP" PHYSICAL="BRESP"/>
+            <PORTMAP LOGICAL="BVALID" PHYSICAL="BVALID"/>
+            <PORTMAP LOGICAL="BREADY" PHYSICAL="BREADY"/>
+            <PORTMAP LOGICAL="ARADDR" PHYSICAL="ARADDR"/>
+            <PORTMAP LOGICAL="ARVALID" PHYSICAL="ARVALID"/>
+            <PORTMAP LOGICAL="ARREADY" PHYSICAL="ARREADY"/>
+            <PORTMAP LOGICAL="RDATA" PHYSICAL="RDATA"/>
+            <PORTMAP LOGICAL="RRESP" PHYSICAL="RRESP"/>
+            <PORTMAP LOGICAL="RVALID" PHYSICAL="RVALID"/>
+            <PORTMAP LOGICAL="RREADY" PHYSICAL="RREADY"/>
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
       <MEMORYMAP/>
-      <PERIPHERALS/>
+      <PERIPHERALS>
+        <PERIPHERAL INSTANCE="axi_uartlite_0"/>
+      </PERIPHERALS>
     </MODULE>
   </MODULES>
 

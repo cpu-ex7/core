@@ -218,7 +218,7 @@ module decode(
         `FUNC_SLL  :
         begin
           alu_pattern <= 4'd4;
-          alu_data_a <= op[10:6];
+          alu_data_a <= {27'b0,op[10:6]};
           alu_data_b <= gpr[op[20:16]];
           gpraddr <= op[15:11];
           wgpr_valid <= 1'b1;
@@ -234,7 +234,7 @@ module decode(
         `FUNC_SRL :
         begin
           alu_pattern <= 4'd5;
-          alu_data_a <= op[10:6];
+          alu_data_a <= {27'b0,op[10:6]};
           alu_data_b <= gpr[op[20:16]];
           gpraddr <= op[15:11];
           wgpr_valid <= 1'b1;
@@ -250,7 +250,7 @@ module decode(
         `FUNC_SRA  :
         begin
           alu_pattern <= 4'd7;
-          alu_data_a <= op[10:6];
+          alu_data_a <= {27'b0,op[10:6]};
           alu_data_b <= gpr[op[20:16]];
           gpraddr <= op[15:11];
           wgpr_valid <= 1'b1;

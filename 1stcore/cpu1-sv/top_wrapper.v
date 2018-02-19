@@ -13,7 +13,7 @@ module top_wrapper(
   output wire [9:0] fpu_in_valid,
   input wire fpu_out_valid,
   output wire [12:0] o_addr,
-  output wire [18:0] d_addr,
+  output wire [16:0] d_addr,
   input wire [31:0] odata,
   input wire [31:0] rdata,
   output wire [31:0] wdata,

@@ -25,7 +25,7 @@ module uart (
   output reg uart_invalid
   );
 
-  reg [1:0] mode;
+  reg [3:0] mode;
 
   initial begin
     mode <= 4'b0;
@@ -56,7 +56,7 @@ module uart (
     end
     4'd1 :
     begin
-      uart_araddr <= 4'h8;
+      uart_araddr <= 4'b1000;
       if (uart_arready && uart_arvalid) begin
         uart_arvalid <= 1'b0;
         mode <= 4'd2;
@@ -82,7 +82,7 @@ module uart (
     end
     4'd3 :
     begin
-      uart_araddr <= 4'h0;
+      uart_araddr <= 4'b0;
       if (uart_arready && uart_arvalid) begin
         uart_arvalid <= 1'b0;
         mode <= 4'd4;
@@ -105,10 +105,10 @@ module uart (
     end
     4'd5 :
     begin
-      uart_araddr <= 4'h8;
+      uart_araddr <= 4'b1000;
       if (uart_arready && uart_arvalid) begin
         uart_arvalid <= 1'b0;
-        mode <= 4'd2;
+        mode <= 4'd6;
       end
       else begin
         uart_arvalid <= 1'b1;
@@ -118,11 +118,11 @@ module uart (
     begin
       if (uart_rready && uart_rvalid) begin
         uart_rready <= 1'b0;
-        if(!uart_rdata[3]) begin
-          mode <= 4'd7;
+        if(uart_rdata[3]) begin
+          mode <= 4'd5;
         end
         else begin
-          mode <= 4'd5;
+          mode <= 4'd7;
         end
       end
       else begin
@@ -131,7 +131,7 @@ module uart (
     end
     4'd7 :
     begin
-      uart_awaddr <= 4'h4;
+      uart_awaddr <= 4'b100;
       if (uart_awready && uart_awvalid) begin
         uart_awvalid <= 1'b0;
         mode <= 4'd8;
